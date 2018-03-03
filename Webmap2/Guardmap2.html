@@ -78,34 +78,34 @@
 				style: back}),
 				
 				
-				b = L.geoJson(country, {
-				style: countrystyle1, 
-				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-				layer.bindPopup("<b>Country:</b> " + feature.properties.GC_4075,popupOptions);
-				layer.bindPopup("<b>Country:</b> " + feature.properties.GC_4075,SqMi);
-					}
-				    }),
+				//b = L.geoJson(country, {
+				//style: countrystyle1, 
+				//onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				//layer.bindPopup("<b>Country:</b> " + feature.properties.GC_4075,popupOptions);
+				//layer.bindPopup("<b>Country:</b> " + feature.properties.GC_4075,SqMi);
+				//	}
+				//    }),
 				
 				
 			//switch statement to categorically style	
 			
-				c = L.geoJson(creek, {
-				style: riv}),
+				//c = L.geoJson(creek, {
+				//style: riv}),
 
 				
-				d = L.geoJson(lake, {
-				style: LakeStyle}),
-				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 220};
-				layer.bindPopup("<b>Surface Area (Mi):</b> " + feature.properties.Sq_Mi,popupOptions);
-				},
+				//d = L.geoJson(lake, {
+				//style: LakeStyle}),
+				//onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 220};
+				//layer.bindPopup("<b>Surface Area (Mi):</b> " + feature.properties.Sq_Mi,popupOptions);
+				//},
 				
 				//switch statement to categorically style these Rivers
 				
-				e = L.geoJson(river, {
-				style: riv,
-				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 220};
-				layer.bindPopup("<b>Name:</b> " + feature.properties.Name,popupOptions);
-				}),
+				//e = L.geoJson(river, {
+				//style: riv,
+				//onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 220};
+				//layer.bindPopup("<b>Name:</b> " + feature.properties.Name,popupOptions);
+				//}),
 				
 				//bind popups
 				//g = L.geoJson(Mount, {
@@ -133,11 +133,11 @@
 			//assigning variables to layers for control	
 			var aShp = L.layerGroup([a]),
 				
-				bShp = L.layerGroup([b]),
+				//bShp = L.layerGroup([b]),
 				
-				cShp = L.layerGroup([c]),
+				//cShp = L.layerGroup([c]),
 				
-				dShp = L.layerGroup([d]),
+				//dShp = L.layerGroup([d]),
 				
 				//gShp = L.layerGroup([g]),
 
@@ -147,7 +147,7 @@
 				
 				//fShp = L.layerGroup([f]),
 			
-				eShp = L.layerGroup([e]);			
+				//eShp = L.layerGroup([e]);			
 			
 			//background images
 			//var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -181,23 +181,23 @@
 			
 			//create basemaps variable to call within the control
 			var baseMaps = {
-				"Streets": OpenStreetMap_Mapnik,
-				"Aerial": Esri_WorldImagery,
+				//"Streets": OpenStreetMap_Mapnik,
+				//"Aerial": Esri_WorldImagery,
 				"Terrain": CartoDB_DarkMatterNoLabels,
 				"Background": aShp,
-				"Country Symbol":bShp,
+				//"Country Symbol":bShp,
 			};
 			
 			
 			//create overlays variable to call within the control. Calls layer groups
-			var overLays = {
+			//var overLays = {
 				//"Mountain Simplified":gShp,
-				"Creek":cShp,
-				"Lake":dShp,			
+				//"Creek":cShp,
+				//"Lake":dShp,			
 				//"Wall":fShp,
 				//"Roads":hShp,
 				//"River Shapes":iShp,
-				"River":eShp;		
+				//"River":eShp;		
 			};
 			
 			
