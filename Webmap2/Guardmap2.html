@@ -108,25 +108,25 @@
 				}),
 				
 				//bind popups
-				g = L.geoJson(Mount, {
-				style: Mountsty}),
+				//g = L.geoJson(Mount, {
+				//style: Mountsty}),
 				
-				h = L.geoJson(Road, {
-				style: roadsty}),
+				//h = L.geoJson(Road, {
+				//style: roadsty}),
 				
-				i = L.geoJson(Watriv, {
-				style: RivStyle}),
+				//i = L.geoJson(Watriv, {
+				//style: RivStyle}),
 				
-				f = L.geoJson(Wall, {
-				style: wallsty,
-					onEachFeature: function (feature, layer){
-						popupOptions = {color: "#5D6D7E", maxWidth: 250};
-						layer.bindPopup("<b>Wall:</b> " + feature.properties.Name
-						,popupOptions);
-						layer.bindPopup("<b>Length (Mi):</b> " + feature.properties.Length
-						,popupOptions);
-						}
-						})
+				//f = L.geoJson(Wall, {
+				//style: wallsty,
+				//	onEachFeature: function (feature, layer){
+				//		popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				//		layer.bindPopup("<b>Wall:</b> " + feature.properties.Name
+				//		,popupOptions);
+				//		layer.bindPopup("<b>Length (Mi):</b> " + feature.properties.Length
+				//		,popupOptions);
+				//		}
+				//		})
 	
 			
 
@@ -139,13 +139,13 @@
 				
 				dShp = L.layerGroup([d]),
 				
-				gShp = L.layerGroup([g]),
+				//gShp = L.layerGroup([g]),
 
-				hShp = L.layerGroup([h]),
+				//hShp = L.layerGroup([h]),
 
-				iShp = L.layerGroup([i]),				
+				//iShp = L.layerGroup([i]),				
 				
-				fShp = L.layerGroup([f]),
+				//fShp = L.layerGroup([f]),
 			
 				eShp = L.layerGroup([e]);			
 			
@@ -191,12 +191,12 @@
 			
 			//create overlays variable to call within the control. Calls layer groups
 			var overLays = {
-				"Mountain Simplified":gShp,
+				//"Mountain Simplified":gShp,
 				"Creek":cShp,
 				"Lake":dShp,			
-				"Wall":fShp,
-				"Roads":hShp,
-				"River Shapes":iShp,
+				//"Wall":fShp,
+				//"Roads":hShp,
+				//"River Shapes":iShp,
 				"River":eShp;		
 			};
 			
