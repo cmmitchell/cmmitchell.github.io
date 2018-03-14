@@ -328,34 +328,5 @@
 			
 			</script>
 			
-		</body>
-				};
-				//create overlays variable to call within the control. Calls layer groups
-				var overLays = {
-					"Creek":cShp,
-					"River":eShp,
-					"Lake":dShp,
-					"River Shapes":iShp,
-					"Mountain Simplified":gShp,
-					"Cities":jShp,
-					"Wall":fShp,
-					"Roads":hShp,
-					"Graticules":kShp,
-					"Countries":b1Shp				
-				};
-				//add control to map
-				L.control.layers(baseMaps, overLays).addTo(map);
-				//Check this and associated scripts for errors. Displays tool, but not tool icon.  Error is likely in the script.
-				var measureControl = new L.Control.Measure(
-					{
-						position: 'topright',
-						primaryLengthUnit: 'meters',
-						activeColor: '#ABE67E'
-					}
-				);
-				measureControl.addTo(map);
-			
-			
-			</script>
 			
 		</body>
