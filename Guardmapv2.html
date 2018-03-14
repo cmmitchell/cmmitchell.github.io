@@ -171,6 +171,22 @@
 					//layer.on(click: zoomToFeatures);
 						}
 						})
+					b6080 = L.geoJson(country2, {
+					style: countrystyle6080,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 6080:</b> " + feature.properties.GC_6080,popupOptions);
+					//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+					//layer.on(click: zoomToFeatures);
+						}
+						})
+					bWW2 = L.geoJson(country2, {
+					style: countrystyleWW2,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Allies WW2:</b> " + feature.properties.Allies_WW2,popupOptions);
+					//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+					//layer.on(click: zoomToFeatures);
+						}
+						})
 					b5780 = L.geoJson(country2, {
 					style: countrystyle5780,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
@@ -284,6 +300,8 @@
 					b5870Shp = L.layerGroup([b5870]),
 					b5965Shp = L.layerGroup([b5965]),
 					b6300Shp = L.layerGroup([b6300]),
+				   	b6080Shp = L.layerGroup([b6080]),
+				   	bWW2Shp = L.layerGroup([bWW2]),
 					b1Shp = L.layerGroup([b1]),
 					//=================creek=================
 					cShp = L.layerGroup([c]),
@@ -335,9 +353,11 @@
 					"Country (5920)":b5920Shp,
 					"Country (5940)":b5940Shp,
 					"Country (5965)":b5965Shp,
+					"Country (6080)":b6520Shp,
 					"Country (6200)":b6200Shp,
 					"Country (6300)":b6300Shp,
 					"Country (6520)":b6520Shp,
+					"Country (WW2)":bWW2Shp,
 				};
 				//create overlays variable to call within the control. Calls layer groups
 				var overLays = {
