@@ -53,38 +53,32 @@
 		<body>
 	
 		<!-- Fade auomation for text box/legend thing -->
-			html, body, #map {
-				width: 100%;
-				height: 100%;
-			}
 
-			.img {
-			    position: fixed;
-				right: -35px;
-				bottom: 20px;
-			    width: 300px;
-				z-index: 2;
-			}
-
-			.legend {
-				position: fixed;
-				right: 45px;
-				bottom: 78px;
-			    width: 300px;
-				z-index: 1;
-			}
 			<script>
 				$(document).ready(function() {
-					$('.legend').delay(1000).fadeOut('normal');
+					$('.legend').delay(1000).fadeOut('normal');.
+					.legend {
+					position: fixed;
+					right: 45px;
+					bottom: 78px;
+					width: 300px;
+					z-index: 1;
+					}
 					$('.img').hover(
 						function() {
 							$('.legend').fadeIn('normal');
 						},
 						function() {
 							$('.legend').fadeOut('normal');
-						}
-					);
-				});
+						},
+						.img {
+						position: fixed;
+						right: -35px;
+						bottom: 20px;
+					    	width: 300px;
+						z-index: 2;
+							);
+						});
 				
 			</script>
 
@@ -94,7 +88,22 @@
 			
 
 			<div id="map"></div>
+						html, body, #map {
+				width: 100%;
+				height: 100%;
+			}
+
 			
+			    
+			}
+
+			.legend {
+				position: fixed;
+				right: 45px;
+				bottom: 78px;
+			    width: 300px;
+				z-index: 1;
+			}
 			
 			<script>
 			
