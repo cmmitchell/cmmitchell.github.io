@@ -40,6 +40,8 @@
 		
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+		<link rel="stylesheet" type="text/css" href="https://github.com/cmmitchell/cmmitchell.github.io/blob/master/Webmap2/Stylesheets/measure_tool.css"/>
+		<link rel="stylesheet" type="text/css" href="https://github.com/cmmitchell/cmmitchell.github.io/blob/master/Webmap2/Stylesheets/css.css"/>
 		
 		
 <!doctype html>
@@ -73,12 +75,17 @@
 				bottom: 78px;
 			    width: 300px;
 				z-index: 1;
+			
 			}
+			#myMap{
+			height: 100%;
+			width: 100%;
+			border: solid;
+			background-color: white;}
+
 			<script>
 				$(document).ready(function() {
-					$('.legend').delay(1000).fadeOut('normal');.
-
-					}
+					$('.legend').delay(1000).fadeOut('normal');
 					$('.img').hover(
 						function() {
 							$('.legend').fadeIn('normal');
@@ -86,7 +93,8 @@
 						function() {
 							$('.legend').fadeOut('normal');
 						}
-						});
+					);
+				});
 				
 			</script>
 
