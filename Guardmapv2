@@ -34,7 +34,7 @@
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Road.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/RiverWater.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Mountains.js"></script>
-		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/MapCountries.js"></script>
+		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/MapCountriesv2.js"></script>
 		
 		
 
@@ -89,38 +89,7 @@
 					a1 = L.geoJson(bak, {
 					style: backblack})
 					//=================Countries=================
-					b4080 = L.geoJson(country2, {
-					style: countrystyle4080,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 4080:</b> " + feature.properties.GC_4080,popupOptions);
-					//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
-					//layer.on(click: zoomToFeatures);
-						}
-						})
-					b4075 = L.geoJson(country2, {
-					style: countrystyle4075,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 4075:</b> " + feature.properties.GC_4075,popupOptions);
-					//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
-					//layer.on(click: zoomToFeatures);
-						}
-						})
-					b4875 = L.geoJson(country2, {
-					style: countrystyle4875,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 4875:</b> " + feature.properties.GC_4875,popupOptions);
-					//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
-					//layer.on(click: zoomToFeatures);
-						}
-						})
-					b3600 = L.geoJson(country2, {
-					style: countrystyle3600,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 3600:</b> " + feature.properties.GC_3600,popupOptions);
-					//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
-					//layer.on(click: zoomToFeatures);
-						}
-						})
+
 					b5125 = L.geoJson(country2, {
 					style: countrystyle5125,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
@@ -137,21 +106,7 @@
 					//layer.on(click: zoomToFeatures);
 						}
 						})
-					b3940 = L.geoJson(country2, {
-					style: countrystyle3940,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 3940:</b> " + feature.properties.GC_3940,popupOptions);
-					//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
-					//layer.on(click: zoomToFeatures);
-						}
-						})
-					b3915 = L.geoJson(country2, {
-					style: countrystyle3915,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 3915:</b> " + feature.properties.GC_3915,popupOptions);
-					//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
-					//layer.on(click: zoomToFeatures);
-						}
+
 						})
 					b6520 = L.geoJson(country2, {
 					style: countrystyle6520,
@@ -321,10 +276,6 @@
 				var aShp = L.layerGroup([a]),
 					a1Shp = L.layerGroup([a1]),
 					//=================country=================
-					b4080Shp = L.layerGroup([b4080]),
-					b4075Shp = L.layerGroup([b4075]),
-					b4875Shp = L.layerGroup([b4875]),
-					b3600Shp = L.layerGroup([b3600]),
 					b5125Shp = L.layerGroup([b5125]),
 					b6520Shp = L.layerGroup([b6520]),
 					b5500Shp = L.layerGroup([b5500]),
@@ -338,10 +289,7 @@
 					b5840Shp = L.layerGroup([b5840]),
 					b5870Shp = L.layerGroup([b5870]),
 					b5965Shp = L.layerGroup([b5965]),
-					b3940Shp = L.layerGroup([b3940]),
-					b3915Shp = L.layerGroup([b3915]),
 					b6300Shp = L.layerGroup([b6300]),
-					bclasShp = L.layerGroup([bclas]),
 					b1Shp = L.layerGroup([b1]),
 					//=================creek=================
 					cShp = L.layerGroup([c]),
@@ -383,13 +331,6 @@
 					//"Terrain": CartoDB_DarkMatterNoLabels,
 					"Water Background": aShp,
 					"Black Background": a1Shp,
-					"Country (Classical)":bclasShp,
-					"Country (3600)":b3600Shp,
-					"Country (3915)":b3915Shp,
-					"Country (3940)":b3940Shp,
-					"Country (4075)":b4075Shp,
-					"Country (4080)":b4080Shp,
-					"Country (4875)":b4875Shp,
 					"Country (5125)":b5125Shp,
 					"Country (5400)":b5400Shp,
 					"Country (5500)":b5500Shp,
