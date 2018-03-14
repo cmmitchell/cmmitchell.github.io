@@ -211,12 +211,7 @@
 					//layer.on(click: zoomToFeatures);
 						}
 						})
-					bclas = L.geoJson(country2, {
-					style: countryclassic,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country Classical:</b> " + feature.properties.Classical_Countries,popupOptions);
-						}
-						})
+
 				//switch statement to categorically style	
 					//=================Creeks=================
 					c = L.geoJson(creek, {
