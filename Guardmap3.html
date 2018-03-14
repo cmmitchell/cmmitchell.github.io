@@ -327,11 +327,7 @@
 
 					//=================Walls=================
 					f = L.geoJson(Wall, {
-					style: wallsty1,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Wall:</b> " + feature.properties.Name,popupOptions);
-						layer.bindPopup("<b>Length (Mi):</b> " + feature.properties.Length
-						,popupOptions);
+					style: wallsty1
 					}
 					})
 
