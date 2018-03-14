@@ -332,12 +332,12 @@
 					})
 
 					//=================Cities=================
-					j = L.geoJson(city, {
-					pointToLayer: function (feature, latlng) {
-						return L.circleMarker(latlng, city)},
-					style: Cityst
-					}
-					})
+					//j = L.geoJson(city, {
+					//pointToLayer: function (feature, latlng) {
+					//	return L.circleMarker(latlng, city)},
+					//style: Cityst
+					//}
+					//})
 
 					k = L.geoJson(grat, {
 					style: gratst,
@@ -398,7 +398,7 @@
 					fShp = L.layerGroup([f]),
 
 					//=================citys=================
-					jShp = L.layerGroup([j]),
+					//jShp = L.layerGroup([j]),
 
 					//=================citys=================
 					kShp = L.layerGroup([k]),
@@ -470,7 +470,7 @@
 					"Lake":dShp,
 					"River Shapes":iShp,
 					"Mountain Simplified":gShp,
-					"Cities":jShp,
+					//"Cities":jShp,
 					"Wall":fShp,
 					"Roads":hShp,
 					"Graticules":kShp,
