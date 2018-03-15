@@ -326,11 +326,12 @@
 						activeColor: '#ABE67E'
 					}
 				);
-				measureControl.addTo(map);
 				
-				addScaleBar(map, position = c("bottomleft"), options = scaleBarOptions())
+				L.control.scale({maxWidth: 150}).addTo(map);
+				//measureControl.addTo(map);
+				//addScaleBar(map, position = c("bottomleft"), options = scaleBarOptions())
 
-				scaleBarOptions(maxWidth = 100, metric = TRUE, imperial = TRUE)
+				//scaleBarOptions(maxWidth = 100, metric = TRUE, imperial = TRUE)
 			
 			
 			</script>
