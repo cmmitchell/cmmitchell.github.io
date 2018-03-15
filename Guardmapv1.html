@@ -281,7 +281,7 @@
 				//set map extent, view, and default layer
 				var map = L.map('map', {
 					layers: [aShp]
-					}).setView([7.1328, -3.6559], 4.5);
+					}).setView([7.1328, -3.6559], 6.5);
 				//	}).setView([-0.9530146, 32.930699], 6.5);
 				//Create Layered Groups
 				//create basemaps variable to call within the control
@@ -305,13 +305,13 @@
 				};
 				//create overlays variable to call within the control. Calls layer groups
 				var overLays = {
-					"Creek":cShp,
+					"Small River":cShp,
 					"River":eShp,
 					"Lake":dShp,
 					"River Shapes":iShp,
 					"Mountain Simplified":gShp,
 					"Cities":jShp,
-					"Wall":fShp,
+					"Defensive Lines":fShp,
 					"Roads":hShp,
 					"Graticules":kShp,
 					"Countries (Square Miles)":b1Shp				
