@@ -328,12 +328,7 @@
 				);
 				measureControl.addTo(map);
 				
-				var scaleControl = new L.Control.scale(
-					{
-						position: 'bottomleft'
-					}
-				);
-				scaleControl.addTo(map);
+				L.control.scale({maxWidth: 150}).addTo(map);
 			
 			
 			</script>
