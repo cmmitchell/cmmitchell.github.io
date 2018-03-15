@@ -328,7 +328,9 @@
 				);
 				measureControl.addTo(map);
 				
-				L.control.scale({maxWidth: 100}).addTo(map);
+				addScaleBar(map, position = c("topright", "bottomright", "bottomleft", "topleft"), options = scaleBarOptions())
+
+				scaleBarOptions(maxWidth = 100, metric = TRUE, imperial = TRUE)
 			
 			
 			</script>
