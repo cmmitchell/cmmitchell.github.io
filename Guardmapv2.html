@@ -285,7 +285,7 @@
 					rg = L.geoJson(Regions, {
 					style: regiostyle,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Region :</b> " + feature.properties.Region_Nam,popupOptions);
+					layer.bindPopup("<b>Region :</b> " + feature.properties.Geo_Region,popupOptions);
 					}
 					})
 					//=================Cities=================
