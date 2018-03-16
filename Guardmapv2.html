@@ -279,6 +279,12 @@
 					style: wallsty1
 					
 					})
+				
+					rg = L.geoJson(Regions, {
+					style: regiostyle,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Region :</b> " + feature.properties.Region_Nam,popupOptions);
+					})
 					//=================Cities=================
 					j = L.geoJson(city, {
 						pointToLayer: function (feature, latlng) {
@@ -323,6 +329,8 @@
 					dShp = L.layerGroup([d]),
 					//=================mountains=================
 					gShp = L.layerGroup([g]),
+				    
+				    	rgShp = L.layerGroup([rg,a]),
 					//=================roads=================
 					hShp = L.layerGroup([h]),
 				    	cavShp = L.layerGroup([cav]),	
@@ -387,7 +395,8 @@
 					"Roads":hShp,
 					"Caves":cavShp,
 					"Graticules":kShp,
-					"Countries (Square Miles)":b1Shp				
+					"Countries (Square Miles)":b1Shp,	
+					"Region Names":rgShp
 				};
 				//add control to map
 				L.control.layers(baseMaps, overLays).addTo(map);
