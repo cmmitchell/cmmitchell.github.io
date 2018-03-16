@@ -167,6 +167,15 @@
 					//layer.on(click: zoomToFeatures);
 						}
 						})
+				
+					b4940 = L.geoJson(country2, {
+					style: countrystyle4940,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 4940:</b> " + feature.properties.GC_4940,popupOptions);
+					//("<b>4110:</b> " + feature.properties.SqMi,popupOptions);
+					//layer.on(click: zoomToFeatures);
+						}
+						})
 
 					b1 = L.geoJson(country2, {
 					style: countrymi,
@@ -247,6 +256,7 @@
 					b4700Shp = L.layerGroup([b4700,a]),
 					b4500Shp = L.layerGroup([b4500,a]),
 					b4110Shp = L.layerGroup([b4110,a]),
+				    	b4940Shp = L.layerGroup([b4940,a]),
 					b3915Shp = L.layerGroup([b3915,a]),
 				   	b3940Shp = L.layerGroup([b3940,a]),
 					bclasShp = L.layerGroup([bclas,a]),
@@ -301,6 +311,7 @@
 					"Country (4500)":b4500Shp,
 					"Country (4700)":b4700Shp,
 					"Country (4875)":b4875Shp,
+					"Country (4940)":b4940Shp,
 
 				};
 				//create overlays variable to call within the control. Calls layer groups
