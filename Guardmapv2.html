@@ -268,6 +268,11 @@
 						,popupOptions);
 					}
 					})
+					//=================Cavern=================
+					cav = L.geoJson(Caves, {
+					style: Cavesty
+					
+					})
 					//=================River Area=================
 					i = L.geoJson(Watriv, {
 					style: RivStyle})
@@ -322,6 +327,7 @@
 					gShp = L.layerGroup([g]),
 					//=================roads=================
 					hShp = L.layerGroup([h]),
+				    	cavShp = L.layerGroup([cav]),	
 					//=================river area=================
 					iShp = L.layerGroup([i]),				
 					//=================Walls=================
@@ -381,6 +387,7 @@
 					"Cities":jShp,
 					"Defensive Lines":fShp,
 					"Roads":hShp,
+					"Caves":cavShp,
 					"Graticules":kShp,
 					"Countries (Square Miles)":b1Shp				
 				};
