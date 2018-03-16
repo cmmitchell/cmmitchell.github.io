@@ -221,6 +221,14 @@
 					//layer.on(click: zoomToFeatures);
 						}
 						})
+					b5980 = L.geoJson(country2, {
+					style: countrystyle5980,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 5980:</b> " + feature.properties.GC_5980,popupOptions);
+					//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+					//layer.on(click: zoomToFeatures);
+						}
+						})
 					b1 = L.geoJson(country2, {
 					style: countrymi,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
@@ -300,6 +308,7 @@
 					b5400Shp = L.layerGroup([b5400,a]),
 					b5840Shp = L.layerGroup([b5840,a]),
 					b5870Shp = L.layerGroup([b5870,a]),
+				    	b5980Shp = L.layerGroup([b5980,a1]),
 					b5965Shp = L.layerGroup([b5965,a]),
 					b6300Shp = L.layerGroup([b6300,a]),
 				   	b6080Shp = L.layerGroup([b6080,a]),
@@ -355,6 +364,7 @@
 					"Country (5920)":b5920Shp,
 					"Country (5940)":b5940Shp,
 					"Country (5965)":b5965Shp,
+					"Country (5965)":b5980Shp,
 					"Country (6080)":b6520Shp,
 					"Country (6200)":b6200Shp,
 					"Country (6300)":b6300Shp,
