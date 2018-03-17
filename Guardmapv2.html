@@ -33,6 +33,7 @@
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Regions.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Regions2.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Revolution.js"></script>
+		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/GeneralRegionS.js"></script>
 		
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Walls.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Road.js"></script>
@@ -246,6 +247,10 @@
 					c = L.geoJson(creek, {
 					style: rivs
 					})
+				
+					gs = L.geoJson(GeoRegion, {
+					style: gratGeo
+					})
 					//=================Lakes=================
 					d = L.geoJson(lake, {
 					style: LakeStyle,
@@ -331,6 +336,7 @@
 					b1Shp = L.layerGroup([b1,a]),
 					//=================creek=================
 					cShp = L.layerGroup([c]),
+				    	gsShp = L.layerGroup([gs]),
 					//=================lake=================
 					dShp = L.layerGroup([d]),
 					//=================mountains=================
@@ -401,6 +407,7 @@
 					"Roads":hShp,
 					"Caves":cavShp,
 					"Graticules":kShp,
+					"Regional Dividers":gsShp,
 					"Countries (Square Miles)":b1Shp,	
 					"Region Names":rgShp
 				};
