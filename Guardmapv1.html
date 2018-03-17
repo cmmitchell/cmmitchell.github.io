@@ -227,6 +227,10 @@
 						,popupOptions);
 					}
 					})
+					lpnt = L.geoJson(Locpoint, {
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Region Name:</b> " + feature.properties.Name,popupOptions)};
+						
 					//=================Cavern=================
 					cav = L.geoJson(Caves, {
 					style: cavesty
@@ -281,6 +285,7 @@
 					//=================creek=================
 					cShp = L.layerGroup([c]),
 				   	gsShp = L.layerGroup([gs]),
+				    	lpntShp = L.layerGroup([lpnt]),
 					//=================lake=================
 					dShp = L.layerGroup([d]),
 					//=================mountains=================
@@ -347,6 +352,7 @@
 					"Caves":cavShp,
 					"Graticules":kShp,
 					"Regional Dividers":gsShp,
+					"Regional Points":lpntShp,
 					"Countries (Square Miles)":b1Shp,
 					"Region Names":rgShp
 				};
