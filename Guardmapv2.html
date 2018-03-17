@@ -40,6 +40,7 @@
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/RiverWater.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Mountains.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/MapCountriesv2.js"></script>
+		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/LocationPoints.js"></script>
 		
 		
 
@@ -241,6 +242,10 @@
 					//layer.on(click: zoomToFeatures);
 						}
 						})
+				
+					lpnt = L.geoJson(Locpoint, {
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Region Name:</b> " + feature.properties.Name,popupOptions)};
 
 				//switch statement to categorically style	
 					//=================Creeks=================
@@ -342,6 +347,8 @@
 					//=================mountains=================
 					gShp = L.layerGroup([g]),
 				    
+				    	lpntShp = L.layerGroup([lpnt]),
+				    
 				    	rgShp = L.layerGroup([rg,a]),
 					//=================roads=================
 					hShp = L.layerGroup([h]),
@@ -408,6 +415,7 @@
 					"Caves":cavShp,
 					"Graticules":kShp,
 					"Regional Dividers":gsShp,
+					"Regional Points":lpntShp,
 					"Countries (Square Miles)":b1Shp,	
 					"Region Names":rgShp
 				};
