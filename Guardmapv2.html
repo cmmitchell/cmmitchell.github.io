@@ -32,6 +32,7 @@
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Caves.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Regions.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Regions2.js"></script>
+		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Revolution.js"></script>
 		
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Walls.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Road.js"></script>
@@ -223,7 +224,7 @@
 					//layer.on(click: zoomToFeatures);
 						}
 						})
-					b5980 = L.geoJson(country2, {
+					b5980 = L.geoJson(Revolutionary, {
 					style: countrystyle5980,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
 					layer.bindPopup("<b>Country 5980:</b> " + feature.properties.GC_5980,popupOptions);
