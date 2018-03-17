@@ -30,7 +30,7 @@ function gratst(feature) {
    return {
    color: '#4f4f4f',
    weight: 2,
-   opacity: .1,
+   opacity: .7,
    
    };
 }
