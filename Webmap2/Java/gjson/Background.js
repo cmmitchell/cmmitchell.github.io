@@ -10,6 +10,7 @@ var bak =
 function back(feature) {
    return {
    fillColor: '#0099FF',
+   fillOpacity: .8,
    weight: 1,
    opacity: 1,
    color: '#0099FF',
@@ -22,6 +23,7 @@ function back(feature) {
 function backblack(feature) {
    return {
    fillColor: '#3e3e3e',
+   fillOpacity: .8,
    weight: 10,
    opacity: 1,
    color: '#000000',
