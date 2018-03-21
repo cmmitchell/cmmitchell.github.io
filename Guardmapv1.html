@@ -302,13 +302,7 @@
 					eShp = L.layerGroup([e]);			
 					//rivers
 				//background images
-				//var CartoDB_DarkMatterNoLabels = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-				//	attribution: 'Map data: &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
-				//	//subdomains: 'abcd',
-				//	maxZoom: 17
-				//});
-				//[-2.8758827, 30.7293144], [0.5410233, 35.9974411]	
-				//[-4.7268675, 36.0768829], [2.1164623, 29.1003032]
+
 				//set map extent, view, and default layer
 				var map = L.map('map', {
 					layers: [aShp]
@@ -317,9 +311,7 @@
 				//Create Layered Groups
 				//create basemaps variable to call within the control
 				var baseMaps = {
-					//"Streets": OpenStreetMap_Mapnik,
-					//"Aerial": Esri_WorldImagery,
-					//"Terrain": CartoDB_DarkMatterNoLabels,
+
 					"Water Background": aShp,
 					"Black Background": a1Shp,
 					"Country 国(Classical)":bclasShp,
