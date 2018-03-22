@@ -22,11 +22,11 @@ function back(feature) {
 
 function backblack(feature) {
    return {
-   fillColor: '#3e3e3e',
-   fillOpacity: .8,
+   fillColor: '#000000',
+   fillOpacity: 1,
    weight: 10,
    opacity: 1,
-   color: '#000000',
+   color: '#3e3e3e',
    weight: 1,
    opacity: 1,
    
