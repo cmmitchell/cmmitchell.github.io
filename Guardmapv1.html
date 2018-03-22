@@ -28,23 +28,22 @@
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Rivers.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Cities_Total.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Background.js"></script>
-		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Function_all.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Graticule_30.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Caves.js"></script>
-		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Regions.js"></script>
-		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Regions2.js"></script>
-		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/GeneralRegionS.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/WaterShapes.js"></script>
 		
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Walls.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Road.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/RiverWater.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Mountains.js"></script>
-		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/MapCountriesv1.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/LocationPoints.js"></script>
 		
+		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/MapCountriesv1.js"></script>
+		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/ModCountry.js"></script>
+		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Regions.js"></script>
+		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Regions2.js"></script>
+		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/GeneralRegionS.js"></script>	
 		
-
 		
 
 		
@@ -117,7 +116,7 @@
 					
 						}
 						})
-					b3600 = L.geoJson(country2, {
+					b3600 = L.geoJson(modcountry, {
 					style: countrystyle3600,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
 					layer.bindPopup("<b>Country 3600:</b> " + feature.properties.GC_3600,popupOptions);
@@ -126,14 +125,14 @@
 						})
 
 
-					b3940 = L.geoJson(country2, {
+					b3940 = L.geoJson(modcountry, {
 					style: countrystyle3940,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
 					layer.bindPopup("<b>Country 3940:</b> " + feature.properties.GC_3940,popupOptions);
 					
 						}
 						})
-					b3915 = L.geoJson(country2, {
+					b3915 = L.geoJson(modcountry, {
 					style: countrystyle3915,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
 					layer.bindPopup("<b>Country 3915:</b> " + feature.properties.GC_3915,popupOptions);
@@ -141,14 +140,14 @@
 						}
 						})
 						
-					b4500 = L.geoJson(country2, {
+					b4500 = L.geoJson(modcountry, {
 					style: countrystyle4500,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
 					layer.bindPopup("<b>Country 4500:</b> " + feature.properties.GC_3940,popupOptions);
 					
 						}
 						})
-					b4700 = L.geoJson(country2, {
+					b4700 = L.geoJson(modcountry, {
 					style: countrystyle4700,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
 					layer.bindPopup("<b>Country 4700:</b> " + feature.properties.GC_4700,popupOptions);
@@ -179,7 +178,7 @@
 
 						}
 						})
-					bclas = L.geoJson(country2, {
+					bclas = L.geoJson(modcountry, {
 					style: countryclassic,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
 					layer.bindPopup("<b>Country Classical:</b> " + feature.properties.Classical_Countries,popupOptions);
