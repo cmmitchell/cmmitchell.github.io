@@ -299,9 +299,7 @@
 					style: rivs
 					})
 				
-					gs = L.geoJson(GeoRegion, {
-					style: gratGeo
-					})
+
 					//=================Lakes=================
 					d = L.geoJson(lake, {
 					style: LakeStyle,
@@ -327,13 +325,7 @@
 						,popupOptions);
 					}
 					})
-					lpnt = L.geoJson(Locpoint, {
-					onEachFeature: function (feature, layer){
-						popupOptions = {color: "#5D6D7E", maxWidth: 250};
-						layer.bindPopup("<b>Region Name:</b> " + feature.properties.Name
-						,popupOptions);
-					}
-					})
+
 						
 					//=================Cavern=================
 					cav = L.geoJson(Caves, {
@@ -347,8 +339,7 @@
 					}
 					})
 					//=================River Area=================
-					i = L.geoJson(Watriv, {
-					style: LakeStyle})
+
 					//=================Walls=================
 					f = L.geoJson(Wall, {
 					style: wallsty1
