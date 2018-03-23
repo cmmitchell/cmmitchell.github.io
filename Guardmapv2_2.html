@@ -260,7 +260,13 @@
 					//bind popups
 					//=================High Areas=================
 					g = L.geoJson(Mount, {
-					style: Mountsty}),
+					style:    
+					fillColor: '#7e6534',
+					weight: 1,
+					fillOpacity: 1,
+					color: '#998152',
+					weight: .01
+					}),
 					//=================Roads=================
 					h = L.geoJson(Road, {
 					style: roadsty1,
