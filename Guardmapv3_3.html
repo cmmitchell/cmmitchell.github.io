@@ -136,7 +136,12 @@
 					
 						}
 						})
-						
+					b3750 = L.geoJson(modcountry, {
+					style: countrystyle3750,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 3750:</b> " + feature.properties.GG3750,popupOptions);	
+						}
+						})				 
 					b4500 = L.geoJson(modcountry, {
 					style: countrystyle4500,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
@@ -371,7 +376,9 @@
 					//=================background=================
 				var aShp = L.layerGroup([a]),
 					a1Shp = L.layerGroup([a1]),
+				    
 					//=================country=================
+					b3750Shp = L.layerGroup([b3750,a]),
 					b4080Shp = L.layerGroup([b4080,a]),
 					b4075Shp = L.layerGroup([b4075,a]),
 					b4875Shp = L.layerGroup([b4875,a]),
@@ -436,6 +443,7 @@
 					"Black Background": a1Shp,
 					"Country 国(Classical)":bclasShp,
 					"Country 国(3600)":b3600Shp,
+					"Country 国(3750)":b3750Shp,
 					"Country 国(3915)":b3915Shp,
 					"Country 国(3940)":b3940Shp,
 					"Country 国(4075)":b4075Shp,
