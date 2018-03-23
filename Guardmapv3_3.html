@@ -411,19 +411,18 @@
 					//=================mountains=================
 					
 				    	rgShp = L.layerGroup([rg,a]),
+				    	eShp = L.layerGroup([e]),
 					//=================roads=================
 					hShp = L.layerGroup([h]),
 				    	cavShp = L.layerGroup([cav]),
-					//=================river area=================
-					iShp = L.layerGroup([i]),				
+					//=================river area=================			
 					//=================Walls=================
 					fShp = L.layerGroup([f]),
 					//=================citys=================
 					jShp = L.layerGroup([j]),
 					//=================citys=================
-					kShp = L.layerGroup([k]),
-					//=================rivers=================
-					eShp = L.layerGroup([e]);			
+					kShp = L.layerGroup([k]);
+					//=================rivers=================			
 					//rivers
 				//background images
 				//set map extent, view, and default layer
@@ -468,7 +467,6 @@
 				};
 				//create overlays variable to call within the control. Calls layer groups
 				var overLays = {
-					"Small River 川":cShp,
 					"River 川":eShp,
 					"Lake 湖":dShp,
 					"Mountain Simplified 山":gShp,
