@@ -172,7 +172,7 @@
 					
 						}
 						})
-					b1 = L.geoJson(modcountry, {
+					b1 = L.geoJson(country2, {
 					style: countrymi,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
 					layer.bindPopup("<b>Sqare Miles :</b> " + feature.properties.SqMi,popupOptions);
@@ -390,7 +390,7 @@
 					b3915Shp = L.layerGroup([b3915,a]),
 				   	b3940Shp = L.layerGroup([b3940,a]),
 					bclasShp = L.layerGroup([bclas,a]),
-					b1Shp = L.layerGroup([b1,a]),
+					b1Shp = L.layerGroup([b1]),
 				    	b5125Shp = L.layerGroup([b5125,a]),
 					b6520Shp = L.layerGroup([b6520,a]),
 					b5500Shp = L.layerGroup([b5500,a]),
@@ -416,7 +416,7 @@
 					dShp = L.layerGroup([d]),
 					//=================mountains=================
 					gShp = L.layerGroup([g]),
-				    	rgShp = L.layerGroup([rg,a]),
+				    	rgShp = L.layerGroup([rg]),
 				    	eShp = L.layerGroup([e]),
 					//=================roads=================
 					hShp = L.layerGroup([h]),
