@@ -180,6 +180,14 @@
 					layer.bindPopup("<b>Country Classical:</b> " + feature.properties.ClassicalC,popupOptions);
 						}
 						})
+					b5125 = L.geoJson(modcountry, {
+					style: countrystyle5125,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 5125:</b> " + feature.properties.GG5125,popupOptions);
+					//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+					//layer.on(click: zoomToFeatures);
+						}
+						})
 					b6300 = L.geoJson(modcountry, {
 					style: countrystyle6300,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
