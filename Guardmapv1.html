@@ -192,6 +192,13 @@
 					layer.bindPopup("<b>Country Classical:</b> " + feature.properties.Classical_Countries,popupOptions);
 						}
 						})
+				
+					cdis = L.geoJson(countryDis, {
+					style: disstyle,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country Classical:</b> " + feature.properties.SqMi,popupOptions);
+						}
+						})
 				//switch statement to categorically style	
 					//=================Creeks=================
 					c = L.geoJson(creek, {
@@ -286,6 +293,7 @@
 					bclasShp = L.layerGroup([bclas,a]),
 					b1Shp = L.layerGroup([b1,a]),
 				    	b2Shp = L.layerGroup([b2,a]),
+				    	cdisShp = L.layerGroup([cdis]),
 					//=================creek=================
 					cShp = L.layerGroup([c]),
 				   	gsShp = L.layerGroup([gs]),
@@ -319,9 +327,9 @@
 				//Create Layered Groups
 				//create basemaps variable to call within the control
 				var baseMaps = {
-
 					"Water Background": aShp,
 					"Black Background": a1Shp,
+					"Blank Country": cdisShp,
 					"Country 国(Classical)":bclasShp,
 					"Country 国(3600)":b3600Shp,
 					"Country 国(3915)":b3915Shp,
