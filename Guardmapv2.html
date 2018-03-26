@@ -240,6 +240,13 @@
 						,popupOptions);
 					}
 					})
+				
+					cdis = L.geoJson(countryDis, {
+					style: disstyle,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country Classical:</b> " + feature.properties.SqMi,popupOptions);
+						}
+						})
 
 
 						
@@ -336,6 +343,7 @@
 				   	b6080Shp = L.layerGroup([b6080,a]),
 				   	bWW2Shp = L.layerGroup([bWW2,a]),
 					b1Shp = L.layerGroup([b1,a]),
+				    	cdisShp = L.layerGroup([cdis]),
 					//=================creek=================
 					cShp = L.layerGroup([c]),
 				    	gsShp = L.layerGroup([gs]),
@@ -374,6 +382,7 @@
 
 					"Water Background": aShp,
 					"Black Background": a1Shp,
+					"Blank Country": cdisShp,
 					"Country 国(5125)":b5125Shp,
 					"Country 国(5400)":b5400Shp,
 					"Country 国(5500)":b5500Shp,
