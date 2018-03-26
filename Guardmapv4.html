@@ -29,25 +29,22 @@
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Background.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Graticule_30.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Caves.js"></script>
-		
-		
-		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/WaterShapes.js"></script>
-		
+		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Countries.js"></script>
+
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Walls.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Road.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/RiverWater.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Mountains.js"></script>
-		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/MapCountriesv2.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/LocationPoints.js"></script>
+		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/CountryDis.js"></script>
 		
+		<!-- Broken Stuff -->
+		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/WaterShapes.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/ModCountry.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Regions.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Regions2.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Revolution.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/GeneralRegionS.js"></script>
-		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/CountryDis.js"></script>
-		
-		
 
 		
 
@@ -100,7 +97,7 @@
 					a1 = L.geoJson(bak, {
 					style: backblack})
 					//=================Countries=================
-          b4080 = L.geoJson(country2, {
+          				b4080 = L.geoJson(country2, {
 					style: countrystyle4080,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
 					layer.bindPopup("<b>Country 4080:</b> " + feature.properties.GC_4080,popupOptions);
@@ -111,6 +108,13 @@
 					style: countrystyle4075,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
 					layer.bindPopup("<b>Country 4075:</b> " + feature.properties.GC_4075,popupOptions);
+					
+						}
+						})
+					b4000 = L.geoJson(country2, {
+					style: countrystyle4000,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 4000:</b> " + feature.properties.GC_4000,popupOptions);
 					
 						}
 						})
@@ -421,37 +425,38 @@
 					b5400Shp = L.layerGroup([b5400,a]),
 					b5840Shp = L.layerGroup([b5840,a]),
 					b5870Shp = L.layerGroup([b5870,a]),
-				  b5980Shp = L.layerGroup([b5980,a1]),
+				  	b5980Shp = L.layerGroup([b5980,a1]),
 					b5965Shp = L.layerGroup([b5965,a]),
 					b6300Shp = L.layerGroup([b6300,a]),
-				  b6080Shp = L.layerGroup([b6080,a]),
-				  bWW2Shp = L.layerGroup([bWW2,a]),
+				  	b6080Shp = L.layerGroup([b6080,a]),
+				  	bWW2Shp = L.layerGroup([bWW2,a]),
 					b1Shp = L.layerGroup([b1,a]),
-				  cdisShp = L.layerGroup([cdis]),
+				  	cdisShp = L.layerGroup([cdis]),
           
-          b4080Shp = L.layerGroup([b4080,a]),
+          				b4080Shp = L.layerGroup([b4080,a]),
+				    	b4000Shp = L.layerGroup([b4000,a]),
 					b4075Shp = L.layerGroup([b4075,a]),
 					b4875Shp = L.layerGroup([b4875,a]),
 					b3600Shp = L.layerGroup([b3600,a]),
 					b4700Shp = L.layerGroup([b4700,a]),
 					b4500Shp = L.layerGroup([b4500,a]),
 					b4110Shp = L.layerGroup([b4110,a]),
-				  b4940Shp = L.layerGroup([b4940,a]),
+				  	b4940Shp = L.layerGroup([b4940,a]),
 					b3915Shp = L.layerGroup([b3915,a]),
-				  b3940Shp = L.layerGroup([b3940,a]),
+				  	b3940Shp = L.layerGroup([b3940,a]),
 					bclasShp = L.layerGroup([bclas,a]),
           
 					//=================creek=================
 					cShp = L.layerGroup([c]),
-				  gsShp = L.layerGroup([gs]),
+				 	 gsShp = L.layerGroup([gs]),
 					//=================lake=================
 					dShp = L.layerGroup([d]),
 					//=================mountains=================
 					gShp = L.layerGroup([g]),
 				    
-				  lpntShp = L.layerGroup([lpnt]),
+				  	lpntShp = L.layerGroup([lpnt]),
 				    
-				  rgShp = L.layerGroup([rg,a]),
+				  	rgShp = L.layerGroup([rg,a]),
 					//=================roads=================
 					hShp = L.layerGroup([h]),
 				    	cavShp = L.layerGroup([cav]),	
