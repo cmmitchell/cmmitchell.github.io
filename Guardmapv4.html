@@ -349,7 +349,7 @@
 					cdis = L.geoJson(countryDis, {
 					style: disstyle,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country Classical:</b> " + feature.properties.SqMi,popupOptions);
+					layer.bindPopup("<b>Square Miles:</b> " + feature.properties.SqMi,popupOptions);
 						}
 						})
 					bgeo = L.geoJson(country3, {
