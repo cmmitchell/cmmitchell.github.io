@@ -319,6 +319,13 @@
 					
 						}
 						})
+					b2 = L.geoJson(country3, {
+					style: countrykm,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Sqare Kilometers :</b> " + feature.properties.SqKm,popupOptions);
+					
+						}
+						})
 				
 
 					lpnt = L.geoJson(Locpoint, {
@@ -437,6 +444,8 @@
 				  	b6080Shp = L.layerGroup([b6080,a]),
 				  	bWW2Shp = L.layerGroup([bWW2,a]),
 					b1Shp = L.layerGroup([b1,a]),
+				    	b2Shp = L.layerGroup([b2,a]),
+				    	bgeoShp = L.layerGroup([bgeo,a]),
 				  	cdisShp = L.layerGroup([cdis]),
           
           				b4080Shp = L.layerGroup([b4080,a]),
@@ -451,7 +460,7 @@
 					b3915Shp = L.layerGroup([b3915,a]),
 				  	b3940Shp = L.layerGroup([b3940,a]),
 					bclasShp = L.layerGroup([bclas,a]),
-          
+         
 					//=================creek=================
 					cShp = L.layerGroup([c]),
 				 	 gsShp = L.layerGroup([gs]),
@@ -524,32 +533,34 @@
 				//create overlays variable to call within the control. Calls layer groups
 				var overLays = {
 					// 川
-					"Small River ":cShp,
+					"Small River":cShp,
 					//川
-					"River ":eShp,
+					"River":eShp,
 					// 湖
-					"Lake ":dShp,
+					"Lake":dShp,
 					// 川
-					//"River Shapes ":iShp,
+					//"River Shapes":iShp,
 					// 山
-					"Mountain Simplified ":gShp,
+					"Mountain Simplified":gShp,
 					// 都市
 					"Cities ":jShp,
 					// 守備ライン
-					"Defensive Line ":fShp,
+					"Defensive Line":fShp,
 					// 道
-					"Roads ":hShp,
+					"Roads":hShp,
 					// 洞窟
-					"Caves ":cavShp,
+					"Caves":cavShp,
 					// 経度緯度
-					"Graticules ":kShp,
+					"Graticules":kShp,
 					// 地方ライン
 					"Regional Dividers":gsShp,
 					// 地方ポイント
-					"Regional Points ":lpntShp,
+					"Regional Points":lpntShp,
 					// 平方マイル
-					"Countries (Square Miles)":b1Shp,	
+					"Countries (Mi²)":b1Shp,
+					"Countries (Km²)":b2Shp,
 					// 名前地方
+					"Regions":bgeoShp
 					
 				};
 				//add control to map
