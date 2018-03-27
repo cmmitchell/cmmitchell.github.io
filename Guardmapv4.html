@@ -431,6 +431,20 @@
 					layer.bindPopup("<b>degrees:</b> " + feature.properties.degrees,popupOptions);
 					}
 					})
+				
+					k1 = L.geoJson(grat1, {
+					style: gratsty1,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>degrees:</b> " + feature.properties.degrees,popupOptions);
+					}
+					})
+				
+					k5 = L.geoJson(grat5, {
+					style: gratsty5,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>degrees:</b> " + feature.properties.degrees,popupOptions);
+					}
+					})
 					
 	//this is a seperating line ==================================================================================
 				
@@ -497,6 +511,9 @@
 					jShp = L.layerGroup([j]),
 					//=================citys=================
 					kShp = L.layerGroup([k]),
+				    	k1Shp = L.layerGroup([k1]),
+				    	k5Shp = L.layerGroup([k5]),
+
 					//=================rivers=================
 					eShp = L.layerGroup([e]);			
 					//rivers
@@ -569,7 +586,9 @@
 					// 洞窟
 					"Caves":cavShp,
 					// 経度緯度
-					"Graticules":kShp,
+					"Graticules 30":kShp,
+					"Graticules 5":k5Shp,
+					"Graticules 1":k1Shp,
 					// 地方ライン
 					"Regional Dividers":gsShp,
 					// 地方ポイント
