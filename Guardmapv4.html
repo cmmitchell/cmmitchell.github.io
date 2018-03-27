@@ -132,6 +132,14 @@
 					
 						}
 						})
+					
+					b3750 = L.geoJson(country3, {
+					style: countrystyle3750,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 3750:</b> " + feature.properties.GC_3750,popupOptions);
+					
+						}
+						})
 
 
 					b3940 = L.geoJson(country3, {
@@ -456,6 +464,7 @@
           
           				b4080Shp = L.layerGroup([b4080,a]),
 				    	b4000Shp = L.layerGroup([b4000,a]),
+				    	b3750Shp = L.layerGroup([b3750,a]),
 					b4075Shp = L.layerGroup([b4075,a]),
 					b4875Shp = L.layerGroup([b4875,a]),
 					b3600Shp = L.layerGroup([b3600,a]),
