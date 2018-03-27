@@ -29,7 +29,7 @@ var grat =
 function gratst(feature) {
    return {
    color: '#4f4f4f',
-   weight: 2,
+   weight: .8,
    opacity: .7,
    
    };
