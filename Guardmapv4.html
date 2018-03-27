@@ -324,14 +324,14 @@
 					b1 = L.geoJson(country3, {
 					style: countrymi,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Sqare Miles :</b> " + feature.properties.SqMi,popupOptions);
+					layer.bindPopup("<b>Mi² :</b> " + feature.properties.SqMi,popupOptions);
 					
 						}
 						})
 					b2 = L.geoJson(country3, {
 					style: countrykm,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Sqare Kilometers :</b> " + feature.properties.SqKm,popupOptions);
+					layer.bindPopup("<b>Km² :</b> " + feature.properties.SqKm,popupOptions);
 					
 						}
 						})
@@ -348,7 +348,7 @@
 					cdis = L.geoJson(countryDis, {
 					style: disstyle,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Square Miles:</b> " + feature.properties.SqMi,popupOptions);
+					layer.bindPopup("<b>Mi²:</b> " + feature.properties.SqMi,popupOptions);
 						}
 						})
 					bgeo = L.geoJson(country3, {
@@ -375,7 +375,7 @@
 					d = L.geoJson(lake, {
 					style: LakeStyle,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 220};
-					layer.bindPopup("<b>Surface Area (SqMi):</b> " + feature.properties.Sq_Mi,popupOptions);
+					layer.bindPopup("<b>Surface Area (Mi²):</b> " + feature.properties.Sq_Mi,popupOptions);
 					}
 					})
 					//switch statement to categorically style these Rivers
