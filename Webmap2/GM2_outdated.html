@@ -1,0 +1,506 @@
+
+<!doctype html>
+
+<!-- Coded by C. M. Mitchell
+
+		-->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Middilgard.jpg</title>
+		
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+		<link rel="stylesheet" href="https://students.salisbury.edu/~cmitchell7/Webmap2//Stylesheets/measure_tool.css"/>
+		<link rel="stylesheet" href="https://students.salisbury.edu/~cmitchell7/Webmap2//Stylesheets/css.css"/>
+		
+		<!-- Javascript -->
+		<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+		<script src="https://students.salisbury.edu/~cmitchell7/Webmap2/Java/gjson/measure_tool.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+		
+		<!-- GeoJSON overlays -->
+		<script src="https://students.salisbury.edu/~cmitchell7/Webmap2/Java/gjson/MapCountries.js"></script>
+		<script src="https://students.salisbury.edu/~cmitchell7/Webmap2/Java/gjson/Creeks.js"></script>	
+		<script src="https://students.salisbury.edu/~cmitchell7/Webmap2/Java/gjson/Lakes.js"></script>
+		<script src="https://students.salisbury.edu/~cmitchell7/Webmap2/Java/gjson/Rivers.js"></script>
+		<script src="https://students.salisbury.edu/~cmitchell7/Webmap2/Java/gjson/Cities_Total.js"></script>	
+		<script src="https://students.salisbury.edu/~cmitchell7/Webmap2/Java/gjson/Background.js"></script>
+		<script src="https://students.salisbury.edu/~cmitchell7/Webmap2/Java/gjson/Function_all.js"></script>
+		<script src="https://students.salisbury.edu/~cmitchell7/Webmap2/Java/gjson/Graticule_30.js"></script>
+		
+		<script src="https://students.salisbury.edu/~cmitchell7/Webmap2/Java/gjson/Walls.js"></script>
+		<script src="https://students.salisbury.edu/~cmitchell7/Webmap2/Java/gjson/Road.js"></script>
+		<script src="https://students.salisbury.edu/~cmitchell7/Webmap2/Java/gjson/RiverWater.js"></script>
+		<script src="https://students.salisbury.edu/~cmitchell7/Webmap2/Java/gjson/Mountains.js"></script>
+		
+		
+		<!-- Images -->
+		<script src="https://students.salisbury.edu/~cmitchell7/Webmap2/Image/Elev1.tif"></script>
+		
+<!doctype html>
+
+<!-- Coded by C. M. Mitchell
+	 For some unknown reason...
+		-->
+
+		
+	</head>
+		<body>
+	
+		<!-- Fade auomation for text box/legend thing -->
+			<script>
+				$(document).ready(function() {
+					$('.legend').delay(1000).fadeOut('normal');
+					$('.img').hover(
+						function() {
+							$('.legend').fadeIn('normal');
+						},
+						function() {
+							$('.legend').fadeOut('normal');
+						}
+					);
+				});
+				
+			</script>
+
+			
+			<!-- Logo or somthing -->
+			</div>
+			
+
+			<div id="map"></div>
+			
+			
+			<script>
+			
+			
+			//calling geo JASON and embeded styles from javascript
+			//=================Background=================
+			
+			
+			
+			var a = L.geoJson(bak, {
+				style: back})
+				
+				a1 = L.geoJson(bak, {
+				style: backblack})
+				
+				//=================Countries=================
+				b4080 = L.geoJson(country2, {
+				style: countrystyle4080,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Country 4080:</b> " + feature.properties.GC_4080,popupOptions);
+				//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+				//layer.on(click: zoomToFeatures);
+					}
+					})
+				
+				b4075 = L.geoJson(country2, {
+				style: countrystyle4075,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Country 4075:</b> " + feature.properties.GC_4075,popupOptions);
+				//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+				//layer.on(click: zoomToFeatures);
+					}
+					})
+					
+				b4875 = L.geoJson(country2, {
+				style: countrystyle4875,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Country 4875:</b> " + feature.properties.GC_4875,popupOptions);
+				//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+				//layer.on(click: zoomToFeatures);
+					}
+					})
+					
+				b3600 = L.geoJson(country2, {
+				style: countrystyle3600,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Country 3600:</b> " + feature.properties.GC_3600,popupOptions);
+				//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+				//layer.on(click: zoomToFeatures);
+					}
+					})
+					
+				b5125 = L.geoJson(country2, {
+				style: countrystyle5125,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Country 5125:</b> " + feature.properties.GC_5125,popupOptions);
+				//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+				//layer.on(click: zoomToFeatures);
+					}
+					})
+					
+				b6300 = L.geoJson(country2, {
+				style: countrystyle6300,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Country 6300:</b> " + feature.properties.GC_6300,popupOptions);
+				//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+				//layer.on(click: zoomToFeatures);
+					}
+					})
+					
+				b3940 = L.geoJson(country2, {
+				style: countrystyle3940,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Country 3940:</b> " + feature.properties.GC_3940,popupOptions);
+				//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+				//layer.on(click: zoomToFeatures);
+					}
+					})
+					
+				b3915 = L.geoJson(country2, {
+				style: countrystyle3915,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Country 3915:</b> " + feature.properties.GC_3915,popupOptions);
+				//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+				//layer.on(click: zoomToFeatures);
+					}
+					})
+					
+				b6520 = L.geoJson(country2, {
+				style: countrystyle6520,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Country 6520:</b> " + feature.properties.GC_6520,popupOptions);
+				//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+				//layer.on(click: zoomToFeatures);
+					}
+					})
+					
+				b6200 = L.geoJson(country2, {
+				style: countrystyle6200,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Country 6200:</b> " + feature.properties.GC_6200,popupOptions);
+				//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+				//layer.on(click: zoomToFeatures);
+					}
+					})
+					
+				b5800 = L.geoJson(country2, {
+				style: countrystyle5800,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Country 5800:</b> " + feature.properties.GC_5800,popupOptions);
+				//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+				//layer.on(click: zoomToFeatures);
+					}
+					})
+					
+				b5900 = L.geoJson(country2, {
+				style: countrystyle5900,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Country 5900:</b> " + feature.properties.GC_5900,popupOptions);
+				//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+				//layer.on(click: zoomToFeatures);
+					}
+					})
+					
+				b5920 = L.geoJson(country2, {
+				style: countrystyle5920,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Country 5920:</b> " + feature.properties.GC_5920,popupOptions);
+				//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+				//layer.on(click: zoomToFeatures);
+					}
+					})
+					
+				b5940 = L.geoJson(country2, {
+				style: countrystyle5940,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Country 5940:</b> " + feature.properties.GC_5940,popupOptions);
+				//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+				//layer.on(click: zoomToFeatures);
+					}
+					})
+					
+				b5965 = L.geoJson(country2, {
+				style: countrystyle5965,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Country 5965:</b> " + feature.properties.GC_5965,popupOptions);
+				//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+				//layer.on(click: zoomToFeatures);
+					}
+					})
+				b5400 = L.geoJson(country2, {
+				style: countrystyle5400,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Country 5400:</b> " + feature.properties.GC_5400,popupOptions);
+				//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+				//layer.on(click: zoomToFeatures);
+					}
+					})
+				
+				
+					
+				b5780 = L.geoJson(country2, {
+				style: countrystyle5780,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Country 5780:</b> " + feature.properties.GC_5780,popupOptions);
+				//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+				//layer.on(click: zoomToFeatures);
+					}
+					})
+					
+				b5840 = L.geoJson(country2, {
+				style: countrystyle5840,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Country 5840:</b> " + feature.properties.GC_5840,popupOptions);
+				//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+				//layer.on(click: zoomToFeatures);
+					}
+					})
+					
+				b5870 = L.geoJson(country2, {
+				style: countrystyle5870,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Country 5870:</b> " + feature.properties.GC_5870,popupOptions);
+				//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+				//layer.on(click: zoomToFeatures);
+					}
+					})
+					
+				b5500 = L.geoJson(country2, {
+				style: countrystyle5500,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Country 5500:</b> " + feature.properties.GC_5500,popupOptions);
+				//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+				//layer.on(click: zoomToFeatures);
+					}
+					})
+					
+				b1 = L.geoJson(country2, {
+				style: countrymi,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Sqare Miles :</b> " + feature.properties.SqMi,popupOptions);
+				//("<b>Sqare Miles:</b> " + feature.properties.SqMi,popupOptions);
+				//layer.on(click: zoomToFeatures);
+					}
+					})
+					
+				bclas = L.geoJson(country2, {
+				style: countryclassic,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Country Classical:</b> " + feature.properties.Classical_Countries,popupOptions);
+					}
+					})
+				
+				
+				
+			//switch statement to categorically style	
+				//=================Creeks=================
+				c = L.geoJson(creek, {
+				style: rivs
+				})
+
+				//=================Lakes=================
+				d = L.geoJson(lake, {
+				style: LakeStyle,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 220};
+				layer.bindPopup("<b>Surface Area (SqMi):</b> " + feature.properties.Sq_Mi,popupOptions);
+				}
+				})
+				
+				//switch statement to categorically style these Rivers
+				//=================Rivers=================
+				e = L.geoJson(river, {
+				style: riv
+				})
+				
+				//bind popups
+				//=================High Areas=================
+				g = L.geoJson(Mount, {
+				style: Mountsty}),
+				
+				//=================Roads=================
+				h = L.geoJson(Road, {
+				style: roadsty1,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Type:</b> " + feature.properties.Type,popupOptions);
+					layer.bindPopup("<b>Length (Mi):</b> " + feature.properties.Mile_Dec
+					,popupOptions);
+				}
+				})
+				
+				//=================River Area=================
+				i = L.geoJson(Watriv, {
+				style: RivStyle}),
+				
+				//=================Walls=================
+				f = L.geoJson(Wall, {
+				style: wallsty1,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Wall:</b> " + feature.properties.Name,popupOptions);
+					layer.bindPopup("<b>Length (Mi):</b> " + feature.properties.Length
+					,popupOptions);
+				}
+				})
+
+				//=================Cities=================
+				j = L.geoJson(city, {
+					pointToLayer: function (feature, latlng) {
+					return L.circleMarker(latlng, city);},
+				style: Cityst,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>Name:</b> " + feature.properties.Name,popupOptions);
+				}
+				})
+				
+				k = L.geoJson(grat, {
+				style: gratst,
+				onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+				layer.bindPopup("<b>degrees:</b> " + feature.properties.degrees,popupOptions);
+				}
+				
+				})
+			
+
+			//assigning variables to layers for control	
+				//=================background=================
+			var aShp = L.layerGroup([a]),
+				a1Shp = L.layerGroup([a1]),
+				
+				//=================country=================
+				b4080Shp = L.layerGroup([b4080]),
+				b4075Shp = L.layerGroup([b4075]),
+				b4875Shp = L.layerGroup([b4875]),
+				b3600Shp = L.layerGroup([b3600]),
+				b5125Shp = L.layerGroup([b5125]),
+				b6520Shp = L.layerGroup([b6520]),
+				b5500Shp = L.layerGroup([b5500]),
+				b6200Shp = L.layerGroup([b6200]),
+				b5800Shp = L.layerGroup([b5800]),
+				b5900Shp = L.layerGroup([b5900]),
+				b5920Shp = L.layerGroup([b5920]),
+				b5940Shp = L.layerGroup([b5940]),
+				
+				b5780Shp = L.layerGroup([b5780]),
+				b5400Shp = L.layerGroup([b5400]),
+				b5840Shp = L.layerGroup([b5840]),
+				b5870Shp = L.layerGroup([b5870]),
+				b5965Shp = L.layerGroup([b5965]),
+				b3940Shp = L.layerGroup([b3940]),
+				b3915Shp = L.layerGroup([b3915]),
+				b6300Shp = L.layerGroup([b6300]),
+				
+				bclasShp = L.layerGroup([bclas]),
+				b1Shp = L.layerGroup([b1]),
+				
+				//=================creek=================
+				cShp = L.layerGroup([c]),
+				
+				//=================lake=================
+				dShp = L.layerGroup([d]),
+				
+				//=================mountains=================
+				gShp = L.layerGroup([g]),
+				
+				//=================roads=================
+				hShp = L.layerGroup([h]),
+				
+				//=================river area=================
+				iShp = L.layerGroup([i]),				
+				
+				//=================Walls=================
+				fShp = L.layerGroup([f]),
+				
+				//=================citys=================
+				jShp = L.layerGroup([j]),
+				
+				//=================citys=================
+				kShp = L.layerGroup([k]),
+				
+				//=================rivers=================
+				eShp = L.layerGroup([e]);			
+				//rivers
+				
+			//background images
+			//var CartoDB_DarkMatterNoLabels = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+			//	attribution: 'Map data: &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
+			//	//subdomains: 'abcd',
+			//	maxZoom: 17
+			//});
+			
+			//[-2.8758827, 30.7293144], [0.5410233, 35.9974411]	
+			//[-4.7268675, 36.0768829], [2.1164623, 29.1003032]
+					
+					
+			//set map extent, view, and default layer
+			var map = L.map('map', {
+				layers: [aShp]
+				}).setView([7.1328, -3.6559], 4.5);
+			//	}).setView([-0.9530146, 32.930699], 6.5);
+
+			
+			//Create Layered Groups
+
+			
+			
+			//create basemaps variable to call within the control
+			var baseMaps = {
+				//"Streets": OpenStreetMap_Mapnik,
+				//"Aerial": Esri_WorldImagery,
+				//"Terrain": CartoDB_DarkMatterNoLabels,
+				"Water Background": aShp,
+				"Black Background": a1Shp,
+				"Country (Classical)":bclasShp,
+				"Country (3600)":b3600Shp,
+				"Country (3915)":b3915Shp,
+				"Country (3940)":b3940Shp,
+				"Country (4075)":b4075Shp,
+				"Country (4080)":b4080Shp,
+				"Country (4875)":b4875Shp,
+				"Country (5125)":b5125Shp,
+				"Country (5400)":b5400Shp,
+				"Country (5500)":b5500Shp,
+				"Country (5800)":b5800Shp,
+				"Country (5840)":b5840Shp,
+				"Country (5870)":b5870Shp,
+				"Country (5900)":b5900Shp,
+				"Country (5920)":b5920Shp,
+				"Country (5940)":b5940Shp,
+				"Country (5965)":b5965Shp,
+				"Country (6200)":b6200Shp,
+				"Country (6300)":b6300Shp,
+				"Country (6520)":b6520Shp,
+				
+				
+				
+
+			};
+			
+			
+			//create overlays variable to call within the control. Calls layer groups
+			var overLays = {
+				"Creek":cShp,
+				"River":eShp,
+				"Lake":dShp,
+				"River Shapes":iShp,
+				"Mountain Simplified":gShp,
+				"Cities":jShp,
+				"Wall":fShp,
+				"Roads":hShp,
+				"Graticules":kShp,
+				"Countries":b1Shp				
+			};
+			
+			
+			//add control to map
+			L.control.layers(baseMaps, overLays).addTo(map);
+			
+
+			//Check this and associated scripts for errors. Displays tool, but not tool icon.  Error is likely in the script.
+			var measureControl = new L.Control.Measure(
+				{
+					position: 'topright',
+					primaryLengthUnit: 'meters',
+					activeColor: '#ABE67E'
+				}
+			);
+			measureControl.addTo(map);
+			
+			
+			</script>
+			
+		</body>
