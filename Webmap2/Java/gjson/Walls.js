@@ -573,7 +573,7 @@ var Wall =
 
 function wallsty1(feature) {
    return {
-   color: '#A11607',
+   color: '#e32511',
    weight: 2,
    opacity: .8,
    fillOpacity: .8,
