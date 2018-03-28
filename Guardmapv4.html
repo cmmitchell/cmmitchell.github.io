@@ -335,6 +335,11 @@
 					
 						}
 						})
+				
+				//===========================================
+				//==============Square Area==================
+				//===========================================
+				
 					b1 = L.geoJson(country3, {
 					style: countrymi,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
@@ -353,7 +358,7 @@
 						})
 				
 				//================================================
-				//================================================
+				//====================New Countries===============
 				//================================================
 				
 					b5030 = L.geoJson(countryg, {
@@ -442,10 +447,12 @@
 					layer.bindPopup("<b>Country 5400:</b> " + feature.properties.G54hun,popupOptions);
 					
 						}
-						})				
+						})		
+				
 				//================================================
+				//==================Future Countries==============
 				//================================================
-				//================================================
+				
 					//b5030 = L.geoJson(country3, {
 					//style: countrystyle5030,
 					//onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
@@ -511,6 +518,10 @@
 					}
 					})
 				
+				//===========================================
+				//===============Blank Country===============
+				//===========================================
+				
 					cdis = L.geoJson(countryDis, {
 					style: disstyle,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
@@ -537,13 +548,18 @@
 						}
 						})
 
-	//this is a seperating line ==================================================================================
-	//this is a seperating line ==================================================================================
-	//this is a seperating line ==================================================================================
+	//this is a seperating line ----------------------------------------------------------------------------------
+	//this is a seperating line ----------------------------------------------------------------------------------
+	//this is a seperating line ----------------------------------------------------------------------------------
 						
 
-				//switch statement to categorically style	
+				//================================================
+				//=========== Layer Additions ====================
+				//================================================
+				
+					//========================================
 					//=================Creeks=================
+					//========================================
 					c = L.geoJson(creek, {
 					style: rivs
 					})
@@ -552,8 +568,9 @@
 					style: rivsb
 					})
 				
-					
+					//========================================
 					//=================Lakes=================
+					//========================================
 					d = L.geoJson(lake, {
 					style: LakeStyle,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 220};
@@ -567,8 +584,11 @@
 					layer.bindPopup("<b>Surface Area (Mi²):</b> " + feature.properties.Sq_Mi,popupOptions);
 					}
 					})
+				
 					//switch statement to categorically style these Rivers
+					//========================================
 					//=================Rivers=================
+					//========================================
 					e = L.geoJson(river, {
 					style: riv
 					})
@@ -576,11 +596,17 @@
 					e1 = L.geoJson(river, {
 					style: rivb
 					})
+				
 					//bind popups
+					//========================================
 					//=================High Areas=================
+					//========================================
 					g = L.geoJson(Mount, {
 					style: Mountsty}),
+						
+					//========================================
 					//=================Roads=================
+					//========================================
 					h = L.geoJson(Road, {
 					style: roadsty1,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
@@ -589,22 +615,32 @@
 						,popupOptions);
 					}
 					})
+				
+					//========================================
 					//=================Cavern=================
+					//========================================
 					cav = L.geoJson(Caves, {
 					style: cavesty
 					
 					})
+				
+					//========================================
 					//=================River Area=================
+					//========================================
 					//i = L.geoJson(Watriv, {
 					//style: LakeStyle})
+				
+					//========================================
 					//=================Walls=================
+					//========================================
 					f = L.geoJson(Wall, {
 					style: wallsty1
 					
 					})
 				
-					
+					//========================================
 					//=================Cities=================
+					//========================================
 					j = L.geoJson(city, {
 						pointToLayer: function (feature, latlng) {
 						return L.circleMarker(latlng, city);},
@@ -613,7 +649,11 @@
 					layer.bindPopup("<b>Name:</b> " + feature.properties.Name,popupOptions);
 					}
 					})
-				//Grats
+				
+				//========================================
+				//========== Grats ==========
+				//========================================
+				
 					gs = L.geoJson(GeoRegion, {
 					style: gratGeo
 					})
@@ -639,8 +679,11 @@
 					}
 					})
 					
-	//this is a seperating line ==================================================================================
+	//==================================================================================
+	//===============================Layer Groups=======================================
+	//==================================================================================
 				
+				//========================================
 				//assigning variables to layers for control	
 					//=================background=================
 				var aShp = L.layerGroup([a]),
@@ -726,7 +769,7 @@
 					eShp = L.layerGroup([e]);			
 					//rivers
 				//background images
-
+	//this is a seperating line ==================================================================================
 				//set map extent, view, and default layer
 				var map = L.map('map', {
 					layers: [aShp],
@@ -785,6 +828,7 @@
 					"Country (6520)":b6520Shp,
 					"WWII (6528)":bWW2Shp,
 				};
+				
 				//create overlays variable to call within the control. Calls layer groups
 				var overLays = {
 					// 川
