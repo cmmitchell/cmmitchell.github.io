@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Himinsgard •𐌳• (Non-Countries) </title>
+		<title>Himinsgard •𐌳• v0(Non-Countries) </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -260,6 +260,11 @@
 					style: wallsty1
 					
 					})
+					
+					f1 = L.geoJson(Wall, {
+					style: wallsty2
+					
+					})
 				
 					//========================================
 					//=================Cities=================
@@ -283,6 +288,13 @@
 				
 					k = L.geoJson(grat, {
 					style: gratst,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>degrees:</b> " + feature.properties.degrees,popupOptions);
+					}
+					})
+				
+					kr = L.geoJson(grat, {
+					style: gratstr,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
 					layer.bindPopup("<b>degrees:</b> " + feature.properties.degrees,popupOptions);
 					}
@@ -343,10 +355,12 @@
 				    	//ibShp = L.layerGroup([i1b,ib]),
 					//=================Walls=================
 					fShp = L.layerGroup([f]),
+				    	f1Shp = L.layerGroup([f1]),
 					//=================citys=================
 					jShp = L.layerGroup([j]),
 					//=================citys=================
 					kShp = L.layerGroup([k]),
+				    	krShp = L.layerGroup([kr]),
 				    	k1Shp = L.layerGroup([k1]),
 				    	k5Shp = L.layerGroup([k5]),
 
@@ -401,6 +415,7 @@
 					
 					// 守備ライン
 					"Defensive Line":fShp,
+					"Defensive Line 2":f1Shp,
 					
 					// 道
 					"Roads":hShp,
@@ -410,6 +425,7 @@
 					
 					// 経度緯度
 					"Graticules 30":kShp,
+					"Graticules 30 (red)":krShp,
 					"Graticules 5":k5Shp,
 					"Graticules 1":k1Shp,
 					
