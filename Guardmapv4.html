@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Himinsgard •𐌳• ck2 </title>
+		<title>Himinsgard •𐌳• ck3 </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -628,8 +628,16 @@
 					//========================================
 					//=================River Area=================
 					//========================================
-					//i = L.geoJson(Watriv, {
-					//style: LakeStyle})
+					i = L.geoJson(rivbuff1, {
+					style:riverbuff1})
+					ib = L.geoJson(rivbuff1, {
+					style:riverbuff1b})
+				
+					i1 = L.geoJson(rivbuff2, {
+					style:riverbuff2})
+				
+					i1b = L.geoJson(rivbuff2, {
+					style:riverbuff2b})
 				
 					//========================================
 					//=================Walls=================
@@ -755,7 +763,10 @@
 					hShp = L.layerGroup([h]),
 				    	cavShp = L.layerGroup([cav]),	
 					//=================river area=================
-					//iShp = L.layerGroup([i]),				
+					iShp = L.layerGroup([i]),	
+				    	ibShp = L.layerGroup([ib]),
+				    	i1Shp = L.layerGroup([i1]),
+				    	i1bShp = L.layerGroup([i1b]),
 					//=================Walls=================
 					fShp = L.layerGroup([f]),
 					//=================citys=================
