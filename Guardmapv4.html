@@ -684,8 +684,12 @@
 
 				//set map extent, view, and default layer
 				var map = L.map('map', {
-					layers: [aShp]
+					layers: [aShp],
+					zoomDelta: 0.15,
+					zoomSnap: 0
 					}).setView([7.1328, -3.6559], 6.5);
+					
+       					
 				//	}).setView([-0.9530146, 32.930699], 6.5);
 
 	//this is a seperating line ==================================================================================
@@ -785,16 +789,15 @@
 				measureControl.addTo(map);
 				
 				L.control.scale({maxWidth: 150}).addTo(map);
-				
-				var poi1 = L.point(100, -180),
-				poi2 = L.point(-100, 180)
+				L.control.fullscreen().addTo(map);
+				//var poi1 = L.point(100, -180),
+				//poi2 = L.point(-100, 180)
 				    
-				L.bounds(poi1, poi2);		
+				//L.bounds(poi1, poi2);		
 				
-				L.map('map', {
-        			zoomDelta: 0.15,
-       				zoomSnap: 0
-    				});
+				//L.map('map', {
+        			
+    				//});
 			
 			
 			</script>
