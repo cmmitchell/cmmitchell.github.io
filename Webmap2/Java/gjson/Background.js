@@ -14,7 +14,7 @@ function back(feature) {
    weight: 1,
    opacity: 1,
    color: '#0099FF',
-   weight: 1,
+   weight: .1,
    opacity: 1,
    
    };
@@ -24,10 +24,10 @@ function backblack(feature) {
    return {
    fillColor: '#000000',
    fillOpacity: 1,
-   weight: 10,
+   weight: 1,
    opacity: 1,
    color: '#3e3e3e',
-   weight: 1,
+   weight: .1,
    opacity: 1,
    
    };
