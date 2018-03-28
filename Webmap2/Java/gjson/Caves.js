@@ -384,6 +384,7 @@ function cavesty(feature) {
    return {
    color: '#212020',
    weight: .95,
+   dashArray: '1',
    opacity: .3,
    
    };
