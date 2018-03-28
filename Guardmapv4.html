@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Himinsgard •𐌳• chck3 </title>
+		<title>Himinsgard •𐌳• chck2 </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -537,6 +537,10 @@
 					style: rivs
 					})
 				
+					c1 = L.geoJson(creek, {
+					style: rivsb
+					})
+				
 					
 					//=================Lakes=================
 					d = L.geoJson(lake, {
@@ -545,10 +549,21 @@
 					layer.bindPopup("<b>Surface Area (Mi²):</b> " + feature.properties.Sq_Mi,popupOptions);
 					}
 					})
+				
+					d1 = L.geoJson(lake, {
+					style: LakeStyleb,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 220};
+					layer.bindPopup("<b>Surface Area (Mi²):</b> " + feature.properties.Sq_Mi,popupOptions);
+					}
+					})
 					//switch statement to categorically style these Rivers
 					//=================Rivers=================
 					e = L.geoJson(river, {
 					style: riv
+					})
+				
+					e1 = L.geoJson(river, {
+					style: rivb
 					})
 					//bind popups
 					//=================High Areas=================
@@ -670,15 +685,17 @@
          
 					//=================creek=================
 					cShp = L.layerGroup([c]),
-				 	gsShp = L.layerGroup([gs]),
+				    	c1Shp = L.layerGroup([c1]),
+				 	
 					//=================lake=================
 					dShp = L.layerGroup([d]),
+				    	d1Shp = L.layerGroup([d1]),
 					//=================mountains=================
 					gShp = L.layerGroup([g]),
-				    
+				    	
 				  	lpntShp = L.layerGroup([lpnt]),
 				    
-				  	
+				  	gsShp = L.layerGroup([gs]),
 					//=================roads=================
 					hShp = L.layerGroup([h]),
 				    	cavShp = L.layerGroup([cav]),	
@@ -694,6 +711,7 @@
 				    	k5Shp = L.layerGroup([k5]),
 
 					//=================rivers=================
+				    	e1Shp = L.layerGroup([e1]),
 					eShp = L.layerGroup([e]);			
 					//rivers
 				//background images
@@ -760,10 +778,13 @@
 				var overLays = {
 					// 川
 					"Small River":cShp,
+					"Small River (Black)":c1Shp,
 					//川
 					"River":eShp,
+					"River (Black)":e1Shp,
 					// 湖
 					"Lake":dShp,
+					"Lake (Black)":d1Shp,
 					// 川
 					//"River Shapes":iShp,
 					// 山
