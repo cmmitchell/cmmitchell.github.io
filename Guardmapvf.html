@@ -130,21 +130,15 @@
 				//===========================================
 				
 					cdis = L.geoJson(countryDis, {
-					style: disstyle,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Mi²:</b> " + feature.properties.SqMi,popupOptions);
+					style: disstyle
 						}
 						})
 					cdis1 = L.geoJson(countryDis, {
-					style: disstyle,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Mi²:</b> " + feature.properties.SqMi,popupOptions);
+					style: disstyle
 						}
 						})
 					cdis2 = L.geoJson(countryDis, {
-					style: disstyle,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Mi²:</b> " + feature.properties.SqMi,popupOptions);
+					style: disstyle
 						}
 						})
 					bgeo = L.geoJson(country2, {
