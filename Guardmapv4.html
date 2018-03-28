@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Himinsgard •𐌳• chck0 </title>
+		<title>Himinsgard •𐌳• chck3 </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -506,6 +506,18 @@
 					layer.bindPopup("<b>Mi²:</b> " + feature.properties.SqMi,popupOptions);
 						}
 						})
+					cdis1 = L.geoJson(countryDis, {
+					style: disstyle,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Mi²:</b> " + feature.properties.SqMi,popupOptions);
+						}
+						})
+					cdis2 = L.geoJson(countryDis, {
+					style: disstyle,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Mi²:</b> " + feature.properties.SqMi,popupOptions);
+						}
+						})
 					bgeo = L.geoJson(country3, {
 					style: countrystyleGeo,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
@@ -653,8 +665,8 @@
 					bclasShp = L.layerGroup([bclas,a]),
 				    
 				    	cdisShp = L.layerGroup([cdis]),
-				    	cdis1Shp = L.layerGroup([cdis,a]),
-				    	cdis2Shp = L.layerGroup([cdis,a1]),
+				    	cdis1Shp = L.layerGroup([cdis1,a]),
+				    	cdis2Shp = L.layerGroup([cdis2,a1]),
          
 					//=================creek=================
 					cShp = L.layerGroup([c]),
