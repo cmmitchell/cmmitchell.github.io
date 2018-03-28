@@ -34,3 +34,12 @@ function gratst(feature) {
    
    };
 }
+
+function gratstr(feature) {
+   return {
+   color: '#783a3a',
+   weight: .8,
+   opacity: .7,
+   
+   };
+}
