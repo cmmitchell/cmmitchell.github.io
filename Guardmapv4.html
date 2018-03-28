@@ -419,13 +419,16 @@
 						})
 				
 
-					lpnt = L.geoJson(Locpoint, {
-					onEachFeature: function (feature, layer){
-						popupOptions = {color: "#5D6D7E", maxWidth: 250};
-						layer.bindPopup("<b>Region Name:</b> " + feature.properties.Name
-						,popupOptions);
-					}
-					})
+					//lpnt = L.geoJson(Locpoint, {
+					//onEachFeature: function (feature, layer){
+					//	popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					//	layer.bindPopup("<b>Region Name:</b> " + feature.properties.Name
+					//	,popupOptions);
+					//}
+					//})
+					//gs = L.geoJson(GeoRegion, {
+					//style: gratGeo
+					//})
 				
 				//===========================================
 				//===============Blank Country===============
@@ -571,9 +574,7 @@
 				//========== Grats =======================
 				//========================================
 				
-					gs = L.geoJson(GeoRegion, {
-					style: gratGeo
-					})
+					
 				
 					k = L.geoJson(grat, {
 					style: gratst,
@@ -666,9 +667,9 @@
 					//=================mountains=================
 					gShp = L.layerGroup([g]),
 				    	
-				  	lpntShp = L.layerGroup([lpnt]),
+				  	//lpntShp = L.layerGroup([lpnt]),
 				    
-				  	gsShp = L.layerGroup([gs]),
+				  	//gsShp = L.layerGroup([gs]),
 					//=================roads=================
 					hShp = L.layerGroup([h]),
 				    	cavShp = L.layerGroup([cav]),	
@@ -754,14 +755,14 @@
 				var overLays = {
 					// 川
 					"Small River":cShp,
-					"Small River (Black)":c1Shp,
+					//"Small River (Black)":c1Shp,
 					"River":eShp,
-					"River (Black)":e1Shp,
+					//"River (Black)":e1Shp,
 					//"River Shape":iShp,
 					//"River Shape (Black)":ibShp,
 					// 湖
 					"Lake":dShp,
-					"Lake (Black)":d1Shp,
+					//"Lake (Black)":d1Shp,
 					
 					// 山
 					"Mountain Simplified":gShp,
@@ -784,9 +785,9 @@
 					"Graticules 1":k1Shp,
 					
 					// 地方ライン
-					"Regional Dividers":gsShp,
+					//"Regional Dividers":gsShp,
 					// 地方ポイント
-					"Regional Points":lpntShp,
+					//"Regional Points":lpntShp,
 					
 					// 平方マイル
 					"Countries (Mi²)":b1Shp,
