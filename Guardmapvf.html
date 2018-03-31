@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Himinsgard 𐍆 ck1 (Non-Countries) </title>
+		<title>Himinsgard 𐍆 ck2 (Non-Countries) </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -223,12 +223,13 @@
 					//=================Roads=================
 					//========================================
 					h = L.geoJson(Road, {
-					style: roadsty1,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Type:</b> " + feature.properties.Type,popupOptions);
-						layer.bindPopup("<b>Length (Mi):</b> " + feature.properties.Mile_Dec
-						,popupOptions);
-					}
+					style: roadsty1
+
+					})
+				
+					h2 = L.geoJson(Road, {
+					style: roadsty2
+
 					})
 				
 					//========================================
@@ -333,6 +334,11 @@
 				    	cdisShp = L.layerGroup([cdis]),
 				    	cdis1Shp = L.layerGroup([cdis1,a]),
 				    	cdis2Shp = L.layerGroup([cdis2,a1]),
+				    
+				    	cavShp = L.layerGroup([cav]),	
+				    	lpntShp = L.layerGroup([lpnt]),
+				    
+				  	gsShp = L.layerGroup([gs]),
          
 					//=================creek=================
 					cShp = L.layerGroup([c]),
@@ -347,15 +353,16 @@
 				    	g2Shp = L.layerGroup([g2]),
 				    	gwShp = L.layerGroup([gw]),
 				    	
-				  	lpntShp = L.layerGroup([lpnt]),
-				    
-				  	gsShp = L.layerGroup([gs]),
+				  	
 					//=================roads=================
 					hShp = L.layerGroup([h]),
-				    	cavShp = L.layerGroup([cav]),	
+				    	h2Shp = L.layerGroup([h2]),
+				    	
 					//=================river area=================
 					//iShp = L.layerGroup([i1,i]),	
 				    	//ibShp = L.layerGroup([i1b,ib]),
+				    
+				    	
 					//=================Walls=================
 					fShp = L.layerGroup([f]),
 				    	f1Shp = L.layerGroup([f1]),
@@ -424,6 +431,7 @@
 					
 					// 道
 					"Roads":hShp,
+					"Roads 2":h2Shp,
 					
 					// 洞窟
 					"Caves":cavShp,
