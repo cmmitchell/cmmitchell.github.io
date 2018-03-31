@@ -570,9 +570,9 @@
 					layer.bindPopup("<b>Name:</b> " + feature.properties.Name,popupOptions);
 					}
 					})
-					j2 = L.geoJson(Namecity, {
+					j2 = L.geoJson(Namedcity, {
 						pointToLayer: function (feature, latlng) {
-						return L.circleMarker(latlng, city);},
+						return L.circleMarker(latlng, Namedcity);},
 					style: namecityst,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
 					layer.bindPopup("<b>Name:</b> " + feature.properties.Name,popupOptions);
