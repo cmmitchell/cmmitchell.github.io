@@ -437,21 +437,15 @@
 				
 					cdis = L.geoJson(countryDis, {
 					style: disstyle,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Mi²:</b> " + feature.properties.SqMi,popupOptions);
-						}
+					
 						})
 					cdis1 = L.geoJson(countryDis, {
 					style: disstyle,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Mi²:</b> " + feature.properties.SqMi,popupOptions);
-						}
+					
 						})
 					cdis2 = L.geoJson(countryDis, {
 					style: disstyle,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Mi²:</b> " + feature.properties.SqMi,popupOptions);
-						}
+					
 						})
 					bgeo = L.geoJson(country2, {
 					style: countrystyleGeo,
