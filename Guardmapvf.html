@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Himinsgard 𐍆 ck0(Non-Countries) </title>
+		<title>Himinsgard 𐍆 ck1 (Non-Countries) </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -213,6 +213,12 @@
 					g = L.geoJson(Mount, {
 					style: Mountsty}),
 						
+					g2 = L.geoJson(Mount, {
+					style: Mountsty2}),
+						
+					gw = L.geoJson(Mount, {
+					style: Mountstyw}),
+						
 					//========================================
 					//=================Roads=================
 					//========================================
@@ -337,6 +343,9 @@
 				    	d1Shp = L.layerGroup([d1]),
 					//=================mountains=================
 					gShp = L.layerGroup([g]),
+				    
+				    	g2Shp = L.layerGroup([g2]),
+				    	gwShp = L.layerGroup([gw]),
 				    	
 				  	lpntShp = L.layerGroup([lpnt]),
 				    
@@ -403,6 +412,8 @@
 					
 					// 山
 					"Mountain Simplified":gShp,
+					"Mountain Opaque":g2Shp,
+					"Mountain White":gwShp,
 					
 					// 都市
 					"Cities ":jShp,
