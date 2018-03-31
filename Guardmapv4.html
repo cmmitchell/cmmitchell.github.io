@@ -570,6 +570,14 @@
 					layer.bindPopup("<b>Name:</b> " + feature.properties.Name,popupOptions);
 					}
 					})
+					j2 = L.geoJson(Namecity, {
+						pointToLayer: function (feature, latlng) {
+						return L.circleMarker(latlng, Namecity);},
+					style: namecityst,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Name:</b> " + feature.properties.Name,popupOptions);
+					}
+					})
 				
 				//========================================
 				//========== Grats =======================
@@ -681,6 +689,7 @@
 					fShp = L.layerGroup([f]),
 					//=================citys=================
 					jShp = L.layerGroup([j]),
+				    	j2Shp = L.layerGroup([j2]),
 					//=================citys=================
 					kShp = L.layerGroup([k]),
 				    	k1Shp = L.layerGroup([k1]),
@@ -770,6 +779,7 @@
 					
 					// 都市
 					"Cities ":jShp,
+					"Cities 2":j2Shp,
 					
 					// 守備ライン
 					"Defensive Line":fShp,
