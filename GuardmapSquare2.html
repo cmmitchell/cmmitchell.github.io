@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Square Area ck2 </title>
+		<title>Square Area ck1 </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -445,23 +445,69 @@
 				L.control.fullscreen().addTo(map);
 				
 		//this is a seperating line ----------------------------------------------------------------------------------	
-				
+				function getColore(e) {
+				    return e > 580000  ? '#006739' :
+					   e > 300000 ? '#238b45' :
+					   e > 180000   ? '#2f9a52' :
+					   e > 100000   ? '#41ab5d' :
+					   e > 35000   ? '#67b469' :
+						   e > 0   ? '#8cbf86' :
+						      '#a1d99b';
+									  //
+									  //#c7e9c0
+				}
+
+				function getColorr(r) {
+				    return r > 1500000  ? '#006739' :
+					   r > 800000 ? '#238b45' :
+					   r > 465000   ? '#2f9a52' :
+					   r > 250000   ? '#41ab5d' :
+					   r > 90000   ? '#67b469' :
+						   r > 0   ? '#8cbf86' :
+						      '#a1d99b';
+					
 				var kilometerLegend = L.control({position: 'bottomright'});
 				kilometerLegend.onAdd = function (map) {
-				var div = L.DomUtil.create('div', 'info legend');
-				    div.innerHTML +=
-				    '<img src="https://cmmitchell.github.io/Webmap2/Image/Sqkm_ledgend.jpg" alt="legend" width="134" height="147">';
-					
-				return div;
+
+					var div = L.DomUtil.create('div', 'info legend'),
+						grades = [0, 90000, 250000, 465000, 800000, 1500000],
+					    	
+						labels = [],
+						from, to;
+
+					for (var i = 0; i < grades.length; i++) {
+						from = grades[i];
+						to = grades[i + 1];
+
+						labels.push(
+							'<i style="background:' + getColorr(from + 1) + '"></i> ' +
+							from + (to ? '&ndash;' + to : '+'));
+					}
+
+					div.innerHTML = labels.join('<br>');
+					return div;
 				};
 				
 				var mileLegend = L.control({position: 'bottomright'});
 				
 				mileLegend.onAdd = function (map) {
-				var div = L.DomUtil.create('div', 'info legend');
-				    div.innerHTML +=
-				    '<img src="https://cmmitchell.github.io/Webmap2/Image/Sqmi_ledgend.jpg" alt="legend" width="134" height="147">';
-				return div;
+
+					var div = L.DomUtil.create('div', 'info legend'),
+						grades = [0, 35000, 100000, 180000, 300000, 580000],
+						labels = [],
+						from, to;
+
+					for (var i = 0; i < grades.length; i++) {
+						from = grades[i];
+						to = grades[i + 1];
+
+						labels.push(
+							'<i style="background:' + getColore(from + 1) + '"></i> ' +
+							from + (to ? '&ndash;' + to : '+'));
+					}
+
+					div.innerHTML = labels.join('<br>');
+					return div;
 				};
 				
 				map.on('overlayadd', function(eventLayer){
