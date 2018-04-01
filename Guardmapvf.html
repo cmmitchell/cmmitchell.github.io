@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Himinsgard 𐍆 ck2 (Non-Countries) </title>
+		<title>Himinsgard 𐍆 ck3 (Non-Countries) </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -482,7 +482,7 @@
 				disLegend.onAdd = function (map) {
 				var div = L.DomUtil.create('div', 'info legend');
 				    div.innerHTML +=
-				    '<img src="Sqkm_ledgend.jpg" alt="legend" width="134" height="147">';
+				    '<img src="Sqmi_ledgend.jpg" alt="legend" width="134" height="147">';
 				return div;
 				};
 
@@ -496,26 +496,18 @@
 				// Add this one (only) for now, as the Population layer is on by default
 				//disLegend.addTo(map);
 
-				//map.on('overlayadd', function (eventLayer) {
-				//    // Switch to the legend...
-				//	this.removeControl(disLegend);
-				//	disLegendChange.addTo(this);
-				//}
-				//     else { // Or switch to the Population Change legend...
-				//        if (eventLayer.name === 'SqMi') {
-				//	this.removeControl(disLegendChange);
-				//	disLegend.addTo(this);
-					
-				//    }
-				//});
 				map.on('overlayadd', function (eventLayer) {
-				    // Switch to legend
+				    // Switch to the Population legend...
 				    if (eventLayer.name === 'SqMi') {
+					//this.removeControl(populationChangeLegend);
 					disLegend.addTo(this);
 				    } else { // Or switch to the Population Change legend...
 					this.removeControl(disLegend);
+					//populationChangeLegend.addTo(this);
 				    }
 				});
+				
+
 				
 		//this is a seperating line ----------------------------------------------------------------------------------	
 
