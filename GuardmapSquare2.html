@@ -427,16 +427,16 @@
 				};
 				
 		//this is a seperating line ----------------------------------------------------------------------------------
-				function getColore(e) {
-				    return e > 580000  ? '#006739' :
-					   e > 300000 ? '#238b45' :
-					   e > 180000   ? '#2f9a52' :
-					   e > 100000   ? '#41ab5d' :
-					   e > 35000   ? '#67b469' :
-						   e > 0   ? '#8cbf86' :
-						      '#a1d99b';
+				//function getColore(e) {
+				//    return e > 580000  ? '#006739' :
+				//	   e > 300000 ? '#238b45' :
+				//	   e > 180000   ? '#2f9a52' :
+				//	   e > 100000   ? '#41ab5d' :
+				//	   e > 35000   ? '#67b469' :
+				//		   e > 0   ? '#8cbf86' :
+				//		      '#a1d99b';
 									
-				}
+				//}
 
 				//function getColorr(r) {
 				//    return r > 1500000  ? '#006739' :
@@ -470,14 +470,14 @@
 				//	return div;
 				//};
 				
-				var mileLegend = L.control({position: 'bottomright'});
+				//var mileLegend = L.control({position: 'bottomright'});
 	
-				mileLegend.onAdd = function (map) {
+				//mileLegend.onAdd = function (map) {
 
-					var div = L.DomUtil.create('div', 'info legend'),
-						grades = [0, 35000, 100000, 180000, 300000, 580000],
-						labels = [],
-						from, to;
+					//var div = L.DomUtil.create('div', 'info legend'),
+					//	grades = [0, 35000, 100000, 180000, 300000, 580000],
+					//	labels = [],
+					//	from, to;
 
 					//for (var i = 0; i < grades.length; i++) {
 					//	from = grades[i];
@@ -488,31 +488,31 @@
 					//		from + (to ? '&ndash;' + to : '+'));
 					//}
 
-					div.innerHTML = labels.join('<br>');
-					return div;
-				};
+					//div.innerHTML = labels.join('<br>');
+					//return div;
+				//};
 				
-				map.on('overlayadd', function(eventLayer){
-				    if (eventLayer.name === 'Countries (Km²)'){
-					map.addControl(kilometerLegend);
-				    } 
-				});
-				map.on('overlayremove', function(eventLayer){
-				    if (eventLayer.name === 'Countries (Km²)'){
-					 map.removeControl(kilometerLegend);
-				    } 
-				});
+				//map.on('overlayadd', function(eventLayer){
+				//    if (eventLayer.name === 'Countries (Km²)'){
+				//	map.addControl(kilometerLegend);
+				//    } 
+				//});
+				//map.on('overlayremove', function(eventLayer){
+				//    if (eventLayer.name === 'Countries (Km²)'){
+				//	 map.removeControl(kilometerLegend);
+				//    } 
+				//});
 				
-				map.on('overlayadd', function(eventLayer){
-				    if (eventLayer.name === 'Countries (Mi²)'){
-					map.addControl(mileLegend);
-				    } 
-				});
-				map.on('overlayremove', function(eventLayer){
-				    if (eventLayer.name === 'Countries (Mi²)'){
-					 map.removeControl(mileLegend);
-				    } 
-				});
+				//map.on('overlayadd', function(eventLayer){
+				//    if (eventLayer.name === 'Countries (Mi²)'){
+				//	map.addControl(mileLegend);
+				//    } 
+				//});
+				//map.on('overlayremove', function(eventLayer){
+				//    if (eventLayer.name === 'Countries (Mi²)'){
+				//	 map.removeControl(mileLegend);
+				//    } 
+				//});
 				
 				
 				
