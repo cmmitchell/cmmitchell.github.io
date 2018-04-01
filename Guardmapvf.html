@@ -475,36 +475,7 @@
 				L.control.fullscreen().addTo(map);
 				
 		//this is a seperating line ----------------------------------------------------------------------------------	
-				var disLegend = L.control({position: 'bottomright'});
-				var disLegend2 = L.control({position: 'bottomright'});
-			
-				
-
-				disLegend.onAdd = function (map) {
-				var div = L.DomUtil.create('div', 'info legend');
-				    div.innerHTML +=
-				    '<img src="Sqmi_ledgend.jpg" alt="legend" width="134" height="147">';
-				return div;
-				};
-
-
-				disLegend2.onAdd = function (map) {
-				
-				};
-
-				// Add this one (only) for now, as the Population layer is on by default
-				//disLegend.addTo(map);
-
-				map.on('overlayadd', function (eventLayer) {
-				    // Switch to the Population legend...
-				    if (eventLayer.name === 'SqMi') {
-					this.removeControl(disLegend2);
-					disLegend.addTo(this);
-				    } else { // Or switch to the Change legend...
-					this.removeControl(disLegend);
-					disLegend2.addTo(this);
-				    }
-				});
+		
 				
 
 				
