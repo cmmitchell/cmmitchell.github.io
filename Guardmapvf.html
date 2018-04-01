@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Himinsgard 𐍆 ck3 (Non-Countries) </title>
+		<title>Himinsgard 𐍆 ck1 (Non-Countries) </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -483,13 +483,7 @@
 				L.control.fullscreen().addTo(map);
 				
 		//this is a seperating line ----------------------------------------------------------------------------------	
-				//var miLegend;
-
-				//document.getElementById('Mi²').addEventListener('click', function () {
-				//    miLegend = L.control({'position': 'topright'}).addTo(map);
-				//});
-
-				//console.log(miLegend) // returns the legend instance
+				
 				var kilometerLegend = L.control({position: 'bottomright'});
 				kilometerLegend.onAdd = function (map) {
 				var div = L.DomUtil.create('div', 'info legend');
@@ -508,29 +502,29 @@
 				};
 				
 				map.on('overlayadd', function(eventLayer){
-				    if (eventLayer.name === 'Km²'){
+				    if (eventLayer.name === 'Countries (Km²)'){
 					map.addControl(kilometerLegend);
 				    } 
 				});
 
 				map.on('overlayremove', function(eventLayer){
-				    if (eventLayer.name === 'Km²'){
+				    if (eventLayer.name === 'Countries (Km²)'){
 					 map.removeControl(kilometerLegend);
 				    } 
 				});
 				
 				map.on('overlayadd', function(eventLayer){
-				    if (eventLayer.name === 'Mi²'){
+				    if (eventLayer.name === 'Countries (Mi²)'){
 					map.addControl(mileLegend);
 				    } 
 				});
 
 				map.on('overlayremove', function(eventLayer){
-				    if (eventLayer.name === 'Mi²'){
+				    if (eventLayer.name === 'Countries (Mi²)'){
 					 map.removeControl(mileLegend);
 				    } 
 				});
-				
+			
 
 				
 		//this is a seperating line ----------------------------------------------------------------------------------	
