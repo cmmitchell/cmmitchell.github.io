@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Himinsgard •𐌳• ck0 </title>
+		<title>Himinsgard •𐌳• ck3 </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -453,6 +453,18 @@
 					style: disstyle
 					
 						})
+					cdis3 = L.geoJson(countryDis, {
+					style: disstyle1
+					
+						})
+					cdisg1 = L.geoJson(countryDis, {
+					style: disstyleg1
+					
+						})
+					cdisg2 = L.geoJson(countryDis, {
+					style: disstyleg2
+					
+						})
 					bgeo = L.geoJson(country2, {
 					style: countrystyleGeo,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
@@ -689,6 +701,9 @@
 				    	cdisShp = L.layerGroup([cdis]),
 				    	cdis1Shp = L.layerGroup([cdis1,a]),
 				    	cdis2Shp = L.layerGroup([cdis2,a1]),
+				    	cdis3Shp = L.layerGroup([cdis3,a1]),
+				    	cdisg1Shp = L.layerGroup([cdisg1,a1]),
+				    	cdisg2Shp = L.layerGroup([cdisg2,a1]),
 				    
 				    	cavShp = L.layerGroup([cav]),	
          
@@ -753,8 +768,11 @@
 					"Water Background": aShp,
 					"Black Background": a1Shp,
 					"Blank Country B.G.": cdisShp,
-					"Country & Water B.G.": cdis1Shp,
+					"Country & Water Grey 1 B.G.": cdis1Shp,
+					"Country & Water Grey 2 B.G.": cdis3Shp,
 					"Country & Black B.G.": cdis2Shp,
+					"Country & Water  Green 1 B.G.": cdisg1Shp,
+					"Country & Water  Green 2 B.G.": cdisg2Shp,
 					"Country (Classical)":bclasShp,
 					"Country (3600)":b3600Shp,
           				"Country (3750)":b3750Shp,
