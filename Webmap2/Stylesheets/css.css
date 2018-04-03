@@ -19,25 +19,11 @@ html, body, #map {
     	width: 300px;
 	z-index: 1;
 }
-.legend i {
-	position: fixed;
-	right: 45px;
-	bottom: 78px;
-    	width: 300px;
-	z-index: 1;
-}
+
 .mileLegend {
 	position: fixed;
-	right: 45px;
-	bottom: 78px;
     	width: 300px;
 	z-index: 1;
 }
-.mileLegend i {
-	position: fixed;
-	right: 45px;
-	bottom: 78px;
-    	width: 300px;
-	z-index: 1;
-}
+
 
