@@ -13,9 +13,6 @@ html, body, #map {
 }
 
 .legend {
-	position: fixed;
-	right: 45px;
-	bottom: 78px;
     	width: 300px;
 	z-index: 1;
 }
