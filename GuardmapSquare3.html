@@ -431,18 +431,19 @@
 				
 	
 				
-				var mileLegend = L.control({position: 'bottomright'})
-				
-				mileLegend.onAdd = function (map) {position = c("bottomright"), na.label = "NA", 
-					  colors = ('#006739','#238b45','#2f9a52','#41ab5d','#67b469','#8cbf86'), 
-					  opacity = 0.5, labels = ("A", "B", "C", "D", "E", "F"), title = NULL, layerId = NULL
-					
-				};
 				var legend = L.control({position: 'bottomright'});
-				legend.onAdd = function (map) { na.label = "NA", 
-					  colors = ['#006739','#238b45','#2f9a52','#41ab5d','#67b469','#8cbf86'], 
-					  opacity = 0.5, labels = ["A", "B", "C", "D", "E", "F"], title = NULL, layerId = NULL
-							      };
+
+				legend.onAdd = function (map) {
+
+				    var div = L.DomUtil.create('div', 'info legend'),
+					grades = [0, 10, 20, 50, 100, 200],
+					labels = ["A", "B", "C", "D", "E", "F"];
+
+				    // loop through our density intervals and generate a label with a colored square for each interval
+				   
+
+				    return div;
+				};
 				
 				
 				
