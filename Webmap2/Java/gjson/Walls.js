@@ -754,12 +754,12 @@ function wallsty1(feature) {
 }
 
 function wallsty2(feature){
-		switch (feature.properties.Discriptio) {
-		case 'Heavy_Wall': return {color: '#e32511', weight: 2.35, opacity: .8};
-		case 'Heavy Wall': return {color: '#e32511', weight: 2.35, opacity: .8};
+	switch (feature.properties.Discriptio) {
+	case 'Heavy_Wall': return {color: '#e32511', weight: 2.35, opacity: .8};
+	case 'Heavy Wall': return {color: '#e32511', weight: 2.35, opacity: .8};
         case 'Wall': return {color: '#c92a62', weight: 2.35, opacity: .8};
         case 'Light_Wall': return {color: '#c77c1e', weight: 1.95, opacity: .8};
-		case 'Light Wall': return {color: '#c77c1e', weight: 1.95, opacity: .8};
+	case 'Light Wall': return {color: '#c77c1e', weight: 1.95, opacity: .8};
         case 'Defensive_Wall': return {color: '#e32511', weight: 1.95, opacity: .8};
         case 'Boarder_Wall': return {color: '#b61e0e', weight: 1.5, opacity: .8};
         case 'City_Wall': return {color: '#c1a91b', weight: 1.15, opacity: .8};
