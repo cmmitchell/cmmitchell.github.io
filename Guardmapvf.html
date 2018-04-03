@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Himinsgard 𐍆 ck2 (Non-Countries) </title>
+		<title>Himinsgard 𐍆 ck1 (Non-Countries) </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -32,6 +32,10 @@
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Graticule_5.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Graticule_1.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Caves.js"></script>
+		
+		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/RiverLarge.js"></script>
+		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/RiverMedium.js"></script>
+		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/RiverSmall.js"></script>
 	
 
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Walls.js"></script>
@@ -169,17 +173,6 @@
 				//================================================
 				
 					//========================================
-					//=================Creeks=================
-					//========================================
-					c = L.geoJson(creek, {
-					style: rivs
-					})
-				
-					c1 = L.geoJson(creek, {
-					style: rivsb
-					})
-				
-					//========================================
 					//=================Lakes=================
 					//========================================
 					d = L.geoJson(lake, {
@@ -200,12 +193,32 @@
 					//========================================
 					//=================Rivers================= reminder: switch statement to categorically style
 					//========================================
-					e = L.geoJson(river, {
-					style: riv
+					e = L.geoJson(riverL, {
+					style: rivL
 					})
 				
-					e1 = L.geoJson(river, {
-					style: rivb
+					e1 = L.geoJson(riverL, {
+					style: rivSb
+					})
+				
+					//Small Rivers
+				
+					n = L.geoJson(riverS, {
+					style: rivL
+					})
+				
+					n1 = L.geoJson(riverS, {
+					style: rivSb
+					})
+				
+					//=================Creeks=================
+
+					c = L.geoJson(riverM, {
+					style: rivM
+					})
+				
+					c1 = L.geoJson(riverM, {
+					style: rivMb
 					})
 				
 					
@@ -342,9 +355,7 @@
 				    
 				  	gsShp = L.layerGroup([gs]),
          
-					//=================creek=================
-					cShp = L.layerGroup([c]),
-				    	c1Shp = L.layerGroup([c1]),
+
 				 	
 					//=================lake=================
 					dShp = L.layerGroup([d]),
@@ -377,6 +388,11 @@
 				    	k5Shp = L.layerGroup([k5]),
 
 					//=================rivers=================
+					//=================creek=================
+					cShp = L.layerGroup([c]),
+				    	c1Shp = L.layerGroup([c1]),
+				    	nShp = L.layerGroup([n]),
+				    	n1Shp = L.layerGroup([n1]),
 				    	e1Shp = L.layerGroup([e1]),
 					eShp = L.layerGroup([e]);			
 					//rivers
@@ -416,8 +432,10 @@
 				//create overlays variable to call within the control. Calls layer groups
 				var overLays = {
 					// 川
-					"Small River":cShp,
-					"Small River (Black)":c1Shp,
+					"Small River":nShp,
+					"Small River (Black)":n1Shp,
+					"Medium River":cShp,
+					"Medium River (Black)":c1Shp,
 					"River":eShp,
 					"River (Black)":e1Shp,
 					//"River Shape":iShp,
