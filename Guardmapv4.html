@@ -868,45 +868,7 @@
 				};
 				
 		//this is a seperating line ----------------------------------------------------------------------------------
-								var kilometerLegend = L.control({position: 'bottomright'});
-				kilometerLegend.onAdd = function (map) {
-				var div = L.DomUtil.create('div', 'info legend');
-				    div.innerHTML +=
-				    '<img src="https://cmmitchell.github.io/Webmap2/Image/Sqkm_ledgend.jpg" alt="legend" width="134" height="147">';
-					
-				return div;
-				};
-				
-				var mileLegend = L.control({position: 'bottomright'});
-				
-				mileLegend.onAdd = function (map) {
-				var div = L.DomUtil.create('div', 'info legend');
-				    div.innerHTML +=
-				    '<img src="https://cmmitchell.github.io/Webmap2/Image/Sqmi_ledgend.jpg" alt="legend" width="134" height="147">';
-				return div;
-				};
-				
-				map.on('basemapadd', function(eventLayer){
-				    if (eventLayer.name === 'Countries (Km²)'){
-					map.addControl(kilometerLegend);
-				    } 
-				});
-				map.on('basemapremove', function(eventLayer){
-				    if (eventLayer.name === 'Countries (Km²)'){
-					 map.removeControl(kilometerLegend);
-				    } 
-				});
-				
-				map.on('basemapadd', function(eventLayer){
-				    if (eventLayer.name === 'Countries (Mi²)'){
-					map.addControl(mileLegend);
-				    } 
-				});
-				map.on('basemapremove', function(eventLayer){
-				    if (eventLayer.name === 'Countries (Mi²)'){
-					 map.removeControl(mileLegend);
-				    } 
-				});
+
 				
 				//add control to map
 				L.control.layers(baseMaps, overLays).addTo(map);
