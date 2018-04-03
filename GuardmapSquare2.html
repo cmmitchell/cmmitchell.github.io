@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Square Area ckQvN </title>
+		<title>Square Area ckQvQN </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -467,15 +467,16 @@
 				//};
 				
 				
-				//map.on('overlayadd', function(eventLayer){
-				 //   if (eventLayer.name === 'Countries (Mi²)'){
-				//	map.addControl(legend);
-				//    } 
-				//});
-				//map.on('overlayremove', function(eventLayer){
-				//    if (eventLayer.name === 'Countries (Mi²)'){
-				//	 map.removeControl(legend);
-				//    } 
+				map.on('overlayadd', function(eventLayer){
+				    if (eventLayer.name === 'Countries (Mi²)'){
+					map.addControl(legend);
+				    } 
+				});
+				map.on('overlayremove', function(eventLayer){
+				    if (eventLayer.name === 'Countries (Mi²)'){
+					 map.removeControl(legend);
+				    } 
+				});
 
 				
 				
