@@ -444,6 +444,14 @@
 					  colors = ['#006739','#238b45','#2f9a52','#41ab5d','#67b469','#8cbf86'], 
 					  opacity = 0.5, labels = ["A", "B", "C", "D", "E", "F"], title = NULL, layerId = NULL
 				};
+				    for (var i = 0; i < grades.length; i++) {
+					div.innerHTML +=
+					    '<i style="background:' + colors(grades[i] + 1) + '"></i> ' +
+					    grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+				    }
+
+				    return div;
+				};
 				
 				legend.addTo(map);
 				
