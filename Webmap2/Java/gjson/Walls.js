@@ -1,4 +1,4 @@
-var Walls =
+var Wall =
 {
 "type": "FeatureCollection",
 "name": "Walls",
