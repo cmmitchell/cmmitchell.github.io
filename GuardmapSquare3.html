@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Square Area ckQvN </title>
+		<title>Square Area ckQvQN </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -428,7 +428,6 @@
 				
 		//this is a seperating line ----------------------------------------------------------------------------------
 			
-
 				
 	
 				
@@ -447,14 +446,11 @@
 				var div = L.DomUtil.create('div', 'info legend');
 				    labels = ['<strong>Categories</strong>'],
 				    categories = ['Low','Meds','High','Not High','Yes'];
-
 				    for (var i = 0; i < categories.length; i++) {
-
 					    div.innerHTML += 
 					    labels.push(
 						'<i class="circle" style="background:' + getColor(categories[i]) + '"></i> ' +
 					    (categories[i] ? categories[i] : '+'));
-
 					}
 					div.innerHTML = labels.join('<br>');
 				    return div;
@@ -467,37 +463,25 @@
 				//};
 				
 				
-				//map.on('overlayadd', function(eventLayer){
-				 //   if (eventLayer.name === 'Countries (Mi²)'){
-				//	map.addControl(legend);
-				//    } 
-				//});
-				//map.on('overlayremove', function(eventLayer){
-				//    if (eventLayer.name === 'Countries (Mi²)'){
-				//	 map.removeControl(legend);
-				//    } 
-
+				map.on('overlayadd', function(eventLayer){
+				    if (eventLayer.name === 'Countries (Mi²)'){
+					map.addControl(legend);
+				    } 
+				});
+				map.on('overlayremove', function(eventLayer){
+				    if (eventLayer.name === 'Countries (Mi²)'){
+					 map.removeControl(legend);
+				    } 
+				});
 				
 				
 				
 			//this is a seperating line ----------------------------------------------------------------------------------			
 				//add control to map
 				L.control.layers(baseMaps, overLays).addTo(map);
-				//Check this and associated scripts for errors. Displays tool, but not tool icon.  Error is likely in the script.
-				var measureControl = new L.Control.Measure(
-					{
-						position: 'topright',
-						primaryLengthUnit: 'meters',
-						activeColor: '#ABE67E'
-					}
-				);
-				measureControl.addTo(map);
-				
-				L.control.scale({maxWidth: 150, position: 'bottomleft'}).addTo(map);
-				L.control.fullscreen().addTo(map);
+
 				
 		//this is a seperating line ----------------------------------------------------------------------------------	
-
 			
 				
 		//this is a seperating line ----------------------------------------------------------------------------------	
