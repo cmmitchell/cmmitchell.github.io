@@ -419,19 +419,19 @@
 						}
 						})
 				
-					//lpnt = L.geoJson(Locpoint, {
-					//onEachFeature: function (feature, layer){
-					//	popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					//	layer.bindPopup("<b>Region Name:</b> " + feature.properties.Name
-					//	,popupOptions);
-					//}
-					//})
-					//gs = L.geoJson(GeoRegion, {
-					//style: gratGeo
-					//})
-					//gsr = L.geoJson(GeoRegion, {
-					//style: gratGeor
-					//})
+					lpnt = L.geoJson(Locpoint, {
+					onEachFeature: function (feature, layer){
+						popupOptions = {color: "#5D6D7E", maxWidth: 250};
+						layer.bindPopup("<b>Region Name:</b> " + feature.properties.Name
+						,popupOptions);
+					}
+					})
+					gs = L.geoJson(GeoRegion, {
+					style: gratGeo
+					})
+					gsr = L.geoJson(GeoRegion, {
+					style: gratGeor
+					})
 				
 				//===========================================
 				//===============Blank Country===============
@@ -709,8 +709,8 @@
 				    	
 				  	//lpntShp = L.layerGroup([lpnt]),
 				    
-				  	//gsShp = L.layerGroup([gs]),
-				    	//gsrShp = L.layerGroup([gsr]),
+				  	gsShp = L.layerGroup([gs]),
+				    	gsrShp = L.layerGroup([gsr]),
 					//=================roads=================
 					hShp = L.layerGroup([h]),
 				    	h2Shp = L.layerGroup([h2]),
@@ -726,6 +726,7 @@
 				    	j2Shp = L.layerGroup([j2]),
 					//=================citys=================
 					kShp = L.layerGroup([k]),
+				    	krShp = L.layerGroup([kr]),
 				    	k1Shp = L.layerGroup([k1]),
 				    	k5Shp = L.layerGroup([k5]),
 					//=================rivers=================
