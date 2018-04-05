@@ -139,6 +139,14 @@
 					
 						}
 						})
+					b3128 = L.geoJson(country2, {
+					style: countrystyle3128,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 3128:</b> " + feature.properties.GC_3128,popupOptions);
+					
+						}
+						})
+				
 					b3600 = L.geoJson(country2, {
 					style: countrystyle3600,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
@@ -418,6 +426,9 @@
 					
 						}
 						})
+				//===========================================
+				//===============Geo Regionsss===============
+				//===========================================
 				
 					lpnt = L.geoJson(Locpoint, {
 					onEachFeature: function (feature, layer){
@@ -686,6 +697,7 @@
 				  	b4940Shp = L.layerGroup([b4940,a]),
 					b3915Shp = L.layerGroup([b3915,a]),
 				  	b3940Shp = L.layerGroup([b3940,a]),
+				    	b3128Shp = L.layerGroup([b3128,a]),
 					bclasShp = L.layerGroup([bclas,a]),
 				    
 				    	cdisShp = L.layerGroup([cdis]),
@@ -764,6 +776,7 @@
 					"Country & Water  Green 2 B.G.": cdisg2Shp,
 
 					"Country (Classical)":bclasShp,
+					"Country (3128)":b3128Shp,
 					"Country (3600)":b3600Shp,
           				"Country (3750)":b3750Shp,
 					"Country (3915)":b3915Shp,
