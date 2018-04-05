@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Master Copy </title>
+		<title>Master Copy dbck1 </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -151,6 +151,14 @@
 					style: countrystyle3600,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
 					layer.bindPopup("<b>Country 3600:</b> " + feature.properties.GC_3600,popupOptions);
+					
+						}
+						})
+					
+					b3650 = L.geoJson(country2, {
+					style: countrystyle3600,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 3650:</b> " + feature.properties.GC_3650,popupOptions);
 					
 						}
 						})
@@ -697,6 +705,7 @@
 					b4075Shp = L.layerGroup([b4075,a]),
 					b4875Shp = L.layerGroup([b4875,a]),
 					b3600Shp = L.layerGroup([b3600,a]),
+				    	b3650Shp = L.layerGroup([b3650,a]),
 					b4700Shp = L.layerGroup([b4700,a]),
 					b4500Shp = L.layerGroup([b4500,a]),
 					b4110Shp = L.layerGroup([b4110,a]),
@@ -784,6 +793,7 @@
 					"Country (Classical)":bclasShp,
 					"Country (3128)":b3128Shp,
 					"Country (3600)":b3600Shp,
+					"Country (3650)":b3650Shp,
           				"Country (3750)":b3750Shp,
 					"Country (3915)":b3915Shp,
 					"Country (3940)":b3940Shp,
