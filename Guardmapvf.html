@@ -314,6 +314,10 @@
 					style: gratGeo
 					})
 				
+					gsr = L.geoJson(GeoRegion, {
+					style: gratGeor
+					})
+				
 					k = L.geoJson(grat, {
 					style: gratst,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
@@ -369,6 +373,7 @@
 				    	lpntShp = L.layerGroup([lpnt]),
 				    
 				  	gsShp = L.layerGroup([gs]),
+				    	gsrShp = L.layerGroup([gsr]),
          
 
 				 	
@@ -488,6 +493,7 @@
 					
 					// 地方ライン
 					"Regional Dividers":gsShp,
+					"Regional Dividers (Red)":gsrShp,
 					// 地方ポイント
 					"Regional Points":lpntShp,
 					
