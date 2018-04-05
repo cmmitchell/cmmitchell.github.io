@@ -139,6 +139,14 @@
 					
 						}
 						})
+					b3128 = L.geoJson(country2, {
+					style: countrystyle3128,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 3128:</b> " + feature.properties.GC_3128,popupOptions);
+					
+						}
+						})
+				
 					b3600 = L.geoJson(country2, {
 					style: countrystyle3600,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
@@ -657,6 +665,7 @@
 				var aShp = L.layerGroup([a]),
 					a1Shp = L.layerGroup([a1]),
 					//=================country=================
+				    	b3128Shp = L.layerGroup([b3128,a]),
 					b5125Shp = L.layerGroup([b5125,a]),
 					b6520Shp = L.layerGroup([b6520,a]),
 					b5500Shp = L.layerGroup([b5500,a]),
@@ -777,7 +786,8 @@
 					"Country & Black B.G.": cdis2Shp,
 					"Country & Green 1 B.G.": cdisg1Shp,
 					"Country & Green 2 B.G.": cdisg2Shp,
-					"Country (Classical)":bclasShp,
+					"Country (Classical/pre-3000)":bclasShp,
+					"Country (3128)":b3128Shp,
 					"Country (3600)":b3600Shp,
           				"Country (3750)":b3750Shp,
 					"Country (3915)":b3915Shp,
