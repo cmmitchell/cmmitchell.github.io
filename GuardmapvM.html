@@ -903,7 +903,7 @@
 					}
 				);
 				measureControl.addTo(map);
-				
+	//,title = "Square Miles"			
 				
 									function getColor(d) {
 					    return d > 580000  ? '#006739' :
@@ -930,7 +930,7 @@
 					}
 
 
-				var legend = L.control({position: 'bottomright',title = "Square Miles"});
+				var legend = L.control({position: 'bottomright'});
 
 				legend.onAdd = function (map) {
 
@@ -951,8 +951,8 @@
 					div.innerHTML = labels.join('<br>');
 					return div;
 				};
-				var legendkm = L.control({position: 'bottomright',title = "Square Kilometers"});
-
+				var legendkm = L.control({position: 'bottomright'});
+//,title = "Square Kilometers"
 				legendkm.onAdd = function (map) {
 
 					var div = L.DomUtil.create('div', 'info legend'),
