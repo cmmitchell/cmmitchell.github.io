@@ -602,14 +602,7 @@
 					//i1b = L.geoJson(rivbuff2, {
 					//style:riverbuff2b})
 				
-				
-					bnotc = L.geoJson(notcountry, {
-					style: notcountry1,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 5870:</b> " + feature.properties.GC_5870,popupOptions);
-					
-						}
-						})
+
 				
 					//========================================
 					//=================Walls==================
@@ -738,8 +731,6 @@
 				    	cdisg2Shp = L.layerGroup([cdisg2,a]),
 				    
 				    	cavShp = L.layerGroup([cav]),	
-				    
-				    	bnotcShp = L.layerGroup([bnotc,a]),
          
 					
 				 	
@@ -808,7 +799,6 @@
 					"Country & Black B.G.": cdis2Shp,
 					"Country & Green 1 B.G.": cdisg1Shp,
 					"Country & Green 2 B.G.": cdisg2Shp,
-					"Country (bnc)":bnotcShp,
 					"Country (Classical/pre-3000)":bclasShp,
 					"Country (3128)":b3128Shp,
 					"Country (3600)":b3600Shp,
