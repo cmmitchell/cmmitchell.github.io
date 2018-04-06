@@ -604,23 +604,6 @@
 					div.innerHTML = labels.join('<br>');
 					return div;
 				};
-				//var legendkm = L.control({position: 'bottomright'});
-				//kilometerLegend.onAdd = function (map) {
-				//var div = L.DomUtil.create('div', 'info legend');
-				//    div.innerHTML +=
-				//    '<img src="https://cmmitchell.github.io/Webmap2/Image/Sqkm_ledgend.jpg" alt="legend" width="134" height="147">';
-					
-				//return div;
-				//};
-				
-				//var mileLegend = L.control({position: 'bottomright'});
-				
-				//mileLegend.onAdd = function (map) {
-				//var div = L.DomUtil.create('div', 'info legend');
-				//    div.innerHTML +=
-				//    '<img src="https://cmmitchell.github.io/Webmap2/Image/Sqmi_ledgend.jpg" alt="legend" width="134" height="147">';
-				//return div;
-				//};
 				
 				map.on('overlayadd', function(eventLayer){
 				    if (eventLayer.name === 'Countries (Km²)'){
