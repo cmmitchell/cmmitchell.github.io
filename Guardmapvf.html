@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Himinsgard 𐍆 CV dbcheck (Non-Countries) </title>
+		<title>Himinsgard 𐍆 VG dbcheck (Non-Countries) </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -583,17 +583,20 @@
 						from, to;
 
 					for (var i = 0; i < grades.length; i++) {
-						from = grades[i];
-						to = grades[i + 1];
+						div.innerHTML +=
+						    '<span style="background:' + getColor(grades[i] + 1) + '"></span> ';
+					    }
 
-						labels.push(
-							'<i style="background:' +getColor(from + 1) + '"></i> ' +
-							from + (to ? '&ndash;' + to : '+'));
-					}
+					    // a line break
+					    div.innerHTML += '<br>';
 
-					div.innerHTML = labels.join('<br>');
-					return div;
-				};
+					    // second loop for text
+					    for (var i = 0; i < grades.length; i++) {
+						div.innerHTML +=
+						    '<label>' + grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] : '+') + '</label>';
+					    }
+					    return div;
+					};
 		//this is a seperating line ----------------------------------------------------------------------------------
 				var legendkm = L.control({position: 'bottomright'});
 
