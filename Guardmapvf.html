@@ -559,17 +559,20 @@
 										  //
 										  //#c7e9c0
 					}
-					function getcity(c) {
-					    return c === 'City'  ? '#000000' :
-						   c === 'Guardian City' ? '#b550c1' :
-						   c === 'Major City'   ? '#e5de35' :
-						   c === 'Regional'   ? '#0a53a5' :
-						   c === 'Tiny_City'   ? '#ba0101' :
-							   c = 'Unnamed_City'   ? '#5a5757' :
-							      '#0099FF';
-										  //
-										  //#c7e9c0
+					function getCityc(c) {
+					    return c > 15  ? '#ba0101' :
+						   c > 7 ? '#c98925' :
+						   c > 4   ? '#000000' :
+							   c > 0   ? '#775b7a' :
+							      '#5a5757';
 					}
+
+function citynum(feature) {
+    return {
+        fillColor: getCityc(feature.properties.City_Weigh),
+        weight: 1, fillOpacity: 1, color: "#000000", weight: 1, opacity: 1
+    };
+}
 
 		//this is a seperating line ----------------------------------------------------------------------------------
 
@@ -637,19 +640,21 @@
 				legendcity.onAdd = function (map) {
 
 					var div = L.DomUtil.create('div', 'info legend'),
-					    	labels = ['<strong>Categories</strong>'],
-						categories = ['City','Guardian City','Major City','Regional','Tiny_City','Unnamed_City','Other'];
+						grades = [0, 1, 4, 7, 10],
+						labels = [];
+					for (var i = 0; i < grades.length; i++) {
+						div.innerHTML +=
+						    '<span style="background:' + getCityc(grades[i] + 1) + '"></span> ';
+					    }
 
-					for (var i = 0; i < categories.length; i++) {
+					    // a line break
+					    div.innerHTML += '<br>';
 
-						    div.innerHTML += 
-						    labels.push(
-							'<i class="circle" style="background:' + getcity(categories[i]) + '"></i> ' +
-						    (categories[i] ? categories[i] : '+'));
-
-						}
-						div.innerHTML = labels.join('<br>');
-
+					    // second loop for text
+					    for (var i = 0; i < grades.length; i++) {
+						div.innerHTML +=
+						    '<label>' + grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] : '+') + '</label>';
+					    }
 					    return div;
 					};
 			
