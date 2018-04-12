@@ -40,7 +40,12 @@ html, body, #map {
 	margin-right: 8px; 
 	opacity: 0.7;
 }
-
+.legendcity {
+	right: -35px;
+	bottom: 20px;
+    	width: 300px;
+	z-index: 1;
+}
 .mileLegend {
 	right: -35px;
 	bottom: 20px;
