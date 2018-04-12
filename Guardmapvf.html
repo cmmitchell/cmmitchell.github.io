@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Himinsgard 𐍆 QK dbcheck (Non-Countries) </title>
+		<title>Himinsgard 𐍆 OO dbcheck (Non-Countries) </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -314,6 +314,14 @@
 					}
 					})
 				
+					j3 = L.geoJson(city, {
+						pointToLayer: function (feature, latlng) {
+						return L.circleMarker(latlng, Namedcity);},
+					style: citynum,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Name:</b> " + feature.properties.Name,popupOptions);
+					}
+					})
 				//========================================
 				//========== Grats =======================
 				//========================================
@@ -410,6 +418,7 @@
 					//=================citys=================
 					jShp = L.layerGroup([j]),
 				    	j2Shp = L.layerGroup([j2]),
+				    	j3Shp = L.layerGroup([j3]),
 					//=================citys=================
 					kShp = L.layerGroup([k]),
 				    	krShp = L.layerGroup([kr]),
@@ -483,6 +492,7 @@
 					// 都市
 					"Cities ":jShp,
 					"Cities 2":j2Shp,
+					"Cities 3":j3Shp,
 					
 					// 守備ライン
 					"Defensive Line":fShp,
@@ -567,12 +577,6 @@
 							      '#5a5757';
 					}
 
-function citynum(feature) {
-    return {
-        fillColor: getCityc(feature.properties.City_Weigh),
-        weight: 1, fillOpacity: 1, color: "#000000", weight: 1, opacity: 1
-    };
-}
 
 		//this is a seperating line ----------------------------------------------------------------------------------
 
@@ -688,13 +692,13 @@ function citynum(feature) {
 				});
 				
 				map.on('overlayadd', function(eventLayer){
-				    if (eventLayer.name === 'Cities'){
+				    if (eventLayer.name === 'Cities 3'){
 					map.addControl(legendcity);
 				    } 
 				});
 
 				map.on('overlayremove', function(eventLayer){
-				    if (eventLayer.name === 'Cities'){
+				    if (eventLayer.name === 'Cities 3'){
 					 map.removeControl(legendcity);
 				    } 
 				});
