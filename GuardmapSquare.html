@@ -401,47 +401,43 @@
 
 
 				var legend = L.control({position: 'bottomright'});
-
 				legend.onAdd = function (map) {
-
 					var div = L.DomUtil.create('div', 'info legend'),
 						grades = [0, 35000, 100000, 180000, 300000, 580000],
 						labels = [],
 						from, to;
-
 					for (var i = 0; i < grades.length; i++) {
-						from = grades[i];
-						to = grades[i + 1];
-
-						labels.push(
-							'<i style="background:' +getColor(from + 1) + '"></i> ' +
-							from + (to ? '&ndash;' + to : '+'));
-					}
-
-					div.innerHTML = labels.join('<br>');
-					return div;
-				};
+						div.innerHTML +=
+						    '<span style="background:' + getColor(grades[i] + 1) + '"></span> ';
+					    }
+					    // a line break
+					    div.innerHTML += '<br>';
+					    // second loop for text
+					    for (var i = 0; i < grades.length; i++) {
+						div.innerHTML +=
+						    '<label>' + grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] : '+') + '</label>';
+					    }
+					    return div;
+					};
+		//this is a seperating line ----------------------------------------------------------------------------------
 				var legendkm = L.control({position: 'bottomright'});
-
 				legendkm.onAdd = function (map) {
-
 					var div = L.DomUtil.create('div', 'info legend'),
 						grades = [0, 90000, 250000, 465000, 800000, 1500000],
-						labels = [],
-						from, to;
-
+						labels = [];
 					for (var i = 0; i < grades.length; i++) {
-						from = grades[i];
-						to = grades[i + 1];
-
-						labels.push(
-							'<i style="background:' +getColorq(from + 1) + '"></i> ' +
-							from + (to ? '&ndash;' + to : '+'));
-					}
-
-					div.innerHTML = labels.join('<br>');
-					return div;
-				};
+						div.innerHTML +=
+						    '<span style="background:' + getColorq(grades[i] + 1) + '"></span> ';
+					    }
+					    // a line break
+					    div.innerHTML += '<br>';
+					    // second loop for text
+					    for (var i = 0; i < grades.length; i++) {
+						div.innerHTML +=
+						    '<label>' + grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] : '+') + '</label>';
+					    }
+					    return div;
+					};
 				//var legendkm = L.control({position: 'bottomright'});
 				//kilometerLegend.onAdd = function (map) {
 				//var div = L.DomUtil.create('div', 'info legend');
