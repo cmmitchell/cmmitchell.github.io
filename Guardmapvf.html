@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Himinsgard 𐍆 10 dbcheck (Non-Countries) </title>
+		<title>Himinsgard 𐍆 Q dbcheck (Non-Countries) </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -67,7 +67,6 @@
 		
 	</head>
 		<body>
-	
 		<!-- Fade auomation for text box/legend thing -->
 
 			
@@ -591,17 +590,29 @@
 						grades = [0, 90000, 250000, 465000, 800000, 1500000],
 						labels = [],
 						from, to;
-
 					for (var i = 0; i < grades.length; i++) {
-						from = grades[i];
-						to = grades[i + 1];
+						div.innerHTML +=
+						    '<i style="background:' + getColorq(grades[i] + 1) + '"></i> ';
+					    }
 
-						labels.push(
-							'<i style="background:' +getColorq(from + 1) + '"></i> ' +
-							from + (to ? '&ndash;' + to : '+'));
-					}
+					    // a line break
+					    div.innerHTML += '<br>';
 
-					div.innerHTML = labels.join('<br>');
+					    // second loop for text
+					    for (var i = 0; i < grades.length; i++) {
+						div.innerHTML +=
+						    '<i>' + grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] : '+') + '</i>';
+					    }
+					//for (var i = 0; i < grades.length; i++) {
+					//	from = grades[i];
+					//	to = grades[i + 1];
+
+					//	labels.push(
+					//		'<i style="background:' +getColorq(from + 1) + '"></i> ' +
+					//		from + (to ? '&ndash;' + to : '+'));
+					//}
+
+					//div.innerHTML = labels.join('<br>');
 					return div;
 				};
 				
