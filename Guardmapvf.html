@@ -637,20 +637,13 @@
 				legendcity.onAdd = function (map) {
 
 					var div = L.DomUtil.create('div', 'info legend'),
-						grades = [0, 90000, 250000, 465000, 800000, 1500000],
-						labels = [];
+						grades = [],
+						labels = ['City','Guardian City','Major City','Regional','Tiny_City','Unnamed_City','Other'];
+	
 					div.innerHTML +=
 						'<i class="circle" style="background:' + getcity(categories[i]) + '"></i> ' +
 						 (categories[i] ? categories[i] + '<br>' : '+');
 
-					    // a line break
-					    div.innerHTML += '<br>';
-
-					    // second loop for text
-					    for (var i = 0; i < grades.length; i++) {
-						div.innerHTML +=
-						    '<label>' + grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] : '+') + '</label>';
-					    }
 					    return div;
 					};
 			
@@ -694,18 +687,7 @@
 					 map.removeControl(legendcity);
 				    } 
 				});
-				
-				map.on('overlayadd', function(eventLayer){
-				    if (eventLayer.name === 'Cities 2'){
-					map.addControl(legendcity);
-				    } 
-				});
 
-				map.on('overlayremove', function(eventLayer){
-				    if (eventLayer.name === 'Cities 2'){
-					 map.removeControl(legendcity);
-				    } 
-				});
 				
 			
 
