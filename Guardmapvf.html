@@ -616,6 +616,30 @@
 					//div.innerHTML = labels.join('<br>');
 					return div;
 				};
+				var legendcity = L.control({position: 'bottomright'});
+				legendcity.onAdd = function (map) {
+
+					var div = L.DomUtil.create('div', 'info legend'),
+						grades = [0, 90000, 250000, 465000, 800000, 1500000],
+						labels = [];
+					div.innerHTML +=
+						'<i class="circle" style="background:' + getColorq(categories[i]) + '"></i> ' +
+						 (categories[i] ? categories[i] + '<br>' : '+');
+
+					    // a line break
+					    div.innerHTML += '<br>';
+
+					    // second loop for text
+					    for (var i = 0; i < grades.length; i++) {
+						div.innerHTML +=
+						    '<label>' + grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] : '+') + '</label>';
+					    }
+					    return div;
+					};
+
+        
+				
+				//Turn the various ledgends on/off
 				
 				map.on('overlayadd', function(eventLayer){
 				    if (eventLayer.name === 'Countries (Km²)'){
