@@ -559,7 +559,7 @@
 										  //
 										  //#c7e9c0
 					}
-
+		//this is a seperating line ----------------------------------------------------------------------------------
 
 				var legend = L.control({position: 'bottomright'});
 
@@ -582,6 +582,7 @@
 					div.innerHTML = labels.join('<br>');
 					return div;
 				};
+		//this is a seperating line ----------------------------------------------------------------------------------
 				var legendkm = L.control({position: 'bottomright'});
 
 				legendkm.onAdd = function (map) {
@@ -616,6 +617,7 @@
 					//div.innerHTML = labels.join('<br>');
 					return div;
 				};
+		//this is a seperating line ----------------------------------------------------------------------------------
 				var legendcity = L.control({position: 'bottomright'});
 				legendcity.onAdd = function (map) {
 
@@ -638,8 +640,8 @@
 					};
 
         
-				
-				//Turn the various ledgends on/off
+		//this is a seperating line ----------------------------------------------------------------------------------				
+				//Turn the various legends on/off
 				
 				map.on('overlayadd', function(eventLayer){
 				    if (eventLayer.name === 'Countries (Km²)'){
