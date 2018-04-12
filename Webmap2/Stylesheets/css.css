@@ -1,8 +1,8 @@
 html, body, #map {
 	width: 100%;
 	height: 100%;
-	border: solid;
 	background-color: lightsteelblue1;
+
 }
 
 .img {
@@ -60,6 +60,8 @@ html, body, #map {
 	text-align: left;
 	line-height: 18px;
 	color: #555;
+	border: solid;
+	background-color: lightsteelblue1;
 	
 }
 
