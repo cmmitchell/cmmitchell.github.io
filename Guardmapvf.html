@@ -588,11 +588,10 @@
 
 					var div = L.DomUtil.create('div', 'info legend'),
 						grades = [0, 90000, 250000, 465000, 800000, 1500000],
-						labels = [],
-						from, to;
+						labels = [];
 					for (var i = 0; i < grades.length; i++) {
 						div.innerHTML +=
-						    '<i style="background:' + getColorq(grades[i] + 1) + '"></i> ';
+						    '<span style="background:' + getColorq(grades[i] + 1) + '"></span> ';
 					    }
 
 					    // a line break
@@ -601,8 +600,10 @@
 					    // second loop for text
 					    for (var i = 0; i < grades.length; i++) {
 						div.innerHTML +=
-						    '<i>' + grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] : '+') + '</i>';
+						    '<label>' + grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] : '+') + '</label>';
 					    }
+					    return div;
+					};
 					//for (var i = 0; i < grades.length; i++) {
 					//	from = grades[i];
 					//	to = grades[i + 1];
