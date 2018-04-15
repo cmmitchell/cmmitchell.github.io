@@ -826,8 +826,8 @@
 					"Country (6520)":b6520Shp,
 					"Global War II (6528)":bWW2Shp,
 					// 平方マイル
-					"Countries (Mi²)":b1Shp,
-					"Countries (Km²)":b2Shp,
+					//"Countries (Mi²)":b1Shp,
+					//"Countries (Km²)":b2Shp,
 				};
 				
 				//create overlays variable to call within the control. Calls layer groups
@@ -996,11 +996,7 @@
 				    } 
 				});
 
-				map.on('overlayremove', function(eventLayer){
-				    if (eventLayer.name === 'Countries (Mi²)'){
-					 map.removeControl(legend);
-				    } 
-				});
+
 				
 				
 				L.control.scale({maxWidth: 150}).addTo(map);
