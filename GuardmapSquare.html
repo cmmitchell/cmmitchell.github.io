@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Square Area ckdd </title>
+		<title>C.M.M.'s Map (Square Area) [CK 1] </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -23,9 +23,9 @@
 		
 		<!-- GeoJSON overlays -->
 		
-		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Creeks.js"></script>	
+		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/RiverMedium.js"></script>	
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Lakes.js"></script>
-		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Rivers.js"></script>
+		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/RiverLarge.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Background.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Graticule_30.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Graticule_5.js"></script>
@@ -191,12 +191,12 @@
 					//========================================
 					//=================Rivers================= reminder: switch statement to categorically style
 					//========================================
-					e = L.geoJson(river, {
-					style: riv
+					e = L.geoJson(riverL, {
+					style: rivL
 					})
 				
-					e1 = L.geoJson(river, {
-					style: rivb
+					e1 = L.geoJson(riverL, {
+					style: rivSb
 					})
 				
 					
@@ -335,7 +335,7 @@
 				//create overlays variable to call within the control. Calls layer groups
 				var overLays = {
 					// 川
-					"River":eShp,
+					"River Large":eShp,
 					//"River Shape":iShp,
 					//"River Shape (Black)":ibShp,
 					// 湖
