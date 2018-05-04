@@ -91,7 +91,7 @@ html, body, #map {
 	height: 50px; 
 	margin-top: 4px;
 	opacity: 0.7;
-	padding: 6px 10px 6px 6px;
+	padding: 6px 8px;
 }
 .legend QSS, .legend QSSR { 
   width: 50px;
