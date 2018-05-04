@@ -85,6 +85,9 @@ html, body, #map {
 }
 
 .legend QS { 
+	padding: 6px 10px 6px 6px;
+	color: #000033;
+	background: #fff;
 	width: 25px; 
 	height: 50px; 
 	margin-top: 4px;
