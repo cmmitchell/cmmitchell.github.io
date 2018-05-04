@@ -85,7 +85,6 @@ html, body, #map {
 .legend QS { 
 	width: 25px; 
 	height: 50px; 
-	float: left; 
 	margin-right: 8px; 
 	text-align: left; 
 	font-size: 80%
