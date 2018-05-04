@@ -87,8 +87,8 @@ html, body, #map {
 .legend QS { 
 	color: #555;
 	background: #fff;
-	width: 25px; 
-	height: 40px; 
+	width: 16px; 
+	height: 16px; 
 	opacity: 0.7;
 	text-align: center;
 	margin-right: 8px; 
