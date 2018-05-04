@@ -87,6 +87,7 @@ html, body, #map {
 	height: 32px; 
 	float: left; 
 	text-align: center; 
+	font-size: 80%
 	opacity: 0.7;
 }
 .legend QSS, .legend QSSR { 
