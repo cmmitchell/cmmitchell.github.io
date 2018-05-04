@@ -18,8 +18,10 @@ html, body, #map {
 }
 
 .legend {
-	color: #555;
-	
+    padding: 6px 10px 6px 6px;
+    color: #000033;
+    background: #fff;
+
 }
 .kmlegend {
 	color: #555;
