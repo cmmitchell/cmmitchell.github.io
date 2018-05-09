@@ -29,7 +29,7 @@
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Graticule_30.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Graticule_5.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Graticule_1.js"></script>
-		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Caves.js"></script>
+
 		
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/RiverLarge.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/RiverMedium.js"></script>
@@ -645,14 +645,6 @@
 
 				
 					//========================================
-					//=================Cavern=================
-					//========================================
-					cav = L.geoJson(Caves, {
-					style: cavesty
-					
-					})
-				
-					//========================================
 					//=================River Area==============
 					//========================================
 					//i = L.geoJson(rivbuff1, {
@@ -805,7 +797,6 @@
 				    	cdisg1Shp = L.layerGroup([cdisg1,a]),
 				    	cdisg2Shp = L.layerGroup([cdisg2,a]),
 				    
-				    	cavShp = L.layerGroup([cav]),	
          
 					
 				 	
@@ -962,8 +953,6 @@
 					"Roads":hShp,
 					"Roads 2":h2Shp,
 					
-					// 洞窟
-					//"Caves":cavShp,
 					
 					// 経度緯度
 					"Graticules 30":kShp,
