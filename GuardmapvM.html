@@ -29,7 +29,6 @@
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Graticule_30.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Graticule_5.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Graticule_1.js"></script>
-		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Caves.js"></script>
 		
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/RiverLarge.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/RiverMedium.js"></script>
@@ -43,7 +42,7 @@
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/LocationPoints.js"></script>
 		
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/CountryDis.js"></script>
-		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Countries.js"></script>
+		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Countries_3.js"></script>
 		
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/GeneralRegionS.js"></script>
 		<!-- Broken Stuff -->
@@ -430,6 +429,76 @@
 					
 						}
 						})
+					b6028 = L.geoJson(country2, {
+					style: countrystylegcc6028,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 6028:</b> " + feature.properties.gcc6028,popupOptions);
+					
+						}
+						})
+					b3700 = L.geoJson(country2, {
+					style: countrystyle3700,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 3700:</b> " + feature.properties.GC3700,popupOptions);
+					
+						}
+						})
+				
+					b3800 = L.geoJson(country2, {
+					style: countrystyle3800,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 3800:</b> " + feature.properties.GC3800,popupOptions);
+					
+						}
+						})
+				
+					b3830 = L.geoJson(country2, {
+					style: countrystyle3830,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 3830:</b> " + feature.properties.GC3830,popupOptions);
+					
+						}
+						})
+				
+					b3905 = L.geoJson(country2, {
+					style: countrystyle3905,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 3905:</b> " + feature.properties.GC3905,popupOptions);
+					
+						}
+						})
+				
+					b4020 = L.geoJson(country2, {
+					style: countrystyle4020,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 4020:</b> " + feature.properties.GC4020,popupOptions);
+					
+						}
+						})
+				
+					b4030 = L.geoJson(country2, {
+					style: countrystyle4030,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 4030:</b> " + feature.properties.GC4030,popupOptions);
+					
+						}
+						})
+				
+					b4045 = L.geoJson(country2, {
+					style: countrystyle4045,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 4045:</b> " + feature.properties.GC4045,popupOptions);
+					
+						}
+						})
+				
+					b4065 = L.geoJson(country2, {
+					style: countrystyle4065,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 4065:</b> " + feature.properties.GC4065,popupOptions);
+					
+						}
+						})
 				//===========================================
 				//===============Geo Regionsss===============
 				//===========================================
@@ -565,13 +634,7 @@
 					style: roadsty2
 					})
 				
-					//========================================
-					//=================Cavern=================
-					//========================================
-					//cav = L.geoJson(Caves, {
-					//style: cavesty
-					
-					//})
+
 				
 					//========================================
 					//=================River Area==============
@@ -685,6 +748,8 @@
 					b1Shp = L.layerGroup([b1]),
 				    	b2Shp = L.layerGroup([b2]),
 				    	bgeoShp = L.layerGroup([bgeo]),
+				    
+				    	b6028Shp = L.layerGroup([b6028,a]),
 				  	
 				    
 				    	b5030Shp = L.layerGroup([b5030,a]),
@@ -694,6 +759,14 @@
 				    	b5250Shp = L.layerGroup([b5250,a]),
 				    	b5600Shp = L.layerGroup([b5600,a]),
 				    	b5725Shp = L.layerGroup([b5725,a]),
+				    	b3700Shp = L.layerGroup([b3700,a]),
+				    	b3800Shp = L.layerGroup([b3800,a]),
+				    	b3830Shp = L.layerGroup([b3830,a]),
+					b3905Shp = L.layerGroup([b3905,a]),
+					b4020Shp = L.layerGroup([b4020,a]),
+					b4030Shp = L.layerGroup([b4030,a]),
+					b4045Shp = L.layerGroup([b4045,a]),
+					b4065Shp = L.layerGroup([b4065,a]),
           
           				b4080Shp = L.layerGroup([b4080,a]),
 				    	b4000Shp = L.layerGroup([b4000,a]),
@@ -718,7 +791,7 @@
 				    	cdisg1Shp = L.layerGroup([cdisg1,a]),
 				    	cdisg2Shp = L.layerGroup([cdisg2,a]),
 				    
-				    	//cavShp = L.layerGroup([cav]),	
+				    	
          
 					
 				 	
@@ -790,10 +863,18 @@
 					"Country (3128)":b3128Shp,
 					"Country (3600)":b3600Shp,
 					"Country (3650)":b3650Shp,
+          				"Country (3700)":b3700Shp,
           				"Country (3750)":b3750Shp,
+					"Country (3800)":b3800Shp,
+					"Country (3830)":b3830Shp,
+					"Country (3905)":b3905Shp,
 					"Country (3915)":b3915Shp,
 					"Country (3940)":b3940Shp,
 					"Country (4000)":b4000Shp,
+					"Country (4020)":b4020Shp,
+					"Country (4030)":b4030Shp,
+					"Country (4045)":b4045Shp,
+					"Country (4065)":b4065Shp,
 					"Country (4075)":b4075Shp,
 					"Country (4080)":b4080Shp,
 					"Country (4110)":b4110Shp,
@@ -820,6 +901,7 @@
 					"Country (5940)":b5940Shp,
 					"Country (5965)":b5965Shp,
 					"Country (5980)":b5980Shp,
+					"Country (6028)":b6028Shp,
 					"Country (6080)":b6520Shp,
 					"Country (6200)":b6200Shp,
 					"Country (6300)":b6300Shp,
@@ -862,8 +944,7 @@
 					"Roads":hShp,
 					"Roads 2":h2Shp,
 					
-					// 洞窟
-					//"Caves":cavShp,
+
 					
 					// 経度緯度
 					"Graticules 30":kShp,
