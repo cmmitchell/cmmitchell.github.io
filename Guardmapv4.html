@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>C.M.'s Map •𐌳• [XXIVbq] </title>
+		<title>C.M.'s Map •𐌳• [XXIVb] </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -935,7 +935,7 @@
 					"Country (6300)":b6300Shp,
 					"Country (6520)":b6520Shp,
 					"Global War II (6528)":bWW2Shp,
-					"Regions":brgShp,
+					
 					// 平方マイル
 					//"Countries (Mi²)":b1Shp,
 					//"Countries (Km²)":b2Shp,
@@ -994,6 +994,8 @@
 
 					// 名前地方
 					//"Regions":bgeoShp,
+					//other region
+					"G.M.A. Region":brgShp,
 					
 				};
 				
@@ -1032,9 +1034,31 @@
 						   q > 90000   ? '#67b469' :
 							   q > 0   ? '#8cbf86' :
 							      '#a1d99b';
-										  //
-										  //#c7e9c0
+							
 					}
+					function gregColor(a) {
+						return a === 'Region 1' ? "#8e3774":
+							a === 'Region 2' ? "#468935":
+							a === 'Region 3' ? "#29ae60":
+							a === 'Region 4' ? "#1f0d81":
+							// #342969
+							a === 'Region 5' ? "#9d1b2a":
+							a === 'Region 6' ? "#5b7b4c":
+							a === 'Region 7' ? "#2f5c7c":
+							a === 'Region 8' ? "#b24936":
+							a === 'Region 9' ? "#9c9960":
+							a === 'Region 10' ? "#9a9945":
+							a === 'Region 11' ? "#149b72":
+							a === 'Region 12' ? "#542a8a":
+							a === 'Region 13' ? "#bc7962":
+							a === 'Region 14' ? "#42bd3d":
+							a === 'Region 15' ? "#2c56b8":
+							a === 'Region 16' ? "#4d5e44":
+							a === 'Region 17' ? "#218c87":
+								"#bcbcbc";
+					}	
+					
+
 
 
 				var legend = L.control({position: 'bottomright'});
@@ -1075,6 +1099,43 @@
 					    }
 					    return div;
 					};
+				
+		//this is a seperating line ----------------------------------------------------------------------------------	
+				
+				var legend2 = L.control({position: 'bottomright'});
+				legend2.onAdd = function (map) {
+
+				var div = L.DomUtil.create('div', 'info legend'),
+					labels = ['<strong>City</strong>'],
+					categories = ['Region 1', 'Region 2', 'Region 3', 'Region 4', 'Region 5', 'Region 6', 'Region 7', 'Region 8', 'Region 9', 'Region 10', 'Region 11', 
+						      'Region 12', 'Region 13', 'Region 14', 'Region 15', 'Region 16', 'Region 17', 'Region 18'];
+					
+
+					for (var i = 0; i < categories.length; i++) {
+
+					    div.innerHTML += 
+					    labels.push(
+						'<QS style="background:' + gregColor(categories[i]) + '"></QS> ' +
+					    (categories[i] ? categories[i] : '+'));
+
+					}
+					div.innerHTML = labels.join('<br>');
+				    return div;
+				    };
+				
+			//this is a seperating line ----------------------------------------------------------------------------------	
+				
+				map.on('overlayadd', function(eventLayer){
+				    if (eventLayer.name === 'G.M.A. Region'){
+					map.addControl(legend2);
+				    } 
+				});
+
+				map.on('overlayremove', function(eventLayer){
+				    if (eventLayer.name === 'G.M.A. Region'){
+					 map.removeControl(legend2);
+				    } 
+				});
 				
 				map.on('overlayadd', function(eventLayer){
 				    if (eventLayer.name === 'Provinces (Km²)'){
