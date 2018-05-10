@@ -981,6 +981,8 @@
 					"Graticules 5":k5Shp,
 					"Graticules 1":k1Shp,
 					
+					"Nations 4075":b4075Shp,
+					
 					
 					
 					// 地方ライン
@@ -1054,7 +1056,25 @@
 							a === 'Region 16' ? "#4d5e44":
 							a === 'Region 17' ? "#218c87":
 								"#bcbcbc";
-					}	
+					}
+				
+					function GenColors(t) {
+						return a === 'Guardian League Allies' ? "#123254":
+								a === 'Guardian Uninhabited Region' ? "#757f89":
+								a === 'Guardian Military Police' ? "#34495e":
+								a === 'Guardian Military' ? "#1b4067":	
+								a === 'Orkinus' ? "#69645f":
+								a === 'Orkinus N' ? "#312f2d":
+								a === 'Orkinus S' ? "#4b453f":
+								a === 'Orkinus W' ? "#292929":
+								a === 'Meridonia' ? "#750922":
+								a === 'SE Meridonia' ? "#75090e":
+								a === 'S Meridonia' ? "#601010":
+								a === 'W Meridonia' ? "#60000a":
+								a === 'E Meridonia' ? "#5c0606":
+								a === 'FE Meridonia' ? "#5c1010";
+
+					}
 					
 
 
@@ -1121,7 +1141,35 @@
 				    return div;
 				    };
 				
+				var legend3 = L.control({position: 'bottomright'});
+				legend2.onAdd = function (map) {
+				var div = L.DomUtil.create('div', 'info legend'),
+					labels = ['<strong>Major Countries</strong>'],
+					categories = ['Guardian League', ' ', ' ', 'Region 4', ' ', 'Enemy', ' ', ' ', ' ', 'Meridonia', ' ', 
+						      ' ', ' ', ' ', ' '];
+					
+					for (var i = 0; i < categories.length; i++) {
+					    div.innerHTML += 
+					    labels.push(
+						'<QS style="background:' + GenColors(categories[i]) + '"></QS> ' +
+					    (categories[i] ? categories[i] : '+'));
+					}
+					div.innerHTML = labels.join('<br>');
+				    return div;
+				    };
 			//this is a seperating line ----------------------------------------------------------------------------------	
+				
+				map.on('overlayadd', function(eventLayer){
+				    if (eventLayer.name === 'Nations 4075'){
+					map.addControl(legend3);
+				    } 
+				});
+
+				map.on('overlayremove', function(eventLayer){
+				    if (eventLayer.name === 'Nations 4075'){
+					 map.removeControl(legend3);
+				    } 
+				});
 				
 				map.on('overlayadd', function(eventLayer){
 				    if (eventLayer.name === 'G.M.A. Region'){
