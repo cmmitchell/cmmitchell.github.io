@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>C.M.'s Map (Master) [XIV] </title>
+		<title>C.M.'s Map (Master) [XIVc] </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -930,13 +930,13 @@
 					"Lake (Black)":d1Shp,
 					
 					// 山
-					"Mountain Simplified":gShp,
+					//"Mountain Simplified":gShp,
 					"Mountain Opaque":g2Shp,
 					"Mountain White":gwShp,
 					
 					// 都市
-					"Cities ":jShp,
-					"Cities 2":j2Shp,
+					//"Cities ":jShp,
+					//"Cities 2":j2Shp,
 					
 					// 守備ライン
 					"Defensive Line":fShp,
@@ -955,17 +955,17 @@
 					"Graticules 1":k1Shp,
 					
 					// 平方マイル
-					"Countries (Mi²)":b1Shp,
-					"Countries (Km²)":b2Shp,
+					"Provinces (Mi²)":b1Shp,
+					"Provinces (Km²)":b2Shp,
 					
 					// 地方ライン
 					"Regional Dividers":gsShp,
-					"Regional Dividers":gsrShp,
+					"Regional Dividers (r)":gsrShp,
 					// 地方ポイント
 					"Regional Points":lpntShp,
 					
 					// 名前地方
-					"Regions":bgeoShp,
+					//"Regions":bgeoShp,
 					
 				};
 				
@@ -1030,12 +1030,12 @@
 					    return div;
 					};
 				map.on('overlayadd', function(eventLayer){
-				    if (eventLayer.name === 'Countries (Mi²)'){
+				    if (eventLayer.name === 'Provinces (Mi²)'){
 					map.addControl(legend);
 				    } 
 				});
 				map.on('overlayremove', function(eventLayer){
-				    if (eventLayer.name === 'Countries (Mi²)'){
+				    if (eventLayer.name === 'Provinces (Mi²)'){
 					 map.removeControl(legend);
 				    } 
 				});
@@ -1069,12 +1069,12 @@
 					//return div;
 				//};
 				map.on('overlayadd', function(eventLayer){
-				    if (eventLayer.name === 'Countries (Km²)'){
+				    if (eventLayer.name === 'Provinces (Km²)'){
 					map.addControl(legendkm);
 				    } 
 				});
 				map.on('overlayremove', function(eventLayer){
-				    if (eventLayer.name === 'Countries (Km²)'){
+				    if (eventLayer.name === 'Provinces (Km²)'){
 					 map.removeControl(legendkm);
 				    } 
 				});
