@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>C.M.'s Map •𐌳• [XXIVcv] </title>
+		<title>C.M.'s Map •𐌳• [XXIVv] </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -505,6 +505,24 @@
 					
 						}
 						})
+					brg = L.geoJson(country2, {
+					style: regionG,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Region:</b> " + feature.properties.region_G,popupOptions);
+					
+						}
+						})
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
 				
 
 					//lpnt = L.geoJson(Locpoint, {
@@ -753,6 +771,7 @@
 				  	bWW2Shp = L.layerGroup([bWW2,a]),
 					b1Shp = L.layerGroup([b1]),
 				    	b2Shp = L.layerGroup([b2]),
+				    	brgShp = L.layerGroup([brg]),
 				    	//bgeoShp = L.layerGroup([bgeo]),
 				    
 				    	b3650Shp = L.layerGroup([b3650,a]),
@@ -916,6 +935,7 @@
 					"Country (6300)":b6300Shp,
 					"Country (6520)":b6520Shp,
 					"Global War II (6528)":bWW2Shp,
+					"Regions":brg2Shp,
 					// 平方マイル
 					//"Countries (Mi²)":b1Shp,
 					//"Countries (Km²)":b2Shp,
