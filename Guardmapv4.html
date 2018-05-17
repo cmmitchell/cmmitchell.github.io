@@ -519,7 +519,13 @@
 						}
 						})
 					
+					b6540 = L.geoJson(country2, {
+					style: countrystyle6540,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 6540:</b> " + feature.properties.GC_6540,popupOptions);
 					
+						}
+						})
 					
 					
 					
@@ -805,6 +811,7 @@
 					b4080Shp = L.layerGroup([b4080,a]),
 					
 				    	b6110Shp = L.layerGroup([b6110,a]),
+				    	b6540Shp = L.layerGroup([b6540,a]),
 				    	
 					b4075Shp = L.layerGroup([b4075,a]),
 					b4875Shp = L.layerGroup([b4875,a]),
@@ -941,6 +948,7 @@
 					"Country (6300)":b6300Shp,
 					"Country (6520)":b6520Shp,
 					"Global War II (6528)":bWW2Shp,
+					"Country (6540)":b6540Shp,
 					
 					// 平方マイル
 					//"Countries (Mi²)":b1Shp,
