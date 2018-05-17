@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Map •𐌳• [XXV v0.1.3] </title>
+		<title>Map •𐌳• [XXV v0.1.4] </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -1050,6 +1050,16 @@
 						   q > 50000   ? '#67b469' :
 							   q > 0   ? '#8cbf86' :
 							      '#a1d99b';
+							
+					}
+					function getColorj(j) {
+					    return j === 'North' ? "#2b288b":
+						   j === 'North (Late)' ? "#15135e":
+					    	   j === 'North (Neutral Assistance)' ? "#54527c":
+						   j === 'South' ? "#b61515":
+						   j === 'South (Late)' ? "#8b2828":
+						   j === 'South (Neutral Assistance)' ? "#986161":
+							      '#878787';
 							
 					}
 					function gregColor(a) {
