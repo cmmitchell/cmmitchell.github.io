@@ -1159,10 +1159,12 @@
 						      'Meridonia 3', 'Meridonia 4', 'Meridonia 5', 'Meridonia 6'];
 					
 					for (var i = 0; i < categories.length; i++) {
+
 					    div.innerHTML += 
 					    labels.push(
 						'<QS style="background:' + GenColors(categories[i]) + '"></QS> ' +
 					    (categories[i] ? categories[i] : '+'));
+
 					}
 					div.innerHTML = labels.join('<br>');
 				    return div;
