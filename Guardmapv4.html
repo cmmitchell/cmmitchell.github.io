@@ -511,7 +511,13 @@
 						}
 						})
 					
+					b6110 = L.geoJson(country2, {
+					style: countrystyle6110,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 6110:</b> " + feature.properties.GC6110,popupOptions);
 					
+						}
+						})
 					
 					
 					
@@ -798,6 +804,7 @@
 					b4065Shp = L.layerGroup([b4065,a]),
 					b4080Shp = L.layerGroup([b4080,a]),
 					
+				    	b6110Shp = L.layerGroup([b6110,a]),
 				    	
 					b4075Shp = L.layerGroup([b4075,a]),
 					b4875Shp = L.layerGroup([b4875,a]),
@@ -1059,20 +1066,20 @@
 					}
 				
 					function GenColors(t) {
-						return a === 'Guardian League Allies' ? "#123254":
-								a === 'Guardian Uninhabited Region' ? "#757f89":
-								a === 'Guardian Military Police' ? "#34495e":
-								a === 'Guardian Military' ? "#1b4067":	
-								a === 'Orkinus' ? "#69645f":
-								a === 'Orkinus N' ? "#312f2d":
-								a === 'Orkinus S' ? "#4b453f":
-								a === 'Orkinus W' ? "#292929":
-								a === 'Meridonia' ? "#750922":
-								a === 'SE Meridonia' ? "#75090e":
-								a === 'S Meridonia' ? "#601010":
-								a === 'W Meridonia' ? "#60000a":
-								a === 'E Meridonia' ? "#5c0606":
-									"#5c1010";
+						return t === 'Guardian League Allies' ? "#123254":
+							t === 'Guardian Uninhabited Region' ? "#757f89":
+							t === 'Guardian Military Police' ? "#34495e":
+							t === 'Guardian Military' ? "#1b4067":	
+							t === 'Orkinus' ? "#69645f":
+							t === 'Orkinus N' ? "#312f2d":
+							t === 'Orkinus S' ? "#4b453f":
+							t === 'Orkinus W' ? "#292929":
+							t === 'Meridonia' ? "#750922":
+							t === 'SE Meridonia' ? "#75090e":
+							t === 'S Meridonia' ? "#601010":
+							t === 'W Meridonia' ? "#60000a":
+							t === 'E Meridonia' ? "#5c0606":
+								"#5c1010";
 
 					}
 					
