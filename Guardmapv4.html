@@ -997,7 +997,7 @@
 					"Graticules 5":k5Shp,
 					"Graticules 1":k1Shp,
 					
-					"Nations 4075":b4075Shp,
+					
 					
 					
 					
@@ -1012,6 +1012,8 @@
 					//"Regions":bgeoShp,
 					//other region
 					"G.M.A. Region":brgShp,
+					"Nations 4075":b4075Shp,
+					"Global War II (6528)":bWW2Shp,
 					
 				};
 				
@@ -1188,7 +1190,27 @@
 				    return div;
 				    };
 			//this is a seperating line ----------------------------------------------------------------------------------	
+				var legend4 = L.control({position: 'bottomright'});
+				legend4.onAdd = function (map) {
+
+				var div = L.DomUtil.create('div', 'info legend'),
+					labels = ['<strong>Region</strong>'],
+					categories = ['North', 'North (Late)', 'North Assistance', 'South', 'South (Late)', 'South  Assistance', 'Neutral'];
+					
+
+					for (var i = 0; i < categories.length; i++) {
+
+					    div.innerHTML += 
+					    labels.push(
+						'<QS style="background:' + getColorj(categories[i]) + '"></QS> ' +
+					    (categories[i] ? categories[i] : '+'));
+
+					}
+					div.innerHTML = labels.join('<br>');
+				    return div;
+				    };
 				
+				//this is a seperating line ----------------------------------------------------------------------------------
 				map.on('overlayadd', function(eventLayer){
 				    if (eventLayer.name === 'Nations 4075'){
 					map.addControl(legend3);
@@ -1224,7 +1246,20 @@
 					 map.removeControl(legendkm);
 				    } 
 				});
-				
+				//=======
+				map.on('overlayadd', function(eventLayer){
+				    if (eventLayer.name === 'Global War II (6528)'){
+					map.addControl(legend4);
+				    } 
+				});
+
+				map.on('overlayremove', function(eventLayer){
+				    if (eventLayer.name === 'Global War II (6528)'){
+					 map.removeControl(legend4);
+				    } 
+				});
+				//=======
+										
 				map.on('overlayadd', function(eventLayer){
 				    if (eventLayer.name === 'Provinces (Mi²)'){
 					map.addControl(legend);
