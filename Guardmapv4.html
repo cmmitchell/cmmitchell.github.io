@@ -1013,7 +1013,7 @@
 					//other region
 					"G.M.A. Region":brgShp,
 					"Nations 4075":b4075Shp,
-					"Global War II (6528)":bWW2Shp,
+					"GW II Alliance":bWW2Shp,
 					
 				};
 				
@@ -1248,13 +1248,13 @@
 				});
 				//this is a seperating line -----------------------
 				map.on('overlayadd', function(eventLayer){
-				    if (eventLayer.name === 'Global War II (6528)'){
+				    if (eventLayer.name === 'GW II Alliance'){
 					map.addControl(legend4);
 				    } 
 				});
 
 				map.on('overlayremove', function(eventLayer){
-				    if (eventLayer.name === 'Global War II (6528)'){
+				    if (eventLayer.name === 'GW II Alliance'){
 					 map.removeControl(legend4);
 				    } 
 				});
