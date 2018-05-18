@@ -1182,7 +1182,7 @@
 
 					    div.innerHTML += 
 					    labels.push(
-						'<QS style="background:' + GenColors(categories[i]) + '"></QS> ' +
+						'<QN style="background:' + GenColors(categories[i]) + '"></QN> ' +
 					    (categories[i] ? categories[i] : '+'));
 
 					}
@@ -1194,7 +1194,7 @@
 				legend4.onAdd = function (map) {
 
 				var div = L.DomUtil.create('div', 'info legend'),
-					labels = ['<strong>Region</strong>'],
+					labels = ['<strong>Side</strong>'],
 					categories = ['North', 'North (Late)', 'North Assistance', 'South', 'South (Late)', 'South  Assistance', 'Neutral'];
 					
 
@@ -1202,7 +1202,7 @@
 
 					    div.innerHTML += 
 					    labels.push(
-						'<QS style="background:' + getColorj(categories[i]) + '"></QS> ' +
+						'<QQ style="background:' + getColorj(categories[i]) + '"></QQ> ' +
 					    (categories[i] ? categories[i] : '+'));
 
 					}
