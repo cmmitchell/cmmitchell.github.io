@@ -1145,7 +1145,27 @@
 					    }
 					    return div;
 					};
-				
+				//this is a seperating line ----------------------------------------------------------------------------------
+				var legendGW = L.control({position: 'bottomright'});
+				legendGW.onAdd = function (map) {
+
+				var div = L.DomUtil.create('div', 'info legend'),
+					labels = ['<strong>Sides</strong>'],
+					categories = ['North', 'North (Late)', 'N Assistance', 'South', 'South (Late)',  
+						      'S Assistance', 'Neutral'];
+					
+
+					for (var i = 0; i < categories.length; i++) {
+
+					    div.innerHTML += 
+					    labels.push(
+						'<QQ style="background:' + getColorj(categories[i]) + '"></QQ> ' +
+					    (categories[i] ? categories[i] : '+'));
+
+					}
+					div.innerHTML = labels.join('<br>');
+				    return div;
+				    };
 		//this is a seperating line ----------------------------------------------------------------------------------	
 				
 				var legend2 = L.control({position: 'bottomright'});
@@ -1172,26 +1192,7 @@
 		
 			//this is a seperating line ----------------------------------------------------------------------------------	
 				
-				var legendGW = L.control({position: 'bottomright'});
-				legendGW.onAdd = function (map) {
-
-				var div = L.DomUtil.create('div', 'info legend'),
-					labels = ['<strong>Sides</strong>'],
-					categories = ['North', 'North (Late)', 'N Assistance', 'South', 'South (Late)',  
-						      'S Assistance', 'Neutral'];
-					
-
-					for (var i = 0; i < categories.length; i++) {
-
-					    div.innerHTML += 
-					    labels.push(
-						'<QQ style="background:' + getColorj(categories[i]) + '"></QQ> ' +
-					    (categories[i] ? categories[i] : '+'));
-
-					}
-					div.innerHTML = labels.join('<br>');
-				    return div;
-				    };
+				
 				
 				
 			//this is a seperating line ----------------------------------------------------------------------------------	
