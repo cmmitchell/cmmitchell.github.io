@@ -1190,19 +1190,21 @@
 				    return div;
 				    };
 			//this is a seperating line ----------------------------------------------------------------------------------	
-				var legend4 = L.control({position: 'bottomright'});
-				legend4.onAdd = function (map) {
+				
+				var legendGW = L.control({position: 'bottomright'});
+				legendGW.onAdd = function (map) {
 
 				var div = L.DomUtil.create('div', 'info legend'),
-					labels = ['<strong>Side</strong>'],
-					categories = ['North', 'North (Late)', 'North Assistance', 'South', 'South (Late)', 'South  Assistance', 'Neutral'];
+					labels = ['<strong>Region</strong>'],
+					categories = ['North', 'North (Late)', 'North Assistance', 'South', 'South (Late)',  
+						      'South  Assistance', 'Neutral'];
 					
 
 					for (var i = 0; i < categories.length; i++) {
 
 					    div.innerHTML += 
 					    labels.push(
-						'<QQ style="background:' + getColorj(categories[i]) + '"></QQ> ' +
+						'<QS style="background:' + getColorj(categories[i]) + '"></QS> ' +
 					    (categories[i] ? categories[i] : '+'));
 
 					}
@@ -1249,13 +1251,13 @@
 				//this is a seperating line -----------------------
 				map.on('overlayadd', function(eventLayer){
 				    if (eventLayer.name === 'GW II Alliance'){
-					map.addControl(legend4);
+					map.addControl(legendGW);
 				    } 
 				});
 
 				map.on('overlayremove', function(eventLayer){
 				    if (eventLayer.name === 'GW II Alliance'){
-					 map.removeControl(legend4);
+					 map.removeControl(legendGW);
 				    } 
 				});
 				//this is a seperating line -----------------------
