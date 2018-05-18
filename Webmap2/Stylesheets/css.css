@@ -93,6 +93,24 @@ html, body, #map {
 	float: left;
 	
 }
+.legend QN { 
+	color: #555;
+	background: #fff;
+	width: 20px; 
+	height: 20px; 
+	opacity: 0.7;
+	float: left;
+	
+}
+.legend QQ { 
+	color: #555;
+	background: #fff;
+	width: 18px; 
+	height: 16px; 
+	opacity: 0.7;
+	float: left;
+	
+}
 .legend QSS, .legend QSSR { 
   width: 50px;
   height: 25px;
