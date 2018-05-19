@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Map •𐌳• [XXV v0.2.5] </title>
+		<title>Map •𐌳• [XXV v0.2.6] </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -527,7 +527,9 @@
 						}
 						})
 					
-					
+					bFED = L.geoJson(country2, {
+					style: countryFED,
+						})
 					
 					
 					
@@ -812,6 +814,7 @@
 					
 				    	b6110Shp = L.layerGroup([b6110,a]),
 				    	b6540Shp = L.layerGroup([b6540,a]),
+				    	bFEDShp = L.layerGroup([bFED,a]),
 				    	
 					b4075Shp = L.layerGroup([b4075,a]),
 					b4875Shp = L.layerGroup([b4875,a]),
