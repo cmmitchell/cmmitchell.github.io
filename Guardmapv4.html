@@ -965,7 +965,7 @@
 					"Country (6200)":b6200Shp,
 					"Country (6300)":b6300Shp,
 					"Country (6520)":b6520Shp,
-					"Global War II (6528)":bWW2Shp,
+					//"Global War II (6528)":bWW2Shp,
 					"Country (6540)":b6540Shp,
 					
 					// 平方マイル
@@ -1031,7 +1031,8 @@
 					//other region
 					"G.M.A. Region":brgShp,
 					//"Nations 4075":b4075Shp,
-					"GW II Alliance":bWW2Shp,
+					//"GW II Alliance":bWW2Shp,
+					"Global War II (6528)":bWW2Shp,
 					"Federation":bFEDShp,
 					
 				};
@@ -1235,6 +1236,7 @@
 				//    } 
 				//});
 				
+				//region add
 				map.on('overlayadd', function(eventLayer){
 				    if (eventLayer.name === 'G.M.A. Region'){
 					map.addControl(legend2);
@@ -1246,7 +1248,7 @@
 					 map.removeControl(legend2);
 				    } 
 				});
-				
+				//km add
 				map.on('overlayadd', function(eventLayer){
 				    if (eventLayer.name === 'Provinces (Km²)'){
 					map.addControl(legendkm);
@@ -1260,13 +1262,13 @@
 				});
 				//this is a seperating line -----------------------
 				map.on('overlayadd', function(eventLayer){
-				    if (eventLayer.name === 'GW II Alliance'){
+				    if (eventLayer.name === 'Global War II (6528)'){
 					map.addControl(legendGW);
 				    } 
 				});
 
 				map.on('overlayremove', function(eventLayer){
-				    if (eventLayer.name === 'GW II Alliance'){
+				    if (eventLayer.name === 'Global War II (6528)'){
 					 map.removeControl(legendGW);
 				    } 
 				});
