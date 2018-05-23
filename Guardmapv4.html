@@ -233,6 +233,20 @@
 					
 						}
 						})
+					b4075 = L.geoJson(country2, {
+					style: countrystyle4075,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 4075:</b> " + feature.properties.GC_4075,popupOptions);
+					
+						}
+						})
+					b4075b = L.geoJson(country2, {
+					style: countrystyle4075,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 4075:</b> " + feature.properties.GC_4075,popupOptions);
+					
+						}
+						})
 				
 					b4080 = L.geoJson(country2, {
 					style: countrystyle4080,
@@ -241,13 +255,7 @@
 					
 						}
 						})
-					b4075 = L.geoJson(country2, {
-					style: countrystyle4075,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 4075:</b> " + feature.properties.GC_4075,popupOptions);
 					
-						}
-						})
 					b4110 = L.geoJson(country2, {
 					style: countrystyle4110,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
@@ -832,6 +840,7 @@
 				    	bFEDShp = L.layerGroup([bFED,a]),
 				    	
 					b4075Shp = L.layerGroup([b4075,a]),
+				    	b4075bShp = L.layerGroup([b4075b,a]),
 					b4875Shp = L.layerGroup([b4875,a]),
 					
 					b4700Shp = L.layerGroup([b4700,a]),
@@ -1030,7 +1039,7 @@
 					//"Regions":bgeoShp,
 					//other region
 					"G.M.A. Region":brgShp,
-					//"Nations 4075":b4075Shp,
+					"Nations 4075":b4075bShp,
 					//"GW II Alliance":bWW2Shp,
 					"Global War II (6528)":bWW2Shp,
 					"Federation":bFEDShp,
