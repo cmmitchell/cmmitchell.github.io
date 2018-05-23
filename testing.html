@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Test [v0] </title>
+		<title>Test [vu] </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -1040,15 +1040,15 @@
 				};
 				
 		//this is a seperating line ----------------------------------------------------------------------------------
-				//var options = {
+				var options = {
 				      // Make the "Landmarks" group exclusive (use radio inputs)
 				 //     exclusiveGroups: ["Water Shit"],
 				      // Show a checkbox next to non-exclusive group labels for toggling all
-				//      groupCheckboxes: true
-				//    };
+				      groupCheckboxes: true
+				    };
 
 				    // Use the custom grouped layer control, not "L.control.layers"
-				var layerControl = L.control.groupedLayers(baseMaps, overLays);
+				var layerControl = L.control.GroupedLayers(baseMaps, overLays, options);
 				map.addControl(layerControl);
 
 
