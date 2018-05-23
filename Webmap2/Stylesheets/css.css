@@ -96,8 +96,8 @@ html, body, #map {
 .legend QS { 
 	width: 16px; 
 	height: 16px; 
-	opacity: 0.7;
 	float: left;
+	opacity: 0.7;
 	
 }
 .legend QN { 
