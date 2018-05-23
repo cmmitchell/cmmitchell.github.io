@@ -93,7 +93,7 @@ html, body, #map {
 	float: left;
 	
 }
-.legend QN { 
+.legend qn { 
 	color: #555;
 	background: #fff;
 	width: 20px; 
@@ -102,7 +102,7 @@ html, body, #map {
 	float: left;
 	
 }
-.legend QQ { 
+.legend qq { 
 	color: #555;
 	background: #fff;
 	width: 22px; 
