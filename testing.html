@@ -1045,10 +1045,10 @@
 				 //     exclusiveGroups: ["Water Shit"],
 				      // Show a checkbox next to non-exclusive group labels for toggling all
 				      groupCheckboxes: true
-				    };
+				};
 
 				    // Use the custom grouped layer control, not "L.control.layers"
-				var layerControl = L.control.GroupedLayers(baseMaps, overLays, options);
+				var layerControl = L.control.groupedLayers(baseMaps, overLays, options);
 				map.addControl(layerControl);
 
 
