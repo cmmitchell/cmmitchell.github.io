@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Map •𐌳• [XXV v0.2.0] </title>
+		<title>Map •𐌳• [XXV v0.2.1] </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -1055,11 +1055,22 @@
 				};
 				
 		//this is a seperating line ----------------------------------------------------------------------------------
+				var options = {
+				      // Make the "Landmarks" group exclusive (use radio inputs)
+				      exclusiveGroups: ["Water Shit"],
+				      // Show a checkbox next to non-exclusive group labels for toggling all
+				      groupCheckboxes: true
+				    };
+
+				    // Use the custom grouped layer control, not "L.control.layers"
+				var layerControl = L.control.groupedLayers(baseMaps, overLays, options);
+				map.addControl(layerControl);
+
 
 				
 				//add control to map
-				L.control.layers(baseMaps, overLays).addTo(map);
-				//Check this and associated scripts for errors. Displays tool, but not tool icon.  Error is likely in the script.
+				//L.control.layers(baseMaps, overLays).addTo(map);
+				
 				var measureControl = new L.Control.Measure(
 					{
 						position: 'topright',
