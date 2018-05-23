@@ -139,6 +139,13 @@
 					
 						}
 						})
+					b3600 = L.geoJson(country2, {
+					style: countrystyle3600,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 3600:</b> " + feature.properties.GC_3600,popupOptions);
+					
+						}
+						})
 				
 					b3650 = L.geoJson(country2, {
 					style: countrystyle3650,
@@ -148,13 +155,7 @@
 						}
 						})
 				
-					b3600 = L.geoJson(country2, {
-					style: countrystyle3600,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 3600:</b> " + feature.properties.GC_3600,popupOptions);
 					
-						}
-						})
 					
 					b3750 = L.geoJson(country2, {
 					style: countrystyle3750,
@@ -221,63 +222,9 @@
 	//this is a seperating line ----------------------------------------------------------------------------------
 		
 				
-					b6300 = L.geoJson(country2, {
-					style: countrystyle6300,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 6300:</b> " + feature.properties.GC_6300,popupOptions);
 					
-						}
-						})
-
-					b6520 = L.geoJson(country2, {
-					style: countrystyle6520,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 6520:</b> " + feature.properties.GC_6520,popupOptions);
 					
-						}
-						})
-					b6200 = L.geoJson(country2, {
-					style: countrystyle6200,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 6200:</b> " + feature.properties.GC_6200,popupOptions);
 					
-						}
-						})
-					b5800 = L.geoJson(country2, {
-					style: countrystyle5800,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 5800:</b> " + feature.properties.GC_5800,popupOptions);
-					
-						}
-						})
-					b5900 = L.geoJson(country2, {
-					style: countrystyle5900,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 5900:</b> " + feature.properties.GC_5900,popupOptions);
-					
-						}
-						})
-					b5920 = L.geoJson(country2, {
-					style: countrystyle5920,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 5920:</b> " + feature.properties.GC_5920,popupOptions);
-					
-						}
-						})
-					b5940 = L.geoJson(country2, {
-					style: countrystyle5940,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 5940:</b> " + feature.properties.GC_5940,popupOptions);
-					
-						}
-						})
-					b5965 = L.geoJson(country2, {
-					style: countrystyle5965,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 5965:</b> " + feature.properties.GC_5965,popupOptions);
-					
-						}
-						})
 				
 					b5125 = L.geoJson(country2, {
 					style: countrystyle5125,
@@ -312,20 +259,14 @@
 						}
 						})
 				
-					b6080 = L.geoJson(country2, {
-					style: countrystyle6080,
+					b5800 = L.geoJson(country2, {
+					style: countrystyle5800,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 6080:</b> " + feature.properties.GC_6080,popupOptions);
+					layer.bindPopup("<b>Country 5800:</b> " + feature.properties.GC_5800,popupOptions);
 					
 						}
 						})
-					bWW2 = L.geoJson(country2, {
-					style: countrystyleWW2,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Allies WW2:</b> " + feature.properties.GC_WWII,popupOptions);
 					
-						}
-						})
 					
 					b5840 = L.geoJson(country2, {
 					style: countrystyle5840,
@@ -341,6 +282,34 @@
 					
 						}
 						})
+					b5900 = L.geoJson(country2, {
+					style: countrystyle5900,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 5900:</b> " + feature.properties.GC_5900,popupOptions);
+					
+						}
+						})
+					b5920 = L.geoJson(country2, {
+					style: countrystyle5920,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 5920:</b> " + feature.properties.GC_5920,popupOptions);
+					
+						}
+						})
+					b5940 = L.geoJson(country2, {
+					style: countrystyle5940,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 5940:</b> " + feature.properties.GC_5940,popupOptions);
+					
+						}
+						})
+					b5965 = L.geoJson(country2, {
+					style: countrystyle5965,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 5965:</b> " + feature.properties.GC_5965,popupOptions);
+					
+						}
+						})
 					
 
 					b5980 = L.geoJson(country2, {
@@ -350,6 +319,76 @@
 					
 						}
 						})
+				
+					b6080 = L.geoJson(country2, {
+					style: countrystyle6080,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 6080:</b> " + feature.properties.GC_6080,popupOptions);
+					
+						}
+						})
+				
+					b6110 = L.geoJson(country2, {
+					style: countrystyle6110,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 6110:</b> " + feature.properties.GC6110,popupOptions);
+					
+						}
+						})
+					
+					
+					
+					
+				
+					b6200 = L.geoJson(country2, {
+					style: countrystyle6200,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 6200:</b> " + feature.properties.GC_6200,popupOptions);
+					
+						}
+						})
+				
+					b6300 = L.geoJson(country2, {
+					style: countrystyle6300,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 6300:</b> " + feature.properties.GC_6300,popupOptions);
+					
+						}
+						})
+
+					b6520 = L.geoJson(country2, {
+					style: countrystyle6520,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 6520:</b> " + feature.properties.GC_6520,popupOptions);
+					
+						}
+						})
+					bWW2 = L.geoJson(country2, {
+					style: countrystyleWW2,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Allies WW2:</b> " + feature.properties.GC_WWII,popupOptions);
+					
+						}
+						})
+					b6540 = L.geoJson(country2, {
+					style: countrystyle6540,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 6540:</b> " + feature.properties.GC_6540,popupOptions);
+					
+						}
+						})
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
 				
 				//===========================================
 				//==============Square Area==================
@@ -511,21 +550,7 @@
 						}
 						})
 					
-					b6110 = L.geoJson(country2, {
-					style: countrystyle6110,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 6110:</b> " + feature.properties.GC6110,popupOptions);
 					
-						}
-						})
-					
-					b6540 = L.geoJson(country2, {
-					style: countrystyle6540,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 6540:</b> " + feature.properties.GC_6540,popupOptions);
-					
-						}
-						})
 					
 					bFED = L.geoJson(country2, {
 					style: countryFED,
