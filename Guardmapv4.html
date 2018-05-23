@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Map •𐌳• [XXV v0.2.8] </title>
+		<title>Map •𐌳• [XXV v0.2.9] </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -1220,7 +1220,27 @@
 					div.innerHTML = labels.join('<br>');
 				    return div;
 				    };
-				
+		//this is a seperating line ----------------------------------------------------------------------------------	
+				var legendNA = L.control({position: 'bottomright'});
+				legendNA.onAdd = function (map) {
+
+				var div = L.DomUtil.create('div', 'info legend'),
+					labels = ['<strong>Sides</strong>'],
+					categories = ['Guardian League', '_Area', '_Military', '_Militarys', 'Enemy', 'Enemy 2', 'Enemy 3', 'Enemy 4', 'Meridonia', 'Meridonia 2', 
+						      'Meridonia 3', 'Meridonia 4', 'Meridonia 5', 'Meridonia 6'];
+					
+
+					for (var i = 0; i < categories.length; i++) {
+
+					    div.innerHTML += 
+					    labels.push(
+						'<QS style="background:' + GenColors(categories[i]) + '"></QS> ' +
+					    (categories[i] ? categories[i] : '+'));
+
+					}
+					div.innerHTML = labels.join('<br>');
+				    return div;
+				    };
 		
 			//this is a seperating line ----------------------------------------------------------------------------------	
 				
@@ -1230,20 +1250,19 @@
 			//this is a seperating line ----------------------------------------------------------------------------------	
 				
 				
-				//categories = ['Guardian League', '_Area', '_Military', '_Militarys', 'Enemy', 'Enemy 2', 'Enemy 3', 'Enemy 4', 'Meridonia', 'Meridonia 2', 
-				//		      'Meridonia 3', 'Meridonia 4', 'Meridonia 5', 'Meridonia 6'];
+				//categories = ;
 				//this is a seperating line ------------------------------------------------
-				//map.on('overlayadd', function(eventLayer){
-				 //   if (eventLayer.name === 'Nations 4075'){
-				//	map.addControl(legend3);
-				//    } 
-				//});
+				map.on('overlayadd', function(eventLayer){
+				    if (eventLayer.name === 'Nations 4075'){
+					map.addControl(legend3);
+				    } 
+				});
 
-				//map.on('overlayremove', function(eventLayer){
-				//    if (eventLayer.name === 'Nations 4075'){
-				//	 map.removeControl(legend3);
-				//    } 
-				//});
+				map.on('overlayremove', function(eventLayer){
+				    if (eventLayer.name === 'Nations 4075'){
+					 map.removeControl(legend3);
+				    } 
+				});
 				
 				//region add
 				map.on('overlayadd', function(eventLayer){
