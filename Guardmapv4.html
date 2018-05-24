@@ -1261,66 +1261,33 @@
 				map.on('overlayadd', function(eventLayer){
 				    if (eventLayer.name === 'Nations 4075'){
 					map.addControl(legend3);
-				    } 
-				});
-
-				map.on('overlayremove', function(eventLayer){
-				    if (eventLayer.name === 'Nations 4075'){
-					 map.removeControl(legend3);
-				    } 
-				});
-				
-				//region add
-				map.on('overlayadd', function(eventLayer){
-				    if (eventLayer.name === 'G.M.A. Region'){
+				    } else if (eventLayer.name === 'G.M.A. Region'){
 					map.addControl(legend2);
-				    } 
-				});
-
-				map.on('overlayremove', function(eventLayer){
-				    if (eventLayer.name === 'G.M.A. Region'){
-					 map.removeControl(legend2);
-				    } 
-				});
-				//km add
-				map.on('overlayadd', function(eventLayer){
-				    if (eventLayer.name === 'Provinces (Km²)'){
+				    } else if (eventLayer.name === 'Provinces (Km²)'){
 					map.addControl(legendkm);
-				    } 
-				});
-
-				map.on('overlayremove', function(eventLayer){
-				    if (eventLayer.name === 'Provinces (Km²)'){
-					 map.removeControl(legendkm);
-				    } 
-				});
-				//this is a seperating line -----------------------
-				map.on('overlayadd', function(eventLayer){
-				    if (eventLayer.name === 'Global War II (6528)'){
+				    } else if (eventLayer.name === 'Global War II (6528)'){
 					map.addControl(legendGW);
-				    } 
-				});
-
-				map.on('overlayremove', function(eventLayer){
-				    if (eventLayer.name === 'Global War II (6528)'){
-					 map.removeControl(legendGW);
-				    } 
-				});
-				//this is a seperating line -----------------------
-										
-				map.on('overlayadd', function(eventLayer){
-				    if (eventLayer.name === 'Provinces (Mi²)'){
+				    } else if (eventLayer.name === 'Provinces (Mi²)'){
 					map.addControl(legend);
 				    } 
 				});
-
+				//==========================================
 				map.on('overlayremove', function(eventLayer){
-				    if (eventLayer.name === 'Provinces (Mi²)'){
+				    if (eventLayer.name === 'Nations 4075'){
+					 map.removeControl(legend3);
+				    } else if (eventLayer.name === 'G.M.A. Region'){
+					 map.removeControl(legend2);
+				    } else if (eventLayer.name === 'Provinces (Km²)'){
+					 map.removeControl(legendkm);
+				    } else if (eventLayer.name === 'Global War II (6528)'){
+					 map.removeControl(legendGW);
+				    } else if (eventLayer.name === 'Provinces (Mi²)'){
 					 map.removeControl(legend);
 				    } 
 				});
+
 				
-				legendGW.addTo(map);
+				//legendGW.addTo(map);
 				
 				L.control.scale({maxWidth: 150}).addTo(map);
 				L.control.fullscreen().addTo(map);
