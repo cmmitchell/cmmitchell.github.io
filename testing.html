@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Map •𐌳• [XXV v0.2.777] </title>
+		<title>Map •𐌳• [XXV v0.2.877] </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -1076,12 +1076,20 @@
 							//other region
 						}	
 					 }							 
-	];
+				];
+				
+				var options = {
+					container_width 	: "300px",
+					container_maxHeight : "350px", 
+					group_maxHeight     : "80px",
+					exclusive       	: false
+				};
 		//this is a seperating line ----------------------------------------------------------------------------------
 
 				
 				//add control to map
-				L.control.layers(baseMaps, overlays).addTo(map);
+				var control = L.Control.styledLayerControl(baseMaps, overlays, options);
+				map.addControl(control);
 				//Check this and associated scripts for errors. Displays tool, but not tool icon.  Error is likely in the script.
 				var measureControl = new L.Control.Measure(
 					{
