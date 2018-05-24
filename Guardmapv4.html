@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Map •𐌳• [XXV v0.2.6] </title>
+		<title>Map •𐌳• [XXV v0.2.6ttt] </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -988,6 +988,15 @@
 				
 				//create overlays variable to call within the control. Calls layer groups
 				var overLays = {
+
+					"G.M.A. Region":brgShp,
+					"Nations 4075":b4075bShp,
+					//"GW II Alliance":bWW2Shp,
+					"Global War II (6528)":bWW2Shp,
+					"Federation":bFEDShp,
+					
+				};
+				var overLays2 = {
 					// 川
 					"Small River":nShp,
 					//"Small River (Black)":n1Shp,
@@ -1026,7 +1035,7 @@
 					// 経度緯度
 					"Graticules 30":kShp,
 					"Graticules 5":k5Shp,
-					"Graticules 1":k1Shp,
+					"Graticules 1":k1Shp
 					
 					
 					
@@ -1042,19 +1051,12 @@
 					// 名前地方
 					//"Regions":bgeoShp,
 					//other region
-					"G.M.A. Region":brgShp,
-					"Nations 4075":b4075bShp,
-					//"GW II Alliance":bWW2Shp,
-					"Global War II (6528)":bWW2Shp,
-					"Federation":bFEDShp,
-					
 				};
-				
 		//this is a seperating line ----------------------------------------------------------------------------------
 
 				
 				//add control to map
-				L.control.layers(baseMaps, overLays).addTo(map);
+				L.control.layers(baseMaps, overLays, overLays2).addTo(map);
 				//Check this and associated scripts for errors. Displays tool, but not tool icon.  Error is likely in the script.
 				var measureControl = new L.Control.Measure(
 					{
