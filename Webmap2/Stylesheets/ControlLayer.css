@@ -90,8 +90,8 @@ div[id^="leaflet-control-accordion-layers"] > label:hover {
 	margin-top: -1px;
 	overflow: hidden;
 	height: 0px;
-    padding: 0px;
-    line-height: 0px;
+    	padding: 0px;
+    	line-height: 0px;
 	position: relative;
 	z-index: 10;
 	-webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
