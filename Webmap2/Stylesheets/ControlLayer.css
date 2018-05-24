@@ -1,21 +1,21 @@
 @font-face {
     font-family: BebasNeueRegular;
-    src: url(fonts/BebasNeue-webfont.woff);
+    src: url(https://davicustodio.github.io/Leaflet.StyledLayerControl/css/fonts/BebasNeue-webfont.woff);
 }
 
 @font-face {
     font-family: Alegreya-Regular;
-    src: url(fonts/Alegreya-Regular.ttf);
+    src: url(https://davicustodio.github.io/Leaflet.StyledLayerControl/css/fonts/Alegreya-Regular.ttf);
 }
 
 @font-face {
     font-family: Ubuntu-Medium;
-    src: url(fonts/Ubuntu-Medium.ttf);
+    src: url(https://davicustodio.github.io/Leaflet.StyledLayerControl/css/fonts/Ubuntu-Medium.ttf);
 }
 
 @font-face {
     font-family: Ubuntu-Regular;
-    src: url(fonts/Ubuntu-Regular.ttf);
+    src: url(https://davicustodio.github.io/Leaflet.StyledLayerControl/css/fonts/Ubuntu-Regular.ttf);
 }
 
 
@@ -77,10 +77,10 @@ div[id^="leaflet-control-accordion-layers"] > label:hover {
 	height: 24px;
 	right: 13px;
 	top: 7px;
-	background: transparent url(images/arrow_down.png) no-repeat center center;
+	background: transparent url(https://davicustodio.github.io/Leaflet.StyledLayerControl/css/images/arrow_down.png) no-repeat center center;
 }
 .ac-container input.menu:checked + div[id^="leaflet-control-accordion-layers"] > label:hover:after{
-	background-image: url(images/arrow_up.png);
+	background-image: url(https://davicustodio.github.io/Leaflet.StyledLayerControl/css/images/arrow_up.png);
 }
 .ac-container input.menu{
 	display: none;
@@ -150,7 +150,7 @@ div[id^="leaflet-control-accordion-layers"] > label:hover {
 .bt_delete{
     position: relative;
 	float: right;
-	background-image: url(images/delete.png);
+	background-image: url(https://davicustodio.github.io/Leaflet.StyledLayerControl/css/images/delete.png);
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: 0px 0px;
@@ -167,6 +167,6 @@ div[id^="leaflet-control-accordion-layers"] > label:hover {
 
 .leaflet-control-layers:hover {
 	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
-	background: #e0e3ec url(images/bgnoise_lg.jpg) repeat top left;
+	background: #e0e3ec url(https://davicustodio.github.io/Leaflet.StyledLayerControl/css/images/bgnoise_lg.jpg) repeat top left;
 	border-radius: 5px;
 }
