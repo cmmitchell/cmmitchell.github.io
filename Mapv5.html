@@ -1194,7 +1194,7 @@
 				//this is a seperating line ------------------------------------------------
 				map.on('overlayadd', function(eventLayer){
 				    if (eventLayer.name === 'Nations 4075'){
-					map.addControl(legend3);
+					map.addControl(legendNA);
 				    } else if (eventLayer.name === 'G.M.A. Region'){
 					map.addControl(legend2);
 				    } else if (eventLayer.name === 'Provinces (Km²)'){
@@ -1208,7 +1208,7 @@
 				//==========================================
 				map.on('overlayremove', function(eventLayer){
 				    if (eventLayer.name === 'Nations 4075'){
-					 map.removeControl(legend3);
+					 map.removeControl(legendNA);
 				    } else if (eventLayer.name === 'G.M.A. Region'){
 					 map.removeControl(legend2);
 				    } else if (eventLayer.name === 'Provinces (Km²)'){
