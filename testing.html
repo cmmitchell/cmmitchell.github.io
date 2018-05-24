@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Map [v0.3.022] </title>
+		<title>Map [v0.3.03] </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
@@ -606,8 +606,7 @@
 					//	}
 					//	})
 
-	//this is a seperating line ----------------------------------------------------------------------------------
-	//this is a seperating line ----------------------------------------------------------------------------------
+
 	//this is a seperating line ----------------------------------------------------------------------------------
 						
 
@@ -721,57 +720,30 @@
 					style: wallsty2
 					
 					})
-				
-					//========================================
-					//=================Cities=================
-					//========================================
-					//j = L.geoJson(city, {
-					//	pointToLayer: function (feature, latlng) {
-					//	return L.circleMarker(latlng, city);},
-					//style: Cityst,
-					//onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					//layer.bindPopup("<b>Name:</b> " + feature.properties.Name,popupOptions);
-					//}
-					//})
-					//j2 = L.geoJson(Namedcity, {
-					//	pointToLayer: function (feature, latlng) {
-					//	return L.circleMarker(latlng, Namedcity);},
-					//style: namecityst,
-					//onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					//layer.bindPopup("<b>Name:</b> " + feature.properties.Name,popupOptions);
-					//}
-					//})
-				
-				//========================================
+
+
 				//========== Grats =======================
-				//========================================
+
 				
 					
 				
 					k = L.geoJson(grat, {
 					style: gratst,
-					//onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					//layer.bindPopup("<b>degrees:</b> " + feature.properties.degrees,popupOptions);
-					//}
+				
 					})
 				
 					k1 = L.geoJson(grat1, {
 					style: gratsty1,
-					//onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					//layer.bindPopup("<b>degrees:</b> " + feature.properties.degrees,popupOptions);
-					//}
+				
 					})
 				
 					k5 = L.geoJson(grat5, {
 					style: gratsty5,
-					//onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					//layer.bindPopup("<b>degrees:</b> " + feature.properties.degrees,popupOptions);
-					//}
+		
 					})
 					
-	//==================================================================================
 	//===============================Layer Groups=======================================
-	//==================================================================================
+
 				
 				//===================================================
 				//assigning variables to layers for control
@@ -903,133 +875,131 @@
 					zoomDelta: 0.15,
 					zoomSnap: 0
 					}).setView([0, 0], 4.5);
-					
-       				//	}).setView([7.1328, -3.6559], 9.5);	
-				//	}).setView([-0.9530146, 32.930699], 6.5);
+
 
 	//this is a seperating line ----------------------------------------------------------------------------------
 			
 				//Create Layered Groups
 				//create basemaps variable to call within the control
 				var baseMaps = [
-					{ 
-						groupName : "background",
-						expanded : true,
-						layers    : {
-							"Water Background": aShp,
-							"Black Background": a1Shp,
-							"Blank Country B.G.": cdisShp,
-							"Grey 1 B.G.": cdis1Shp,
-							"Grey 2 B.G.": cdis3Shp,
-							"Black B.G.": cdis2Shp,
-							"Green 1 B.G.": cdisg1Shp,
-							"Green 2 B.G.": cdisg2Shp
-						}
-					}, {
-						groupName : "0-5k",
-						layers    : {
-							"Country (pre-3000)":bclasShp,
-							"Country (3128)":b3128Shp,
-							"Country (3600)":b3600Shp,
-							"Country (3650)":b3650Shp,
-							"Country (3700)":b3700Shp,
-							"Country (3750)":b3750Shp,
-							"Country (3800)":b3800Shp,
-							"Country (3830)":b3830Shp,
-							"Country (3905)":b3905Shp,
-							"Country (3915)":b3915Shp,
-							"Country (3940)":b3940Shp,
-							"Country (4000)":b4000Shp,
-							"Country (4020)":b4020Shp,
-							"Country (4030)":b4030Shp,
-							"Country (4045)":b4045Shp,
-							"Country (4065)":b4065Shp,
-							"Country (4075)":b4075Shp,
-							"Country (4080)":b4080Shp,
-							"Country (4110)":b4110Shp,
-							"Country (4500)":b4500Shp,
-							"Country (4700)":b4700Shp,
-							"Country (4875)":b4875Shp,
-							"Country (4940)":b4940Shp
-							
-						}
-					}, {
-						groupName : "5k+",
-						layers    : {
-							"Country (5030)":b5030Shp,
-							"Country (5060)":b5060Shp,
-							"Country (5075)":b5075Shp,
-							"Country (5100)":b5100Shp,
-							"Country (5125)":b5125Shp,
-							"Country (5250)":b5250Shp,
-							"Country (5400)":b5400Shp,
-							"Country (5500)":b5500Shp,
-							"Country (5600)":b5600Shp,
-							"Country (5725)":b5725Shp,
-							"Country (5780)":b5780Shp,
-							"Country (5800)":b5800Shp,
-							"Country (5840)":b5840Shp,
-							"Country (5870)":b5870Shp,
-							"Country (5900)":b5900Shp,
-							"Country (5920)":b5920Shp,
-							"Country (5940)":b5940Shp,
-							"Country (5965)":b5965Shp,
-							"Country (5980)":b5980Shp,
-							"Country (6028)":b6028Shp,
-							"Country (6080)":b6080Shp,
-							"Country (6110)":b6110Shp,
-							"Country (6200)":b6200Shp,
-							"Country (6300)":b6300Shp,
-							"Country (6520)":b6520Shp,
-							"Country (6540)":b6540Shp
-							
-						}
-					}							
+						{ 
+							groupName : "background",
+							expanded : true,
+							layers    : {
+								"Water Background": aShp,
+								"Black Background": a1Shp,
+								"Blank Country B.G.": cdisShp,
+								"Grey 1 B.G.": cdis1Shp,
+								"Grey 2 B.G.": cdis3Shp,
+								"Black B.G.": cdis2Shp,
+								"Green 1 B.G.": cdisg1Shp,
+								"Green 2 B.G.": cdisg2Shp
+							}
+						}, {
+							groupName : "0-5k",
+							layers    : {
+								"Country (pre-3000)":bclasShp,
+								"Country (3128)":b3128Shp,
+								"Country (3600)":b3600Shp,
+								"Country (3650)":b3650Shp,
+								"Country (3700)":b3700Shp,
+								"Country (3750)":b3750Shp,
+								"Country (3800)":b3800Shp,
+								"Country (3830)":b3830Shp,
+								"Country (3905)":b3905Shp,
+								"Country (3915)":b3915Shp,
+								"Country (3940)":b3940Shp,
+								"Country (4000)":b4000Shp,
+								"Country (4020)":b4020Shp,
+								"Country (4030)":b4030Shp,
+								"Country (4045)":b4045Shp,
+								"Country (4065)":b4065Shp,
+								"Country (4075)":b4075Shp,
+								"Country (4080)":b4080Shp,
+								"Country (4110)":b4110Shp,
+								"Country (4500)":b4500Shp,
+								"Country (4700)":b4700Shp,
+								"Country (4875)":b4875Shp,
+								"Country (4940)":b4940Shp
+
+							}
+						}, {
+							groupName : "5k+",
+							layers    : {
+								"Country (5030)":b5030Shp,
+								"Country (5060)":b5060Shp,
+								"Country (5075)":b5075Shp,
+								"Country (5100)":b5100Shp,
+								"Country (5125)":b5125Shp,
+								"Country (5250)":b5250Shp,
+								"Country (5400)":b5400Shp,
+								"Country (5500)":b5500Shp,
+								"Country (5600)":b5600Shp,
+								"Country (5725)":b5725Shp,
+								"Country (5780)":b5780Shp,
+								"Country (5800)":b5800Shp,
+								"Country (5840)":b5840Shp,
+								"Country (5870)":b5870Shp,
+								"Country (5900)":b5900Shp,
+								"Country (5920)":b5920Shp,
+								"Country (5940)":b5940Shp,
+								"Country (5965)":b5965Shp,
+								"Country (5980)":b5980Shp,
+								"Country (6028)":b6028Shp,
+								"Country (6080)":b6080Shp,
+								"Country (6110)":b6110Shp,
+								"Country (6200)":b6200Shp,
+								"Country (6300)":b6300Shp,
+								"Country (6520)":b6520Shp,
+								"Country (6540)":b6540Shp
+
+							}
+						}							
 				];	
 				//create overlays variable to call within the control. Calls layer groups
 
 				
 				var overlays = [
-					 {
-						groupName : "Land",
-						expanded  : true,
-						layers    : { 
-							"G.M.A. Region":brgShp,
-							"Nations 4075":b4075bShp,
-							"Global War II (6528)":bWW2Shp,
-							"Federation":bFEDShp,
-							"Provinces (Mi²)":b1Shp,
-							"Provinces (Km²)":b2Shp
-							
-						}	
-					 }, {
-						groupName : "Rivers",
-						expanded  : true,
-						layers    : { 
-							"Small River":nShp,
-							"Medium River":cShp,					
-							"River":eShp,
-							"Lake":dShp
-							//"Lake (Black)":d1Shp,	
-							//"River (Black)":e1Shp,
-							//"Small River (Black)":c1Shp,
-							//"Small River (Black)":n1Shp,
-						}	
-					 }, {
-						groupName : "Mounts",
-						layers    : { 
-							"Mountain Opaque":g2Shp,
-							"Mountain White":gwShp,	
-							"Defensive Line":fShp,
-							"Defensive Line 2":f1Shp,
-							"Roads":hShp,
-							"Roads 2":h2Shp,
-							"Graticules 30":kShp,
-							"Graticules 5":k5Shp,
-							"Graticules 1":k1Shp
+						 {
+							groupName : "Land",
+							expanded  : true,
+							layers    : { 
+								"G.M.A. Region":brgShp,
+								"Nations 4075":b4075bShp,
+								"Global War II (6528)":bWW2Shp,
+								"Federation":bFEDShp,
+								"Provinces (Mi²)":b1Shp,
+								"Provinces (Km²)":b2Shp
 
-						}	
-					 }							 
+							}	
+						 }, {
+							groupName : "Rivers",
+							expanded  : true,
+							layers    : { 
+								"Small River":nShp,
+								"Medium River":cShp,					
+								"River":eShp,
+								"Lake":dShp
+								//"Lake (Black)":d1Shp,	
+								//"River (Black)":e1Shp,
+								//"Small River (Black)":c1Shp,
+								//"Small River (Black)":n1Shp,
+							}	
+						 }, {
+							groupName : "Mounts",
+							layers    : { 
+								"Mountain Opaque":g2Shp,
+								"Mountain White":gwShp,	
+								"Defensive Line":fShp,
+								"Defensive Line 2":f1Shp,
+								"Roads":hShp,
+								"Roads 2":h2Shp,
+								"Graticules 30":kShp,
+								"Graticules 5":k5Shp,
+								"Graticules 1":k1Shp
+
+							}	
+						 }							 
 				];
 				//================================================
 				
