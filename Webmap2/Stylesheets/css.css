@@ -103,15 +103,15 @@ html, body, #map {
 .legend QN { 
 	width: 20px; 
 	height: 20px; 
-	opacity: 0.7;
 	float: left;
+	opacity: 0.7;
 	
 }
 .legend QQ { 
 	width: 22px; 
 	height: 16px; 
-	opacity: 0.7;
 	float: left;
+	opacity: 0.7;
 	
 
 
