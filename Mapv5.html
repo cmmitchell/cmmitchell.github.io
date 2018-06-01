@@ -1036,7 +1036,7 @@
 						   q > 325000   ? '#2f9a52' :
 						   q > 150000   ? '#41ab5d' :
 						   q > 50000   ? '#67b469' :
-							   q > 0   ? '#8cbf86' :
+						   q > 0   ? '#8cbf86' :
 							      '#a1d99b';
 							
 					}
@@ -1171,8 +1171,9 @@
 				legendNA.onAdd = function (map) {
 				var div = L.DomUtil.create('div', 'info legend'),
 					labels = ['<strong>Sides</strong>'],
-					categories = ['Guardian League', '_Area', '_Military', '_Militarys', 'Enemy', 'Enemy 2', 'Enemy 3', 'Enemy 4', 'Meridonia', 'Meridonia 2', 
-						      'Meridonia 3', 'Meridonia 4', 'Meridonia 5', 'Meridonia 6'];
+					categories = ['Guardian League', 'Area', 'Military', 'Militaryz', 'Enemy', 
+						      'Enemy 2', 'Enemy 3', 'Enemy 4', 'Meridonia', 'Meridonia 2', 
+						      'Meridonia 3', 'Meridonia 4', 'Meridonia 5', 'Other'];
 					
 					for (var i = 0; i < categories.length; i++) {
 					    div.innerHTML += 
