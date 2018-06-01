@@ -1073,10 +1073,10 @@
 								"#bcbcbc";
 					}
 				
-					function GenColors(t) {
-						return t === 'Guardian League Allies' ? "#123254":
-							t === 'Guardian Uninhabited Region' ? "#757f89":
-							t === 'Guardian Military Police' ? "#34495e":
+					function GenColorsz(t) {
+						return t === 'Guardian League' ? "#123254":
+							t === 'Region' ? "#757f89":
+							t === 'Military Rule' ? "#34495e":
 							t === 'Guardian Military' ? "#1b4067":	
 							t === 'Orkinus' ? "#69645f":
 							t === 'Orkinus N' ? "#312f2d":
@@ -1171,21 +1171,21 @@
 				legendNA.onAdd = function (map) {
 				var div = L.DomUtil.create('div', 'info legend'),
 					labels = ['<strong>Sides</strong>'],
-					categories = ['Guardian League', 'Area', 'Military', 'Militaryz', 'Enemy',
-						      'Enemy 2', 'Enemy 3', 'Enemy 4', 'Meridonia', 'Meridonia 2',
-						      'Meridonia 3', 'Meridonia 4', 'Meridonia 5', 'Other'];
+					categories = ['Guardian League', 'Region', 'Military Rule', 'Guardian Military', 'Orkinus',
+						      'Orkinus N', 'Orkinus S', 'Orkinus W', 'Meridonia', 'SE Meridonia',
+						      'S Meridonia', 'W Meridonia', 'E Meridonia', 'Other'];
 					
 					for (var i = 0; i < categories.length; i++) {
 					    div.innerHTML += 
 					    labels.push(
-						'<QS style="background:' + GenColors(categories[i]) + '"></QS> ' +
+						'<QS style="background:' + GenColorsz(categories[i]) + '"></QS> ' +
 					    (categories[i] ? categories[i] : '+'));
 					}
 					div.innerHTML = labels.join('<br>');
 				    return div;
 				    };
 						
-		
+	
 			//this is a seperating line ----------------------------------------------------------------------------------	
 				
 				
