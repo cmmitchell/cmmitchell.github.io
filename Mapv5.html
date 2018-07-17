@@ -1053,22 +1053,7 @@
 								"#bcbcbc";
 					}
 				
-					function GenColorsz(t) {
-						return t === 'Guardian League' ? "#123254":
-							t === 'Region' ? "#757f89":
-							t === 'Military Rule' ? "#34495e":
-							t === 'Guardian Military' ? "#1b4067":	
-							t === 'Orkinus' ? "#69645f":
-							t === 'Orkinus N' ? "#312f2d":
-							t === 'Orkinus S' ? "#4b453f":
-							t === 'Orkinus W' ? "#292929":
-							t === 'Meridonia' ? "#750922":
-							t === 'SE Meridonia' ? "#75090e":
-							t === 'S Meridonia' ? "#601010":
-							t === 'W Meridonia' ? "#60000a":
-							t === 'E Meridonia' ? "#5c0606":
-								"#5c1010";
-					}
+
 					
 			//this is miles
 				var legend = L.control({position: 'bottomright'});
@@ -1147,23 +1132,7 @@
 				    return div;
 				    };
 		//this is a seperating line ----------------------------------------------------------------------------------	
-				var legendNA = L.control({position: 'bottomright'});
-				legendNA.onAdd = function (map) {
-				var div = L.DomUtil.create('div', 'info legend'),
-					labels = ['<strong>Sides</strong>'],
-					categories = ['Guardian League', 'Region', 'Military Rule', 'Guardian Military', 'Orkinus',
-						      'Orkinus N', 'Orkinus S', 'Orkinus W', 'Meridonia', 'SE Meridonia',
-						      'S Meridonia', 'W Meridonia', 'E Meridonia', 'Other'];
-					
-					for (var i = 0; i < categories.length; i++) {
-					    div.innerHTML += 
-					    labels.push(
-						'<QS style="background:' + GenColorsz(categories[i]) + '"></QS> ' +
-					    (categories[i] ? categories[i] : '+'));
-					}
-					div.innerHTML = labels.join('<br>');
-				    return div;
-				    };
+
 						
 	
 			//this is a seperating line ----------------------------------------------------------------------------------	
@@ -1177,9 +1146,7 @@
 				//categories = ;
 				//this is a seperating line ------------------------------------------------
 				map.on('overlayadd', function(eventLayer){
-				    if (eventLayer.name === 'Nations 4075'){
-					map.addControl(legendNA);
-				    } else if (eventLayer.name === 'G.M.A. Region'){
+				    if (eventLayer.name === 'G.M.A. Region'){
 					map.addControl(legend2);
 				    } else if (eventLayer.name === 'Provinces (Km²)'){
 					map.addControl(legendkm);
@@ -1191,9 +1158,7 @@
 				});
 				//==========================================
 				map.on('overlayremove', function(eventLayer){
-				    if (eventLayer.name === 'Nations 4075'){
-					 map.removeControl(legendNA);
-				    } else if (eventLayer.name === 'G.M.A. Region'){
+				    if (eventLayer.name === 'G.M.A. Region'){
 					 map.removeControl(legend2);
 				    } else if (eventLayer.name === 'Provinces (Km²)'){
 					 map.removeControl(legendkm);
