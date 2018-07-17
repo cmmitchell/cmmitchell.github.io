@@ -7,7 +7,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Map [[[[v0.3.47 </title>
+		<title>Map v0.3.47 </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
@@ -662,62 +662,6 @@
 					gw = L.geoJson(Mount, {
 					style: Mountstyw}),
 						
-					//========================================
-					//=================Roads=================
-					//========================================
-					h = L.geoJson(Road, {
-					style: roadsty1
-					})
-				
-					h2 = L.geoJson(Road, {
-					style: roadsty2
-					})
-				
-					//========================================
-					//=================River Area==============
-					//========================================
-					//i = L.geoJson(rivbuff1, {
-					//style:riverbuff1})
-					//ib = L.geoJson(rivbuff1, {
-					//style:riverbuff1b})
-				
-					//i1 = L.geoJson(rivbuff2, {
-					//style:riverbuff2})
-				
-					//i1b = L.geoJson(rivbuff2, {
-					//style:riverbuff2b})
-				
-				
-					//========================================
-					//=================Walls==================
-					//========================================
-					f = L.geoJson(Wall, {
-					style: wallsty1
-					
-					})
-				
-					f1 = L.geoJson(Wall, {
-					style: wallsty2
-					
-					})
-				//========== Grats =======================
-				
-					
-				
-					k = L.geoJson(grat, {
-					style: gratst,
-				
-					})
-				
-					k1 = L.geoJson(grat1, {
-					style: gratsty1,
-				
-					})
-				
-					k5 = L.geoJson(grat5, {
-					style: gratsty5,
-		
-					})
 					
 	//===============================Layer Groups=======================================
 				
@@ -812,29 +756,10 @@
 					gShp = L.layerGroup([g]),
 				    	g2Shp = L.layerGroup([g2]),
 				    	gwShp = L.layerGroup([gw]),
-				    	
-				  	//lpntShp = L.layerGroup([lpnt]),
-				    
-				  	//gsShp = L.layerGroup([gs]),
-				    	//gsrShp = L.layerGroup([gsr]),
+
 					//=================roads=================
 					hShp = L.layerGroup([h]),
 				    	h2Shp = L.layerGroup([h2]),
-				    	
-					//=================river area=================
-					//iShp = L.layerGroup([i1,i]),	
-				    	//ibShp = L.layerGroup([i1b,ib]),
-					//=================Walls=================
-					fShp = L.layerGroup([f]),
-				    	f1Shp = L.layerGroup([f1]),
-					//=================citys=================
-					//jShp = L.layerGroup([j]),
-				    	//j2Shp = L.layerGroup([j2]),
-					//=================citys=================
-					kShp = L.layerGroup([k]),
-				    	k1Shp = L.layerGroup([k1]),
-				    	k5Shp = L.layerGroup([k5]),
-					//=================rivers=================
 				    	//=================creek=================
 					cShp = L.layerGroup([c]),
 				    	c1Shp = L.layerGroup([c1]),
@@ -953,19 +878,7 @@
 							expanded  : true,
 							layers    : { 
 								"Mountain Opaque":g2Shp,
-								"Mountain White":gwShp,	
-								"Defensive Line":fShp,
-								"Defensive Line 2":f1Shp,
-								"Roads":hShp,
-								"Roads 2":h2Shp
-							}	
-						 }, {
-							groupName : "Gaticule",
-							layers    : { 
-								
-								"Graticules 30":kShp,
-								"Graticules 5":k5Shp,
-								"Graticules 1":k1Shp
+								"Mountain White":gwShp
 							}	
 						 }							 
 				];
