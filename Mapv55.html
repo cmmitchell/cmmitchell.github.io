@@ -39,7 +39,7 @@
 		
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/RiverLarge.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/RiverMedium.js"></script>
-		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/RiverSmall.js"></script>
+
 	
 		
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Mountains.js"></script>
@@ -422,15 +422,7 @@
 					style: rivSb
 					})
 				
-					//Small Rivers
-				
-					n = L.geoJson(riverS, {
-					style: rivL
-					})
-				
-					n1 = L.geoJson(riverS, {
-					style: rivSb
-					})
+
 				
 					//=================Creeks=================
 					c = L.geoJson(riverM, {
@@ -554,8 +546,7 @@
 				    	//=================creek=================
 					cShp = L.layerGroup([c]),
 				    	c1Shp = L.layerGroup([c1]),
-					nShp = L.layerGroup([n]),
-				    	n1Shp = L.layerGroup([n1]),
+
 				    	e1Shp = L.layerGroup([e1]),
 					eShp = L.layerGroup([e]);			
 					//rivers
@@ -650,19 +641,9 @@
 							groupName : "Rivers",
 							expanded  : true,
 							layers    : { 
-								"Small River":nShp,
 								"Medium River":cShp,					
 								"River":eShp,
 								"Lake":dShp
-							}	
-						 }, {
-							groupName : "Black Rivers",
-							expanded  : true,
-							layers    : { 
-								"Lake (Black)":d1Shp,	
-								"Large River (Black)":e1Shp,
-								"Medium River (Black)":c1Shp,
-								"Small River (Black)":n1Shp
 							}	
 						 }, {
 							groupName : "Other",
