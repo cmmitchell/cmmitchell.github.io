@@ -189,52 +189,28 @@
 						})
 				
 					b5060 = L.geoJson(country2, {
-					style: countrystyle5060,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 5060:</b> " + feature.properties.GC_5060,popupOptions);
-					
-						}
+					style: countrystyle5060
 						})
 				
 					b5075 = L.geoJson(country2, {
-					style: countrystyle5075,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 5075:</b> " + feature.properties.GC_5075,popupOptions);
-					
-						}
+					style: countrystyle5075
 						})
 				
 					b5100 = L.geoJson(country2, {
-					style: countrystyle5100,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 5100:</b> " + feature.properties.GC_5100,popupOptions);
-					
-						}
+					style: countrystyle5100
 						})
 				
 					
 				
 					b5125 = L.geoJson(country2, {
-					style: countrystyle5125,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 5125:</b> " + feature.properties.GC_5125,popupOptions);
-					
-						}
+					style: countrystyle5125
 						})
 					b5250 = L.geoJson(country2, {
-					style: countrystyle5250,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 5250:</b> " + feature.properties.GC_5250,popupOptions);
-					
-						}
+					style: countrystyle5250
 						})
 				
 					b5400 = L.geoJson(country2, {
-					style: countrystyle5400,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 5400:</b> " + feature.properties.GC_5400,popupOptions);
-					
-						}
+					style: countrystyle5400
 						})
 				
 					b5500 = L.geoJson(country2, {
@@ -442,9 +418,7 @@
 						
 					g2 = L.geoJson(Mount, {
 					style: Mountsty2}),
-						
-					gw = L.geoJson(Mount, {
-					style: Mountstyw})
+
 						
 					
 	//===============================Layer Groups=======================================
@@ -539,7 +513,6 @@
 					//=================mountains=================
 					gShp = L.layerGroup([g]),
 				    	g2Shp = L.layerGroup([g2]),
-				    	gwShp = L.layerGroup([gw]),
 
 					//=================roads=================
 
