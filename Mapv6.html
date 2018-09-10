@@ -95,15 +95,7 @@
 					a3 = L.geoJson(bak, {
 					style: back})
 					
-				
-					//===========================================
-					//=================Countries=================
-					//==========================================
-					
-					
-					
-					
-					
+			
 				
 				//===========================================
 				//==============Square Area==================
@@ -135,30 +127,9 @@
 						}
 						})
 					
+
 					
 					
-					bFED = L.geoJson(country2, {
-					style: countryFED,
-						})
-					
-					
-					
-					
-					
-				
-					//lpnt = L.geoJson(Locpoint, {
-					//onEachFeature: function (feature, layer){
-					//	popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					//	layer.bindPopup("<b>Region Name:</b> " + feature.properties.Name
-					//	,popupOptions);
-					//}
-					//})
-					//gs = L.geoJson(GeoRegion, {
-					//style: gratGeo
-					//})
-					//gsr = L.geoJson(GeoRegion, {
-					//style: gratGeor
-					//})
 				
 				//===========================================
 				//===============Blank Country===============
@@ -278,17 +249,7 @@
 					//========================================
 					//=================River Area==============
 					//========================================
-					//i = L.geoJson(rivbuff1, {
-					//style:riverbuff1})
-					//ib = L.geoJson(rivbuff1, {
-					//style:riverbuff1b})
-				
-					//i1 = L.geoJson(rivbuff2, {
-					//style:riverbuff2})
-				
-					//i1b = L.geoJson(rivbuff2, {
-					//style:riverbuff2b})
-				
+
 				
 					//========================================
 					//=================Walls==================
@@ -337,9 +298,6 @@
 				    	brgShp = L.layerGroup([brg,a]),
 				    	//bgeoShp = L.layerGroup([bgeo]),
 				    
-				    	
-				    	
-				    
 				    	cdisShp = L.layerGroup([cdis]),
 				    	cdis1Shp = L.layerGroup([cdis1,a]),
 				    	cdis2Shp = L.layerGroup([cdis2,a1]),
@@ -358,23 +316,18 @@
 				    	g2Shp = L.layerGroup([g2]),
 				    	gwShp = L.layerGroup([gw]),
 				    	
-				  	//lpntShp = L.layerGroup([lpnt]),
-				    
-				  	//gsShp = L.layerGroup([gs]),
-				    	//gsrShp = L.layerGroup([gsr]),
+				  
 					//=================roads=================
 					hShp = L.layerGroup([h]),
 				    	h2Shp = L.layerGroup([h2]),
 				    	
 					//=================river area=================
-					//iShp = L.layerGroup([i1,i]),	
-				    	//ibShp = L.layerGroup([i1b,ib]),
+			
 					//=================Walls=================
 					fShp = L.layerGroup([f]),
 				    	f1Shp = L.layerGroup([f1]),
 					//=================citys=================
-					//jShp = L.layerGroup([j]),
-				    	//j2Shp = L.layerGroup([j2]),
+				
 					//=================citys=================
 					kShp = L.layerGroup([k]),
 				    	k1Shp = L.layerGroup([k1]),
@@ -424,9 +377,6 @@
 							expanded  : true,
 							layers    : { 
 								"G.M.A. Region":brgShp,
-								"Nations 4075":b4075bShp,
-								"Global War II (6528)":bWW2Shp,
-								"Federation":bFEDShp,
 								"Provinces (Mi²)":b1Shp,
 								"Provinces (Km²)":b2Shp
 							}	
@@ -509,16 +459,6 @@
 							      '#a1d99b';
 							
 					}
-					function getColorj(j) {
-						return j === 'North' ? "#2b288b":
-							j === 'North (Late)' ? "#15135e":
-							j === 'N Assistance' ? "#54527c":
-							j === 'South' ? "#b61515":
-							j === 'South (Late)' ? "#8b2828":
-							j === 'S Assistance' ? "#986161":
-								"#878787";
-							
-					}
 				
 					function gregColor(a) {
 						return a === 'Region 1' ? "#8e3774":
@@ -585,22 +525,6 @@
 					};
 				//this is a seperating line ----------------------------------------------------------------------------------
 				// this is country?
-				var legendGW = L.control({position: 'bottomright'});
-				legendGW.onAdd = function (map) {
-				var div = L.DomUtil.create('div', 'info legend'),
-					labels = ['<strong>Sides</strong>'],
-					categories = ['North', 'North (Late)', 'N Assistance', 'South', 'South (Late)',  
-						      'S Assistance', 'Neutral'];
-					
-					for (var i = 0; i < categories.length; i++) {
-					    div.innerHTML += 
-					    labels.push(
-						'<QS style="background:' + getColorj(categories[i]) + '"></QS> ' +
-					    (categories[i] ? categories[i] : '+'));
-					}
-					div.innerHTML = labels.join('<br>');
-				    return div;
-				    };
 		//this is a seperating line ----------------------------------------------------------------------------------	
 				//Regions
 				var legend2 = L.control({position: 'bottomright'});
@@ -632,8 +556,6 @@
 					map.addControl(legend2);
 				    } else if (eventLayer.name === 'Provinces (Km²)'){
 					map.addControl(legendkm);
-				    } else if (eventLayer.name === 'Global War II (6528)'){
-					map.addControl(legendGW);
 				    } else if (eventLayer.name === 'Provinces (Mi²)'){
 					map.addControl(legend);
 				    } 
@@ -644,25 +566,18 @@
 					 map.removeControl(legend2);
 				    } else if (eventLayer.name === 'Provinces (Km²)'){
 					 map.removeControl(legendkm);
-				    } else if (eventLayer.name === 'Global War II (6528)'){
-					 map.removeControl(legendGW);
 				    } else if (eventLayer.name === 'Provinces (Mi²)'){
 					 map.removeControl(legend);
 				    } 
 				});
 				
-				//legendGW.addTo(map);
+
 				
 				L.control.scale({maxWidth: 150}).addTo(map);
 				L.control.fullscreen().addTo(map);
-				//var poi1 = L.point(100, -180),
-				//poi2 = L.point(-100, 180)
-				    
-				//L.bounds(poi1, poi2);		
-				
-				//L.map('map', {
+
         			
-    				//});
+
 				
 			
 			
