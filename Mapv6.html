@@ -7,7 +7,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Map_v6 V.01Dc </title>
+		<title>Map_v6 V.01Dii </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
@@ -53,6 +53,7 @@
 		
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/CountryDis.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Countries_4.js"></script>
+		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/75shp.js"></script>
 
 		
 		<!-- Broken Stuff -->
@@ -123,6 +124,13 @@
 					style: regionG,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
 					layer.bindPopup("<b>Region:</b> " + feature.properties.region_G,popupOptions);
+					
+						}
+						})
+					c7 = L.geoJson(country75, {
+					style: c75,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country:</b> " + feature.properties.GC_4075,popupOptions);
 					
 						}
 						})
@@ -223,6 +231,8 @@
 					})
 				
 					
+				
+					
 					//========================================
 					//=================High Areas=============
 					//========================================
@@ -299,6 +309,7 @@
 				    	//bgeoShp = L.layerGroup([bgeo]),
 				    
 				    	cdisShp = L.layerGroup([cdis]),
+				    	c7Shp = L.layerGroup([c7,a1]),
 				    	cdis1Shp = L.layerGroup([cdis1,a]),
 				    	cdis2Shp = L.layerGroup([cdis2,a1]),
 				    	cdis3Shp = L.layerGroup([cdis3,a]),
@@ -377,6 +388,7 @@
 							expanded  : true,
 							layers    : { 
 								"G.M.A. Region":brgShp,
+								"c7":c7Shp,
 								"Provinces (Mi²)":b1Shp,
 								"Provinces (Km²)":b2Shp
 							}	
