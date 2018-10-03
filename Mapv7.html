@@ -7,7 +7,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Map v0.3.5DD </title>
+		<title>Map v7.0.1 </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
@@ -103,7 +103,7 @@
 					bclas = L.geoJson(country2, {
 					style: countryclassic,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country Classical:</b> " + feature.properties.Classical_Countries,popupOptions);
+					layer.bindPopup("<b>Country Classical:</b> " + feature.properties.gglassical,popupOptions);
 						}
 						})  
 				
@@ -260,35 +260,35 @@
 					b4500 = L.geoJson(country2, {
 					style: countrystyle4500,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 4500:</b> " + feature.properties.GC_3940,popupOptions);
+					layer.bindPopup("<b>Country 4500:</b> " + feature.properties.g3940,popupOptions);
 					
 						}
 						})
 					b4700 = L.geoJson(country2, {
 					style: countrystyle4700,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 4700:</b> " + feature.properties.GC_4700,popupOptions);
+					layer.bindPopup("<b>Country 4700:</b> " + feature.properties.g4700,popupOptions);
 					
 						}
 						})
 					b4875 = L.geoJson(country2, {
 					style: countrystyle4875,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 4875:</b> " + feature.properties.GC_4875,popupOptions);
+					layer.bindPopup("<b>Country 4875:</b> " + feature.properties.g4875,popupOptions);
 					
 						}
 						})
 					b4940 = L.geoJson(country2, {
 					style: countrystyle4940,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 4940:</b> " + feature.properties.GC_4940,popupOptions);
+					layer.bindPopup("<b>Country 4940:</b> " + feature.properties.g4940,popupOptions);
 					
 						}
 						})
 					b5030 = L.geoJson(country2, {
 					style: countrystyle5030,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 5030:</b> " + feature.properties.GC_5030,popupOptions);
+					layer.bindPopup("<b>Country 5030:</b> " + feature.properties.g5030,popupOptions);
 					
 						}
 						})
@@ -296,7 +296,7 @@
 					b5060 = L.geoJson(country2, {
 					style: countrystyle5060,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 5060:</b> " + feature.properties.GC_5060,popupOptions);
+					layer.bindPopup("<b>Country 5060:</b> " + feature.properties.g5060,popupOptions);
 					
 						}
 						})
@@ -304,7 +304,7 @@
 					b5075 = L.geoJson(country2, {
 					style: countrystyle5075,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 5075:</b> " + feature.properties.GC_5075,popupOptions);
+					layer.bindPopup("<b>Country 5075:</b> " + feature.properties.g5075,popupOptions);
 					
 						}
 						})
@@ -312,7 +312,7 @@
 					b5100 = L.geoJson(country2, {
 					style: countrystyle5100,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 5100:</b> " + feature.properties.GC_5100,popupOptions);
+					layer.bindPopup("<b>Country 5100:</b> " + feature.properties.g5100,popupOptions);
 					
 						}
 						})
@@ -322,14 +322,14 @@
 					b5125 = L.geoJson(country2, {
 					style: countrystyle5125,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 5125:</b> " + feature.properties.GC_5125,popupOptions);
+					layer.bindPopup("<b>Country 5125:</b> " + feature.properties.g5125,popupOptions);
 					
 						}
 						})
 					b5250 = L.geoJson(country2, {
 					style: countrystyle5250,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 5250:</b> " + feature.properties.GC_5250,popupOptions);
+					layer.bindPopup("<b>Country 5250:</b> " + feature.properties.g5250,popupOptions);
 					
 						}
 						})
@@ -399,7 +399,7 @@
 					b5900 = L.geoJson(country2, {
 					style: countrystyle5900,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 5900:</b> " + feature.properties.GC_5900,popupOptions);
+					layer.bindPopup("<b>Country 5900:</b> " + feature.properties.g5900,popupOptions);
 					
 						}
 						})
@@ -464,7 +464,7 @@
 					b6200 = L.geoJson(country2, {
 					style: countrystyle6200,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 6200:</b> " + feature.properties.g6200,popupOptions);
+					layer.bindPopup("<b>Country 6200:</b> " + feature.properties.gg6200,popupOptions);
 					
 						}
 						})
@@ -472,28 +472,28 @@
 					b6300 = L.geoJson(country2, {
 					style: countrystyle6300,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 6300:</b> " + feature.properties.GC_6300,popupOptions);
+					layer.bindPopup("<b>Country 6300:</b> " + feature.properties.g6300,popupOptions);
 					
 						}
 						})
 					b6520 = L.geoJson(country2, {
 					style: countrystyle6520,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 6520:</b> " + feature.properties.GC_6520,popupOptions);
+					layer.bindPopup("<b>Country 6520:</b> " + feature.properties.g6520,popupOptions);
 					
 						}
 						})
 					bWW2 = L.geoJson(country2, {
 					style: countrystyleWW2,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Allies WW2:</b> " + feature.properties.GC_WWII,popupOptions);
+					layer.bindPopup("<b>Allies WW2:</b> " + feature.properties.ww2,popupOptions);
 					
 						}
 						})
 					b6540 = L.geoJson(country2, {
 					style: countrystyle6540,
 					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Country 6540:</b> " + feature.properties.GC_6540,popupOptions);
+					layer.bindPopup("<b>Country 6540:</b> " + feature.properties.g6540,popupOptions);
 					
 						}
 						})
