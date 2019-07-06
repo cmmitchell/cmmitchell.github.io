@@ -220,9 +220,8 @@
 								//"Mountain White":gwShp,	
 								//"Moisture":moShp,
 								//"Rivers":eShp,
-								//"Defensive Line":fShp,
-								//"Defensive Line 2":f1Shp,
-								//"Roads":hShp,
+								//"Provinces (Mi²)":f1Shp,
+								//"Provinces (Km²)":hShp,
 								"Region 1":rdisShp,
 								"Region 2":brgShp
 							}	
@@ -370,7 +369,7 @@
 				//categories = ;
 				//this is a seperating line ------------------------------------------------
 				map.on('overlayadd', function(eventLayer){
-				    if (eventLayer.name === 'G.M.A. Region'){
+				    if (eventLayer.name === 'Region 2'){
 					map.addControl(legend2);
 				    } else if (eventLayer.name === 'Provinces (Km²)'){
 					map.addControl(legendkm);
@@ -380,7 +379,7 @@
 				});
 				//==========================================
 				map.on('overlayremove', function(eventLayer){
-				    if (eventLayer.name === 'G.M.A. Region'){
+				    if (eventLayer.name === 'Region 2'){
 					 map.removeControl(legend2);
 				    } else if (eventLayer.name === 'Provinces (Km²)'){
 					 map.removeControl(legendkm);
