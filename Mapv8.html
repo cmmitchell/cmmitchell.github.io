@@ -406,9 +406,9 @@
 					//========================================
 					//=================Rivers================= reminder: switch statement to categorically style
 					//========================================
-					//e = L.geoJson(riverL, {
-					//style: rivL
-					//})
+					e = L.geoJson(riverL, {
+					style: rivL
+					})
 				
 					//e1 = L.geoJson(riverL, {
 					//style: rivSb
@@ -619,7 +619,7 @@
 					//=================citys=================
 					kShp = L.layerGroup([k]),
 				    	k1Shp = L.layerGroup([k1]),
-				    	k5Shp = L.layerGroup([k5]);
+				    	k5Shp = L.layerGroup([k5]),
 					//=================rivers=================
 				    	//=================creek=================
 					//cShp = L.layerGroup([c]),
@@ -627,7 +627,7 @@
 					//nShp = L.layerGroup([n]),
 				    	//n1Shp = L.layerGroup([n1]),
 				    	//e1Shp = L.layerGroup([e1]),
-					//eShp = L.layerGroup([e]);			
+					eShp = L.layerGroup([e]);			
 					//rivers
 				//background images
 	//this is a seperating line ----------------------------------------------------------------------------------
@@ -681,7 +681,8 @@
 							layers    : { 
 								"Mountain Opaque":g2Shp,
 								"Mountain White":gwShp,	
-								"Moisture":moShp,	
+								"Moisture":moShp,
+								"Rivers":moShp,
 								//"Defensive Line":fShp,
 								//"Defensive Line 2":f1Shp,
 								"Roads":hShp,
