@@ -102,13 +102,13 @@
 				
 				
 					
-					//brg = L.geoJson(region2, {
-					//style: regionG,
-					//onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					//layer.bindPopup("<b>Region:</b> " + feature.properties.region_G,popupOptions);
+					brg = L.geoJson(region2, {
+					style: regionG,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Region:</b> " + feature.properties.region_G,popupOptions);
 					
-					//	}
-					//	})
+						}
+						})
 					
 					
 
@@ -154,7 +154,7 @@
 				    	rdisShp = L.layerGroup([rdis1]),
 
 
-				  	//b3940Shp = L.layerGroup([b3940]),
+				  	brgShp = L.layerGroup([brg]),
 					//bclasShp = L.layerGroup([bclas]),
 				    
 				    	//cdisShp = L.layerGroup([cdis]),
@@ -223,7 +223,7 @@
 								//"Defensive Line":fShp,
 								//"Defensive Line 2":f1Shp,
 								//"Roads":hShp,
-								//"Roads 2":h2Shp
+								"Roads 2":brgShp
 							}	
 						 }, {
 							groupName : "Gaticule",
