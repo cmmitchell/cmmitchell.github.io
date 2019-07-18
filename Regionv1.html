@@ -7,7 +7,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Map v1.0.1.3 </title>
+		<title>Map v1.0.1.4 </title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
@@ -320,7 +320,7 @@
 				var legend = L.control({position: 'bottomright'});
 				legend.onAdd = function (map) {
 					var div = L.DomUtil.create('div', 'info legend'),
-						grades = [0, 35 000, 100 000, 180 000, 250 000, 380 000],
+						grades = [0, 35000, 100000, 180000, 250000, 380000],
 						labels = [],
 						from, to;
 					for (var i = 0; i < grades.length; i++) {
@@ -341,7 +341,7 @@
 				var legendkm = L.control({position: 'bottomright'});
 				legendkm.onAdd = function (map) {
 					var div = L.DomUtil.create('div', 'info legend'),
-						grades = [0, 90 000, 250 000, 465 000, 800 000, 1 500 000],
+						grades = [0, 90000, 250000, 465000, 800000, 1500000],
 						labels = [];
 					for (var i = 0; i < grades.length; i++) {
 						div.innerHTML +=
