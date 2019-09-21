@@ -306,6 +306,15 @@
 					
 						}
 						})
+					//early stuff
+					b4940 = L.geoJson(country2, {
+					style: countrystyle4940,
+					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
+					layer.bindPopup("<b>Country 4940:</b> " + feature.properties.g4940,popupOptions);
+					
+						}
+						})
+					
 					
 
 	//this is a seperating line ----------------------------------------------------------------------------------
@@ -424,6 +433,9 @@
 					
 				    	b6110Shp = L.layerGroup([b6110,a]),
 				    	b6540Shp = L.layerGroup([b6540,a]),
+				    
+				    	//Early Stuff
+				    	b4940Shp = L.layerGroup([b4940]),
 
 					//=================lake=================
 					dShp = L.layerGroup([d]),
@@ -433,36 +445,17 @@
 				    	g2Shp = L.layerGroup([g2]),
 				    	gwShp = L.layerGroup([gw]),
 				    	
-				  	//lpntShp = L.layerGroup([lpnt]),
-				    
-				  	//gsShp = L.layerGroup([gs]),
-				    	//gsrShp = L.layerGroup([gsr]),
 					//=================roads=================
 					hShp = L.layerGroup([h]),
 				    	h2Shp = L.layerGroup([h2]),
 				    	
 					//=================river area=================
-					//iShp = L.layerGroup([i1,i]),	
-				    	//ibShp = L.layerGroup([i1b,ib]),
-					//=================Walls=================
-					//fShp = L.layerGroup([f]),
-				    	//f1Shp = L.layerGroup([f1]),
-					//=================citys=================
-					//jShp = L.layerGroup([j]),
-				    	//j2Shp = L.layerGroup([j2]),
+
 					//=================grats=================
 					kShp = L.layerGroup([k]),
 				    	k1Shp = L.layerGroup([k1]),
 				    	k5Shp = L.layerGroup([k5]);
-					//=================rivers=================
-				    	//=================creek=================
-					//cShp = L.layerGroup([c]),
-				    	//c1Shp = L.layerGroup([c1]),
-					//nShp = L.layerGroup([n]),
-				    	//n1Shp = L.layerGroup([n1]),
-				    	//e1Shp = L.layerGroup([e1]),
-					//eShp = L.layerGroup([e]);			
-					//rivers
+
 				//background images
 	//this is a seperating line ----------------------------------------------------------------------------------
 				//set map extent, view, and default layer
@@ -486,6 +479,7 @@
 						}, {
 							groupName : "5k+",
 							layers    : {
+								"Country (4940)":b4940Shp,
 								"Country (5030)":b5030Shp,
 								"Country (5060)":b5060Shp,
 								"Country (5075)":b5075Shp,
